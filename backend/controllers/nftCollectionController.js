@@ -4,19 +4,21 @@ const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 
 // get NFTCollections
 const getNFTCollections = (req, res) => {
-  const body = req.body;
+  const query = req.query;
+  let payload = { name: query?.name };
+  if (query?.limit) payload = { ...payload, limit: query.limit };
 
-  NFTCollectionRepo.getMany({ name: body?.name })
+  NFTCollectionRepo.getMany(payload)
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 
 // get one NFTCollection
 const getNFTCollection = (req, res) => {
-  const id = req.params?.id;
-  const body = req.body;
+  const params = req.params;
+  const query = req.query;
 
-  NFTCollectionRepo.getOne({ _id: id, name: body?.name })
+  NFTCollectionRepo.getOne({ _id: params?.id, name: query?.name })
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
