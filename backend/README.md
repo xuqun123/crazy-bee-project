@@ -16,6 +16,8 @@
 
 3. Run `npm install` to install all needed packages.
 
+4. If all packages are installed and VSCode is configured properly, when you change any code in VSCode and save now, it should auto format to match the pre-defined code formatting rules.
+
 ## How to Run the Web Server
 
 1. `npm start` to start the server.
@@ -26,7 +28,7 @@
 
 ## How to Seed Fake Data
 
-- To feed `NFT collections` data, run the following: `npm run seed-nft-collections-data    `
+- To feed `NFT collections` data, run the following: `npm run seed-nft-collections-data`
 
 ## How to Run Unit Tests
 
@@ -40,8 +42,8 @@
 
 ## Available APIs
 
-1. `GET api/nftCollections` to retrieve all NFT collections.
-2. `GET api/nftCollections/:id` to retrieve single one NFT collection.
-3. `POST api/nftCollections` with `{ "nftCollection": {"name": "name here", "summary": "summary here", "status": "published"}` payload to create a new NFT collection.
-4. `PATCH api/nftCollections/:id` with `{ "nftCollection": {"name": "name here", "summary": "summary here", "status": "published"}` payload to update an existing NFT collection.
-5. `DELETE api/nftCollections/:id` to delete an existing NFT collection.
+1. `GET /api/nftCollections` to retrieve all NFT collections.
+2. `GET /api/nftCollections/:id` to retrieve single one NFT collection.
+3. `POST /api/nftCollections` with `{ "nftCollection": {"name": "name here", "summary": "summary here", "status": "published"}` payload to create a new NFT collection.
+4. `PATCH /api/nftCollections/:id` with `{ "nftCollection": {"name": "name here", "summary": "summary here", "status": "published"}` payload to update an existing NFT collection.
+5. `DELETE /api/nftCollections/:id` to delete an existing NFT collection.

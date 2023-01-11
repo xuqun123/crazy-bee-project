@@ -1,4 +1,5 @@
 const { NFTCollectionModel } = require("../models/NFTCollection");
+const { DEFAULT_RESULTS_LIMIT } = require("../lib/constants");
 
 /**
  * Get one nftCollection
@@ -9,18 +10,21 @@ const getOne = async ({ name, _id }) => {
   if (_id) filter = { ...filter, _id };
 
   // find the latest one record for a specific nftCollection
-  const nftCollection = await NFTCollectionModel.findOne(filter).sort({ createdAt: -1 }).exec();
+  const nftCollection = await NFTCollectionModel.findOne(filter).sort({ publishedAt: -1 }).exec();
   return nftCollection;
 };
 
 /**
  * Get multiple nftCollections
  */
-const getMany = async ({ name, _id }) => {
+const getMany = async ({ name, _id, limit = DEFAULT_RESULTS_LIMIT }) => {
   let filter = {};
   if (name) filter = { ...filter, name };
 
-  const nftCollections = await NFTCollectionModel.find(filter).sort({ createdAt: -1 }).exec();
+  const nftCollections = await NFTCollectionModel.find(filter)
+    .sort({ publishedAt: -1 })
+    .limit(limit)
+    .exec();
   return nftCollections;
 };
 
