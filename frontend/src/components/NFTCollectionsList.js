@@ -9,9 +9,9 @@ import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
 import moment from 'moment'
-import axiosClient from '../lib/axiosClient'
 
 import Skeleton from '@mui/material/Skeleton'
+import axiosClient from '../lib/axiosClient'
 
 function LoadingSkeletons() {
   return (
@@ -38,11 +38,11 @@ function NFTCollectionsList() {
       .get('/nftCollections?limit=12')
       .then((response) => {
         setLoading(false)
-        setNFTCollections(response.data?.data || [])
+        setNFTCollections(response?.data?.data || [])
       })
       .catch((error) => {
         setLoading(false)
-        const message = `Get device data failed: ${error.message}`
+        const message = `Get nftCollections data failed: ${error.message}`
         console.error(message)
       })
   }, [])

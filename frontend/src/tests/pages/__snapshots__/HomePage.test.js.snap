@@ -1,0 +1,224 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage get nftCollections data via api snapshot the HomePage view with all expected elements 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiBox-root css-10m0cap"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthSm css-cuefkz-MuiContainer-root"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter MuiTypography-gutterBottom css-10759ka-MuiTypography-root"
+          >
+            #1 NFT Marketplace in Australia
+          </h1>
+          <p
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter MuiTypography-paragraph css-17rfbpd-MuiTypography-root"
+          >
+            Do you want to connect your crypto wallet, list your existing NFTs, create and mint your own NFTs for free? We have all these features covered for you!
+          </p>
+          <div
+            class="css-d1ev6n-MuiStack-root"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+              data-testid="main-cta-btn"
+              tabindex="0"
+              type="button"
+            >
+              Explore more NFTs
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              data-testid="secondary-cta-btn"
+              tabindex="0"
+              type="button"
+            >
+              Signup Now
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+        width="lg"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-10m0cap"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthSm css-cuefkz-MuiContainer-root"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter MuiTypography-gutterBottom css-10759ka-MuiTypography-root"
+        >
+          #1 NFT Marketplace in Australia
+        </h1>
+        <p
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter MuiTypography-paragraph css-17rfbpd-MuiTypography-root"
+        >
+          Do you want to connect your crypto wallet, list your existing NFTs, create and mint your own NFTs for free? We have all these features covered for you!
+        </p>
+        <div
+          class="css-d1ev6n-MuiStack-root"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
+            data-testid="main-cta-btn"
+            tabindex="0"
+            type="button"
+          >
+            Explore more NFTs
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+            data-testid="secondary-cta-btn"
+            tabindex="0"
+            type="button"
+          >
+            Signup Now
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+      width="lg"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
