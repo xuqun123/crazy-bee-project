@@ -30,8 +30,10 @@ A user-facing frontend web application for "Crazy Bee" project.
 
 ## How to Run Unit Tests
 
-TODO...
+- To run all unit tests at once: `npm test`
+- To run a single unit test file: `npm run test TEST_FILE_RELATIVE_PATH_HERE` (e.g., `npm run test src/tests/pages/HomePage.test.js`)
 
 ## How to Check Testing Coverage
 
-TODO...
+- `npm run test-with-coverage` to run all tests and generate a new coverage report.
+- open `coverage/lcov-report/index.html` in a browser to see the code coverage in details.
