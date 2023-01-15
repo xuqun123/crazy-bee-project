@@ -1,5 +1,5 @@
 const StatusCodes = require("http-status-codes");
-const NFTCollectionRepo = require("../repos/nftCollection");
+const nftCollectionRepo = require("../repos/nftCollection");
 const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 
 // get NFTCollections
@@ -8,7 +8,8 @@ const getNFTCollections = (req, res) => {
   let payload = { name: query?.name };
   if (query?.limit) payload = { ...payload, limit: query.limit };
 
-  NFTCollectionRepo.getMany(payload)
+  nftCollectionRepo
+    .getMany(payload)
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
@@ -18,7 +19,8 @@ const getNFTCollection = (req, res) => {
   const params = req.params;
   const query = req.query;
 
-  NFTCollectionRepo.getOne({ _id: params?.id, name: query?.name })
+  nftCollectionRepo
+    .getOne({ _id: params?.id, name: query?.name })
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
@@ -31,7 +33,8 @@ const createNFTCollection = (req, res) => {
     return res.status(BAD_REQUEST).json({ error: "missing nftCollection params" });
   }
 
-  NFTCollectionRepo.create(nftCollection)
+  nftCollectionRepo
+    .create(nftCollection)
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
@@ -39,26 +42,24 @@ const createNFTCollection = (req, res) => {
 // update a NFTCollection
 const updateNFTCollection = (req, res) => {
   const { nftCollection } = req.body || {};
-  const id = req.params?.id;
+  const id = req.params.id;
 
-  if (!nftCollection || !id) {
+  if (!nftCollection) {
     return res.status(BAD_REQUEST).json({ error: "missing nftCollection params" });
   }
 
-  NFTCollectionRepo.update(id, nftCollection)
+  nftCollectionRepo
+    .update(id, nftCollection)
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 
 // delete a NFTCollection
 const deleteNFTCollection = (req, res) => {
-  const id = req.params?.id;
+  const id = req.params.id;
 
-  if (!id) {
-    return res.status(BAD_REQUEST).json({ error: "missing nftCollection params" });
-  }
-
-  NFTCollectionRepo.delete(id)
+  nftCollectionRepo
+    .delete(id)
     .then((data) => res.status(OK).json({ data }))
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };

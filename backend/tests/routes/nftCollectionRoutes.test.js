@@ -28,9 +28,11 @@ describe("nftCollectionsRoutes", function () {
       });
 
       it("returns nftCollections", async function () {
-        const response = await request(app).get(baseUrl).set("Accept", "application/json");
+        const response = await request(app)
+          .get(`${baseUrl}?limit=10`)
+          .set("Accept", "application/json");
 
-        expect(nftCollectionRepoStub.calledWith({ name: undefined })).to.equal(true);
+        expect(nftCollectionRepoStub.calledWith({ name: undefined, limit: "10" })).to.equal(true);
         expect(response.statusCode).to.equal(200);
         expect(response.body.data).to.deep.equal(
           nftCollections.map((nftCollection) => convertPublishedAtToString(nftCollection))
@@ -128,7 +130,7 @@ describe("nftCollectionsRoutes", function () {
         nftCollectionRepoStub = sinon.stub(nftCollectionRepo, "create").rejects(error);
       });
 
-      it("returns an error message if there's a request error", async function () {
+      it("returns an error message if 'nftCollection' payload is not provided", async function () {
         const payload = { invalid: "payload" };
         const response = await request(app)
           .post(baseUrl)
@@ -140,6 +142,20 @@ describe("nftCollectionsRoutes", function () {
         expect(response.statusCode).to.equal(400);
         expect(response.body.data).to.be.undefined;
         expect(response.body.error).to.equal("missing nftCollection params");
+      });
+
+      it("returns an error message if there's a request error", async function () {
+        const payload = { nftCollection };
+        const response = await request(app)
+          .post(baseUrl)
+          .send(payload)
+          .set("Content-Type", "application/json")
+          .set("Accept", "application/json");
+
+        expect(nftCollectionRepoStub.called).to.equal(true);
+        expect(response.statusCode).to.equal(400);
+        expect(response.body.data).to.be.undefined;
+        expect(response.body.error).to.equal(error.message);
       });
     });
   });
@@ -178,7 +194,7 @@ describe("nftCollectionsRoutes", function () {
         nftCollectionRepoStub = sinon.stub(nftCollectionRepo, "update").rejects(error);
       });
 
-      it("returns an error message if there's a request error", async function () {
+      it("returns an error message if 'nftCollection' payload is not provided", async function () {
         const payload = { invalid: "payload" };
         const response = await request(app)
           .patch(`${baseUrl}/${nftCollection._id}`)
@@ -190,6 +206,20 @@ describe("nftCollectionsRoutes", function () {
         expect(response.statusCode).to.equal(400);
         expect(response.body.data).to.be.undefined;
         expect(response.body.error).to.equal("missing nftCollection params");
+      });
+
+      it("returns an error message if there's a request error", async function () {
+        const payload = { nftCollection };
+        const response = await request(app)
+          .patch(`${baseUrl}/${nftCollection._id}`)
+          .send(payload)
+          .set("Content-Type", "application/json")
+          .set("Accept", "application/json");
+
+        expect(nftCollectionRepoStub.called).to.equal(true);
+        expect(response.statusCode).to.equal(400);
+        expect(response.body.data).to.be.undefined;
+        expect(response.body.error).to.equal(error.message);
       });
     });
   });

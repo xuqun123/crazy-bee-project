@@ -16,7 +16,7 @@ const createFakeNFTCollection = (withId = false) =>
   omitBy(
     {
       // userId: faker.datatype.uuid(),
-      _id: withId ? faker.datatype.uuid() : null,
+      _id: withId ? faker.database.mongodbObjectId() : null,
       name: faker.lorem.words(6),
       summary: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),

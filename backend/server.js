@@ -1,5 +1,4 @@
 require("dotenv").config();
-// require("./dbConnect");
 require("./mongooseConnect");
 const express = require("express");
 const cors = require("cors");

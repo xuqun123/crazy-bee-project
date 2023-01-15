@@ -17,7 +17,7 @@ const getOne = async ({ name, _id }) => {
 /**
  * Get multiple nftCollections
  */
-const getMany = async ({ name, _id, limit = DEFAULT_RESULTS_LIMIT }) => {
+const getMany = async ({ name, limit = DEFAULT_RESULTS_LIMIT }) => {
   let filter = {};
   if (name) filter = { ...filter, name };
 
