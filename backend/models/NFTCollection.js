@@ -20,7 +20,7 @@ const NFTCollectionSchema = new Schema(
     updatedAt: { type: Date },
     publishedAt: { type: Date },
   },
-  { timestamps: { createdAt: "created_at", updatedAt: "updated_at" } }
+  { timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" } }
 );
 NFTCollectionSchema.plugin(uniqueValidator);
 
