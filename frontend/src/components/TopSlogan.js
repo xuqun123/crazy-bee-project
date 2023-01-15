@@ -25,8 +25,16 @@ function TopSlogan({ header, summary, mainCTAText, secondaryCTA }) {
           </Typography>
         )}
         <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
-          {mainCTAText && <Button variant="contained">{mainCTAText}</Button>}
-          {secondaryCTA && <Button variant="outlined">{secondaryCTA}</Button>}
+          {mainCTAText && (
+            <Button data-testid="main-cta-btn" variant="contained">
+              {mainCTAText}
+            </Button>
+          )}
+          {secondaryCTA && (
+            <Button data-testid="secondary-cta-btn" variant="outlined">
+              {secondaryCTA}
+            </Button>
+          )}
         </Stack>
       </Container>
     </Box>
