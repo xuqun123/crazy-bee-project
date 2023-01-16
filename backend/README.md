@@ -1,5 +1,7 @@
 # Crazy Bee Backend
 
+![Coverage](./coverage/badges.svg)
+
 ## Prerequisite
 
 1. Please ensure `Nodejs`(>= v18.0.0) and `npm`(>=.0.0) have been installed.
