@@ -49,10 +49,6 @@
     "passport-local": "^1.0.0",
     "request": "^2.88.2"
   },
-  "pre-commit": [
-    "test-with-coverage",
-    "make-coverage-badge"
-  ],
   "devDependencies": {
     "eslint": "^8.32.0",
     "husky": "^8.0.3",

@@ -1,5 +1,7 @@
 # Crazy Bee Frontend
 
+![Coverage](./coverage-badge.svg)
+
 A user-facing frontend web application for "Crazy Bee" project.
 
 ## Prerequisite
