@@ -1,11 +1,46 @@
+require("dotenv").config();
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const LocalStrategy = require("passport-local").Strategy;
 const { UserModel } = require("../models/User");
+const { omit } = require("lodash");
 
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
 
+// strategy for user signup with email and password
+passport.use(
+  "local-signup",
+  new LocalStrategy(
+    {
+      usernameField: "email",
+      passwordField: "password",
+      passReqToCallback: true,
+    },
+    (req, email, password, callback) => {
+      // check if the user trying to login already exists in DB with the given email
+      return UserModel.findOne({ email })
+        .then((user) => {
+          if (user) {
+            return callback(null, false, { message: "The user email has been taken already." });
+          } else {
+            const userAttributes = Object.keys(UserModel.schema.obj);
+            const payload = {};
+            userAttributes.forEach((key) => {
+              if (req.body.hasOwnProperty(key)) payload[key] = req.body[key];
+            });
+
+            UserModel.create(payload)
+              .then((data) => callback(null, omit(data.toJSON(), ["password"])))
+              .catch((err) => callback(err));
+          }
+        })
+        .catch((err) => callback(err));
+    }
+  )
+);
+
+// strategy for user login with email and password
 passport.use(
   new LocalStrategy(
     {
@@ -13,7 +48,6 @@ passport.use(
       passwordField: "password",
     },
     (email, password, callback) => {
-      //this one is typically a DB call. Assume that the returned user object is pre-formatted and ready for storing in JWT
       return UserModel.findOne({ email, password })
         .then((user) => {
           if (!user) {
@@ -28,11 +62,12 @@ passport.use(
   )
 );
 
+// strategy for user authentication with a valid JWT token
 passport.use(
   new JWTStrategy(
     {
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
-      secretOrKey: "your_jwt_secret",
+      secretOrKey: process.env.SERVER_JWT_SECRET,
     },
     function (jwtPayload, callback) {
       return UserModel.findById(jwtPayload.id)

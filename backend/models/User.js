@@ -34,6 +34,6 @@ const UserSchema = new Schema(
   { timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" } }
 );
 
-const UserModel = model("user", UserSchema);
+const UserModel = model("User", UserSchema);
 
 module.exports = { UserModel, UserSchema };
