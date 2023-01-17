@@ -2,5 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 cd ./backend
-npm test-with-coverage
-npm make-coverage-badge
+npm run test-with-coverage
+npm run make-coverage-badge
+git add ./coverage
