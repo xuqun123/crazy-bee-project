@@ -9,7 +9,8 @@
     "test-with-coverage": "nyc --reporter=lcov --reporter=text mocha tests/**/** --reporter spec",
     "make-coverage-badge": "lcov-badge2 coverage/lcov.info -o ./coverage/badges.svg",
     "seed-nft-collections-data": "node seeders/nftCollections.js",
-    "seed-users-data": "node seeders/users.js"
+    "seed-users-data": "node seeders/users.js",
+    "prepare": "cd .. && husky install backend/.husky"
   },
   "repository": {
     "type": "git",
@@ -48,17 +49,17 @@
     "passport-local": "^1.0.0",
     "request": "^2.88.2"
   },
-  "devDependencies": {
-    "eslint": "^8.32.0",
-    "mongodb-memory-server": "^8.11.1",
-    "nodemon": "^2.0.20",
-    "pre-commit": "^1.2.2",
-    "prettier": "^2.8.2",
-    "sinon": "^15.0.1",
-    "supertest": "^6.3.3"
-  },
   "pre-commit": [
     "test-with-coverage",
     "make-coverage-badge"
-  ]
+  ],
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "husky": "^8.0.3",
+    "mongodb-memory-server": "^8.11.1",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.8.2",
+    "sinon": "^15.0.1",
+    "supertest": "^6.3.3"
+  }
 }
