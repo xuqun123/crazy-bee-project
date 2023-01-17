@@ -28,6 +28,11 @@ const UserSchema = new Schema(
     dob: {
       type: Date,
     },
+    emailVerified: {
+      type: Boolean,
+      required: true,
+      default: false,
+    },
     createdAt: { type: Date },
     updatedAt: { type: Date },
   },

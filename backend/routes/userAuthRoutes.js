@@ -15,7 +15,6 @@ router.post("/signup", function (req, res) {
       });
     }
 
-    console.log(user);
     return res.json({ user });
   })(req, res);
 });

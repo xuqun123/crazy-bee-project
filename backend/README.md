@@ -32,6 +32,8 @@
 
 - To feed `NFT collections` data, run the following: `npm run seed-nft-collections-data`
 
+- To feed `users` data, run the following: `npm run seed-users-data`
+
 ## How to Run Unit Tests
 
 - To run all unit tests at once: `npm test`

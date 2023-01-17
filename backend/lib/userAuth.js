@@ -2,8 +2,9 @@ require("dotenv").config();
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const LocalStrategy = require("passport-local").Strategy;
-const { UserModel } = require("../models/User");
 const { omit } = require("lodash");
+const { UserModel } = require("../models/User");
+const userRepo = require("../repos/User");
 
 const JWTStrategy = passportJWT.Strategy;
 const ExtractJWT = passportJWT.ExtractJwt;
@@ -19,7 +20,8 @@ passport.use(
     },
     (req, email, password, callback) => {
       // check if the user trying to login already exists in DB with the given email
-      return UserModel.findOne({ email })
+      return userRepo
+        .getByEmail(email)
         .then((user) => {
           if (user) {
             return callback(null, false, { message: "The user email has been taken already." });
@@ -30,7 +32,8 @@ passport.use(
               if (req.body.hasOwnProperty(key)) payload[key] = req.body[key];
             });
 
-            UserModel.create(payload)
+            userRepo
+              .create(payload)
               .then((data) => callback(null, omit(data.toJSON(), ["password"])))
               .catch((err) => callback(err));
           }
@@ -48,7 +51,8 @@ passport.use(
       passwordField: "password",
     },
     (email, password, callback) => {
-      return UserModel.findOne({ email, password })
+      return userRepo
+        .getByEmailAndPassword({ email, password })
         .then((user) => {
           if (!user) {
             return callback(null, false, { message: "Incorrect user email or password." });
@@ -70,7 +74,8 @@ passport.use(
       secretOrKey: process.env.SERVER_JWT_SECRET,
     },
     function (jwtPayload, callback) {
-      return UserModel.findById(jwtPayload.id)
+      return userRepo
+        .getById(jwtPayload.id)
         .then((user) => {
           return callback(null, user);
         })
