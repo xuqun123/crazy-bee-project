@@ -7,10 +7,9 @@
     "start": "nodemon ./server.js",
     "test": "mocha tests/**/** --reporter spec",
     "test-with-coverage": "nyc --reporter=lcov --reporter=text mocha tests/**/** --reporter spec",
-    "make-coverage-badge": "lcov-badge2 ./coverage/lcov.info -o ./coverage/badges.svg",
+    "make-coverage-badge": "lcov-badge2 ./coverage/lcov.info -o ./coverage-badge.svg",
     "seed-nft-collections-data": "node seeders/nftCollections.js",
-    "seed-users-data": "node seeders/users.js",
-    "prepare": "cd .. && husky install backend/.husky"
+    "seed-users-data": "node seeders/users.js"
   },
   "repository": {
     "type": "git",
@@ -51,7 +50,6 @@
   },
   "devDependencies": {
     "eslint": "^8.32.0",
-    "husky": "^8.0.3",
     "mongodb-memory-server": "^8.11.1",
     "nodemon": "^2.0.20",
     "prettier": "^2.8.2",

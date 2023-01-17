@@ -30,7 +30,6 @@
     "test": "react-scripts test",
     "test-with-coverage": "react-scripts test --coverage --watchAll=false",
     "make-coverage-badge": "lcov-badge2 ./coverage/lcov.info -o ./coverage-badge.svg",
-    "prepare": "cd .. && husky install frontend/.husky",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -68,8 +67,5 @@
         "statements": 90
       }
     }
-  },
-  "devDependencies": {
-    "husky": "^8.0.3"
   }
 }

@@ -1,6 +1,6 @@
 # Crazy Bee Backend
 
-![Coverage](./coverage/badges.svg)
+![Coverage](./coverage-badge.svg)
 
 ## Prerequisite
 

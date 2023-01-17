@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-cd ./frontend
-npm run test-with-coverage
-npm run make-coverage-badge
-git add ./coverage
