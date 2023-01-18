@@ -12,10 +12,10 @@ const sampleImages = [
   faker.image.food(),
 ];
 
-const createFakeNFTCollection = (withId = false) =>
+const createFakeNFTCollection = (withId = false, userId = null) =>
   omitBy(
     {
-      // userId: faker.datatype.uuid(),
+      userId,
       _id: withId ? faker.database.mongodbObjectId() : null,
       name: faker.lorem.words(6),
       summary: faker.lorem.sentence(),

@@ -24,13 +24,17 @@ describe("NFTCollection", function () {
 
   describe("getMany", function () {
     it("retrieves multipe nftCollections from DB", async function () {
-      const nftCollections = await nftCollectionRepo.getMany({
+      const [nftCollections, totalCount, offset, loadMore] = await nftCollectionRepo.getMany({
         name: existingNftCollection.name,
         limit: 1,
       });
 
       expect(nftCollections).to.be.a("array");
       expect(nftCollections.length).to.equal(1);
+      expect(totalCount).to.eq(1);
+      expect(offset).to.eq(0);
+      expect(loadMore).to.eq(false);
+
       expect(nftCollections[0]._id.toString()).to.eq(existingNftCollection._id.toString());
       expect(nftCollections[0].name).to.eq(existingNftCollection.name);
     });
