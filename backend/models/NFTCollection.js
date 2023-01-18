@@ -1,8 +1,5 @@
-const { mongoose, model } = require("mongoose");
+const { model, Schema } = require("mongoose");
 const uniqueValidator = require("mongoose-unique-validator");
-
-const Schema = mongoose.Schema;
-const ObjectId = Schema.ObjectId;
 
 const collectionTypes = ["image", "video", "audio", "document"];
 const statuses = ["draft", "published", "archived"];

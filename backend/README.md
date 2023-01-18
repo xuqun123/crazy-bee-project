@@ -1,5 +1,7 @@
 # Crazy Bee Backend
 
+![Coverage](./coverage-badge.svg)
+
 ## Prerequisite
 
 1. Please ensure `Nodejs`(>= v18.0.0) and `npm`(>=.0.0) have been installed.
@@ -30,10 +32,12 @@
 
 - To feed `NFT collections` data, run the following: `npm run seed-nft-collections-data`
 
+- To feed `users` data, run the following: `npm run seed-users-data`
+
 ## How to Run Unit Tests
 
 - To run all unit tests at once: `npm test`
-- To run a single unit test file: `npm run test TEST_FILE_RELATIVE_PATH_HERE` (e.g., `npm run test tests/routes/nftCollectionRoutes.test.js`)
+- To run a single unit test file: `npm run test-single TEST_FILE_RELATIVE_PATH_HERE` (e.g., `npm run test-single tests/routes/nftCollectionRoutes.test.js`)
 
 ## How to Check Testing Coverage
 

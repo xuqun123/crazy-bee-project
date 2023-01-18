@@ -28,9 +28,33 @@ const createFakeNFTCollection = (withId = false) =>
     isNil
   );
 
-const convertPublishedAtToString = (fakeNFTCollection) => ({
-  ...fakeNFTCollection,
-  publishedAt: fakeNFTCollection.publishedAt.toISOString(),
-});
+const createFakeUser = (withId = false) =>
+  omitBy(
+    {
+      _id: withId ? faker.database.mongodbObjectId() : null,
+      email: faker.internet.email(),
+      password: faker.internet.password(),
+      username: faker.internet.userName(),
+      firstName: faker.name.firstName(),
+      lastName: faker.name.lastName(),
+      dob: faker.date.between("1980-01-01", "2023-01-01"),
+    },
+    isNil
+  );
 
-module.exports = { createFakeNFTCollection, sampleImages, convertPublishedAtToString };
+const convertTimestampToString = (entity) => {
+  const result = Object.assign({}, entity);
+
+  Object.keys(result).forEach((key) => {
+    if (result[key] instanceof Date) result[key] = result[key].toISOString();
+  });
+
+  return result;
+};
+
+module.exports = {
+  createFakeNFTCollection,
+  createFakeUser,
+  sampleImages,
+  convertTimestampToString,
+};

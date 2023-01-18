@@ -1,19 +1,12 @@
 const expect = require("chai").expect;
-const testDBHandler = require("../helpers/test-db-handler");
-const { createFakeNFTCollection, convertPublishedAtToString } = require("../../lib/fakeDataHelper");
-const nftCollectionRepo = require("../../repos/nftCollection");
+const { createFakeNFTCollection, convertTimestampToString } = require("../../lib/fakeDataHelper");
+const nftCollectionRepo = require("../../repos/NFTCollection");
 
-describe("nftCollection", function () {
+describe("NFTCollection", function () {
   let existingNftCollection;
 
   before(async () => {
-    await testDBHandler.connect();
     existingNftCollection = await nftCollectionRepo.create(createFakeNFTCollection());
-  });
-
-  after(async () => {
-    await testDBHandler.clearDB();
-    await testDBHandler.closeDB();
   });
 
   describe("getOne", function () {

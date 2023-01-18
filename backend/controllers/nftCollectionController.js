@@ -1,5 +1,5 @@
 const StatusCodes = require("http-status-codes");
-const nftCollectionRepo = require("../repos/nftCollection");
+const nftCollectionRepo = require("../repos/NFTCollection");
 const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 
 // get NFTCollections
