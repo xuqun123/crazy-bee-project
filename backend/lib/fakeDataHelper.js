@@ -42,14 +42,19 @@ const createFakeUser = (withId = false) =>
     isNil
   );
 
-const convertPublishedAtToString = (fakeNFTCollection) => ({
-  ...fakeNFTCollection,
-  publishedAt: fakeNFTCollection.publishedAt.toISOString(),
-});
+const convertTimestampToString = (entity) => {
+  const result = Object.assign({}, entity);
+
+  Object.keys(result).forEach((key) => {
+    if (result[key] instanceof Date) result[key] = result[key].toISOString();
+  });
+
+  return result;
+};
 
 module.exports = {
   createFakeNFTCollection,
   createFakeUser,
   sampleImages,
-  convertPublishedAtToString,
+  convertTimestampToString,
 };

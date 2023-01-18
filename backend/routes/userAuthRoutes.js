@@ -29,7 +29,7 @@ router.post("/login", function (req, res) {
 
     req.login(user, { session: false }, (err) => {
       if (err) {
-        res.send(err);
+        return res.json({ message: err?.message });
       }
 
       const { _id: id, email } = user;

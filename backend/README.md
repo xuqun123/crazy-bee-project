@@ -37,7 +37,7 @@
 ## How to Run Unit Tests
 
 - To run all unit tests at once: `npm test`
-- To run a single unit test file: `npm run test TEST_FILE_RELATIVE_PATH_HERE` (e.g., `npm run test tests/routes/nftCollectionRoutes.test.js`)
+- To run a single unit test file: `npm run test-single TEST_FILE_RELATIVE_PATH_HERE` (e.g., `npm run test-single tests/routes/nftCollectionRoutes.test.js`)
 
 ## How to Check Testing Coverage
 

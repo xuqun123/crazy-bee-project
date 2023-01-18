@@ -73,15 +73,13 @@ passport.use(
       jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
       secretOrKey: process.env.SERVER_JWT_SECRET,
     },
-    function (jwtPayload, callback) {
+    (jwtPayload, callback) => {
       return userRepo
         .getById(jwtPayload.id)
         .then((user) => {
           return callback(null, user);
         })
-        .catch((err) => {
-          return callback(err);
-        });
+        .catch((err) => callback(err));
     }
   )
 );

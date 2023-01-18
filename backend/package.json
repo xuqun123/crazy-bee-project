@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./server.js",
-    "test": "mocha tests/**/** --reporter spec",
-    "test-with-coverage": "nyc --all --reporter=lcov --reporter=text mocha tests/**/** --reporter spec",
+    "test": "mocha --file ./tests/setup.js tests/**/** --reporter spec",
+    "test-single": "mocha --file ./tests/setup.js --reporter spec",
+    "test-with-coverage": "nyc --all --no-cache --reporter=lcov --reporter=text mocha --file ./tests/setup.js tests/**/** --reporter spec",
     "make-coverage-badge": "lcov-badge2 ./coverage/lcov.info -o ./coverage-badge.svg",
     "seed-nft-collections-data": "node seeders/nftCollections.js",
     "seed-users-data": "node seeders/users.js"

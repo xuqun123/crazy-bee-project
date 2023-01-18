@@ -4,9 +4,9 @@ const expect = require("chai").expect;
 const sinon = require("sinon");
 const request = require("supertest");
 const { faker } = require("@faker-js/faker");
-const { createFakeNFTCollection, convertPublishedAtToString } = require("../../lib/fakeDataHelper");
+const { createFakeNFTCollection, convertTimestampToString } = require("../../lib/fakeDataHelper");
 const nftCollectionRoutes = require("../../routes/nftCollectionRoutes");
-const nftCollectionRepo = require("../../repos/nftCollection");
+const nftCollectionRepo = require("../../repos/NFTCollection");
 
 const baseUrl = "/api/nftCollections";
 const app = express();
@@ -21,7 +21,7 @@ describe("nftCollectionsRoutes", function () {
     if (nftCollectionRepoStub) nftCollectionRepoStub.restore();
   });
 
-  describe("Get nftCollections", function () {
+  describe("GET /api/nftCollections", function () {
     describe("200 response", function () {
       beforeEach(function () {
         nftCollectionRepoStub = sinon.stub(nftCollectionRepo, "getMany").resolves(nftCollections);
@@ -35,7 +35,7 @@ describe("nftCollectionsRoutes", function () {
         expect(nftCollectionRepoStub.calledWith({ name: undefined, limit: "10" })).to.equal(true);
         expect(response.statusCode).to.equal(200);
         expect(response.body.data).to.deep.equal(
-          nftCollections.map((nftCollection) => convertPublishedAtToString(nftCollection))
+          nftCollections.map((nftCollection) => convertTimestampToString(nftCollection))
         );
       });
     });
@@ -58,7 +58,7 @@ describe("nftCollectionsRoutes", function () {
     });
   });
 
-  describe("Get one nftCollection", function () {
+  describe("GET /api/nftCollections/:id", function () {
     describe("200 response", function () {
       beforeEach(function () {
         nftCollectionRepoStub = sinon.stub(nftCollectionRepo, "getOne").resolves(nftCollections[0]);
@@ -73,7 +73,7 @@ describe("nftCollectionsRoutes", function () {
           nftCollectionRepoStub.calledWith({ _id: nftCollections[0]._id, name: undefined })
         ).to.equal(true);
         expect(response.statusCode).to.equal(200);
-        expect(response.body.data).to.deep.equal(convertPublishedAtToString(nftCollections[0]));
+        expect(response.body.data).to.deep.equal(convertTimestampToString(nftCollections[0]));
       });
     });
 
@@ -99,7 +99,7 @@ describe("nftCollectionsRoutes", function () {
     });
   });
 
-  describe("Create one nftCollection", function () {
+  describe("POST /api/nftCollections", function () {
     const nftCollection = createFakeNFTCollection();
 
     describe("200 response", function () {
@@ -115,11 +115,11 @@ describe("nftCollectionsRoutes", function () {
           .set("Content-Type", "application/json")
           .set("Accept", "application/json");
 
-        expect(
-          nftCollectionRepoStub.calledWith(convertPublishedAtToString(nftCollection))
-        ).to.equal(true);
+        expect(nftCollectionRepoStub.calledWith(convertTimestampToString(nftCollection))).to.equal(
+          true
+        );
         expect(response.statusCode).to.equal(200);
-        expect(response.body.data).to.deep.equal(convertPublishedAtToString(nftCollection));
+        expect(response.body.data).to.deep.equal(convertTimestampToString(nftCollection));
       });
     });
 
@@ -160,7 +160,7 @@ describe("nftCollectionsRoutes", function () {
     });
   });
 
-  describe("Update one nftCollection", function () {
+  describe("PATCH /api/nftCollections/:id", function () {
     const nftCollection = createFakeNFTCollection(true);
 
     describe("200 response", function () {
@@ -179,11 +179,11 @@ describe("nftCollectionsRoutes", function () {
         expect(
           nftCollectionRepoStub.calledWith(
             nftCollection._id,
-            convertPublishedAtToString(nftCollection)
+            convertTimestampToString(nftCollection)
           )
         ).to.equal(true);
         expect(response.statusCode).to.equal(200);
-        expect(response.body.data).to.deep.equal(convertPublishedAtToString(nftCollection));
+        expect(response.body.data).to.deep.equal(convertTimestampToString(nftCollection));
       });
     });
 
@@ -224,7 +224,7 @@ describe("nftCollectionsRoutes", function () {
     });
   });
 
-  describe("Delete one nftCollection", function () {
+  describe("DELETE /api/nftCollections/:id", function () {
     const nftCollection = createFakeNFTCollection(true);
 
     describe("200 response", function () {
@@ -241,7 +241,7 @@ describe("nftCollectionsRoutes", function () {
 
         expect(nftCollectionRepoStub.calledWith(nftCollection._id)).to.equal(true);
         expect(response.statusCode).to.equal(200);
-        expect(response.body.data).to.deep.equal(convertPublishedAtToString(nftCollection));
+        expect(response.body.data).to.deep.equal(convertTimestampToString(nftCollection));
       });
     });
 
