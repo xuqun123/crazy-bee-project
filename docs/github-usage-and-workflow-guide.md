@@ -33,7 +33,8 @@ git checkout -b your-feature-branch-name-here
 
 - `git add .` to add all changes to a temp git store.
 - `git status` to check if everything is added properly.
-- `git commit -m "WITH YOUR COMMIT MESSAGE HERE"` to commit changes locally.
+- `git commit -m "WITH YOUR COMMIT MESSAGE HERE"` to commit changes locally with some "pre-commit" hooks (this will also run all existing unit tests, generate new coverage reports and coverage badges automatically).
+- Alternatively, `git commit -m "WITH YOUR COMMIT MESSAGE HERE" --no-verify` to commit changes locally and skip all those auto "pre-commit" hooks.
 - `git status` again to check if everything is committed properly.
 
 5. You can repeat step 3 and 4 to make more changes and commit more times.
