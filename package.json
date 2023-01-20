@@ -1,0 +1,27 @@
+{
+  "name": "crazy-bee-project",
+  "version": "1.0.0",
+  "description": "This is the home repo for 'Crazy Bee' project",
+  "directories": {
+    "docs": "docs",
+    "frontend": "frontend",
+    "backend": "backend"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install .husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuqun123/crazy-bee-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuqun123/crazy-bee-project/issues"
+  },
+  "homepage": "https://github.com/xuqun123/crazy-bee-project#readme",
+  "devDependencies": {
+    "husky": "^8.0.3"
+  }
+}
