@@ -1,6 +1,11 @@
 const expect = require("chai").expect;
-const { createFakeNFTCollection, convertTimestampToString } = require("../../lib/fakeDataHelper");
+const {
+  createFakeNFTCollection,
+  convertTimestampToString,
+  createFakeUser,
+} = require("../../lib/fakeDataHelper");
 const nftCollectionRepo = require("../../repos/NFTCollection");
+const userRepo = require("../../repos/User");
 
 describe("NFTCollection", function () {
   let existingNftCollection;
@@ -23,9 +28,19 @@ describe("NFTCollection", function () {
   });
 
   describe("getMany", function () {
+    let user, existingNftCollectionWithUserId;
+    beforeEach(async () => {
+      user = await userRepo.create(createFakeUser());
+      existingNftCollectionWithUserId = await nftCollectionRepo.create({
+        ...createFakeNFTCollection(),
+        userId: user._id,
+      });
+    });
+
     it("retrieves multipe nftCollections from DB", async function () {
       const [nftCollections, totalCount, offset, loadMore] = await nftCollectionRepo.getMany({
-        name: existingNftCollection.name,
+        name: existingNftCollectionWithUserId.name,
+        userId: user._id,
         limit: 1,
       });
 
@@ -35,8 +50,10 @@ describe("NFTCollection", function () {
       expect(offset).to.eq(0);
       expect(loadMore).to.eq(false);
 
-      expect(nftCollections[0]._id.toString()).to.eq(existingNftCollection._id.toString());
-      expect(nftCollections[0].name).to.eq(existingNftCollection.name);
+      expect(nftCollections[0]._id.toString()).to.eq(
+        existingNftCollectionWithUserId._id.toString()
+      );
+      expect(nftCollections[0].name).to.eq(existingNftCollectionWithUserId.name);
     });
   });
 
