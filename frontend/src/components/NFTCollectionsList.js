@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
-import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
-import moment from 'moment'
-
 import Skeleton from '@mui/material/Skeleton'
+import moment from 'moment'
+import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
+import { defaultNFTCollectionsLimit } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
   return (
@@ -29,26 +29,45 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList() {
+function NFTCollectionsList({ userId }) {
   const [nftCollections, setNFTCollections] = useState([])
+  const [loadMore, setLoadMore] = useState(false)
+  const [offset, setOffset] = useState(0)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+    loadData()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const loadData = (offset = 0) => {
+    let url = `/nftCollections?limit=${defaultNFTCollectionsLimit}&offset=${offset}`
+    if (userId) url = `${url}&userId=${userId}`
+
     axiosClient
-      .get('/nftCollections?limit=12')
+      .get(url)
       .then((response) => {
+        const { data, loadMore: loadMoreFlag, offset: offsetNumber } = response?.data
+
         setLoading(false)
-        setNFTCollections(response?.data?.data || [])
+        setOffset(offsetNumber)
+        setNFTCollections(nftCollections.concat(data))
+        setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
         setLoading(false)
         const message = `Get nftCollections data failed: ${error.message}`
         console.error(message)
       })
-  }, [])
+  }
+
+  const handleLoadMore = () => {
+    loadData(offset + defaultNFTCollectionsLimit)
+  }
 
   return (
     <Container sx={{ py: 0 }} width="lg">
+      <PageSearchBar />
       <Grid container spacing={4}>
         {loading ? (
           <LoadingSkeletons />
@@ -67,15 +86,20 @@ function NFTCollectionsList() {
                   <Typography>{nftCollection.summary}</Typography>
                   <Chip sx={{ mt: 1 }} label={nftCollection.collectionType} />
                 </CardContent>
-                <CardActions>
+                {/* <CardActions>
                   <Button size="small">View</Button>
                   <Button size="small">Edit</Button>
-                </CardActions>
+                </CardActions> */}
               </Card>
             </Grid>
           ))
         )}
       </Grid>
+      {loadMore && (
+        <Button variant="contained" sx={{ mt: 4 }} onClick={handleLoadMore}>
+          Load More
+        </Button>
+      )}
     </Container>
   )
 }
