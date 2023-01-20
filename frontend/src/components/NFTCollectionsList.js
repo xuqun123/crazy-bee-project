@@ -29,7 +29,7 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList({ userId }) {
+function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
   const [nftCollections, setNFTCollections] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
@@ -67,7 +67,7 @@ function NFTCollectionsList({ userId }) {
 
   return (
     <Container sx={{ py: 0 }} width="lg">
-      <PageSearchBar />
+      {enableSearch && <PageSearchBar />}
       <Grid container spacing={4}>
         {loading ? (
           <LoadingSkeletons />
@@ -95,7 +95,7 @@ function NFTCollectionsList({ userId }) {
           ))
         )}
       </Grid>
-      {loadMore && (
+      {enableLoadMore && loadMore && (
         <Button variant="contained" sx={{ mt: 4 }} onClick={handleLoadMore}>
           Load More
         </Button>

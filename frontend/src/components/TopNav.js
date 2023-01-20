@@ -15,7 +15,7 @@ function TopNav() {
       <Toolbar sx={{ background: '#faae15' }}>
         <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
           <Grid item sx={{ display: 'flex', alignItems: 'center' }} md={4}>
-            <img src="./logo.jpeg" alt="logo" width={50} style={{ marginRight: '10px' }} />
+            <img src="/logo.jpeg" alt="logo" width={50} style={{ marginRight: '10px' }} />
             <Typography variant="h5" color="inherit" fontWeight={'500'} noWrap>
               Crazy Bee
             </Typography>

@@ -38,6 +38,10 @@ const createFakeUser = (withId = false) =>
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       dob: faker.date.between("1980-01-01", "2023-01-01"),
+      bio: faker.lorem.paragraph(6),
+      walletAddresses: [faker.datatype.uuid()],
+      avatarUrl: faker.image.avatar(500, 500),
+      bannerImageUrl: faker.image.nature(1024, 200),
     },
     isNil
   );

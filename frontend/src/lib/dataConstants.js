@@ -1,3 +1,3 @@
-const defaultNFTCollectionsLimit = 7
+const defaultNFTCollectionsLimit = 8
 
 export { defaultNFTCollectionsLimit }

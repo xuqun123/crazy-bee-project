@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const nftCollectionController = require("../controllers").nftCollectionController;
+const nftCollectionController = require("../controllers/nftCollectionController");
 
 router.get("/", (req, res) => {
   nftCollectionController.getNFTCollections(req, res);

@@ -10,31 +10,19 @@
 			"item": [
 				{
 					"name": "Get User Profile Data",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzU1MWUwY2E3NzAzN2M1YThhMDE3ZiIsImVtYWlsIjoiRWRhNzdAZ21haWwuY29tIiwiaWF0IjoxNjczOTkzODUwLCJleHAiOjE2NzQwODAyNTB9.tyM_i_vNedXg4qQ7c2lxiSo2a0veXixdSZmoAQvj6nE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2E3NjhlY2FmZDNmOTMzZGRjMWQ4ZCIsImVtYWlsIjoiRWRhN3M3Y2EyMjJzYUBhYmNjZC5jb20iLCJpYXQiOjE2NzQyMTM0MDgsImV4cCI6MTY3NDI5OTgwOH0.pOrZHiSKoqT0P0RjtOKi1HwwIQAidfuWdwZUGoh7rwg",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"Heidi_Quitzon@yahoo.com\",\n    \"password\": \"N2TCDgS7PLFAwiB\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:3000/api/users/me",
 							"protocol": "http",
@@ -128,7 +116,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"Eda77@gmail.com\",\n    \"password\": \"lknX_NndRFaLnFa\"\n}",
+							"raw": "{\n    \"email\": \"Eda7s7ca222sa@abccd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +214,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"Eda7s7aa@abcd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\",\n    \"username\": \"abc1234\",\n    \"dob\": \"2021-01-01\",\n    \"firstName\": \"Dick\",\n    \"lastName\": \"Smith\"\n}",
+							"raw": "{\n    \"email\": \"Eda7s7ca222s1a@abccd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\",\n    \"username\": \"abc1122\",\n    \"dob\": \"2021-01-01\",\n    \"firstName\": \"Dick\",\n    \"lastName\": \"Smith\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -313,6 +301,201 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"user\": {\n        \"email\": \"Eda7s7aa@abcd.com\",\n        \"username\": \"abc1234\",\n        \"firstName\": \"Dick\",\n        \"lastName\": \"Smith\",\n        \"dob\": \"2021-01-01T00:00:00.000Z\",\n        \"_id\": \"63c69ffb110f2000d481fe70\",\n        \"createdAt\": \"2023-01-17T13:17:47.821Z\",\n        \"updatedAt\": \"2023-01-17T13:17:47.821Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"63c551e0ca77037c5a8a017f"
+							]
+						},
+						"description": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f"
+					},
+					"response": [
+						{
+							"name": "Get One User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"63c551e0ca77037c5a8a017f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-expG9XwSOmI0wa4xk4l2kPpbpC4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Jan 2023 11:14:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"emailVerified\": false,\n        \"_id\": \"63c551e0ca77037c5a8a017f\",\n        \"email\": \"Eda77@gmail.com\",\n        \"username\": \"Roxane24\",\n        \"firstName\": \"Casimir\",\n        \"lastName\": \"aaa\",\n        \"dob\": \"1987-11-25T19:09:22.834Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-16T13:32:16.716Z\",\n        \"updatedAt\": \"2023-01-20T11:13:56.020Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update One User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzU1MWUwY2E3NzAzN2M1YThhMDE3ZiIsImVtYWlsIjoiRWRhNzdAZ21haWwuY29tIiwiaWF0IjoxNjc0MjEyMzAxLCJleHAiOjE2NzQyOTg3MDF9.ZhDy3V3RC8FeoFOZLcQTQiUMwP7tjHjOGHkPw8ZQGmI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"password\": \"N2TCDgS7PLFAwiB\",\n        \"lastName\": \"aaa\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"63c551e0ca77037c5a8a017f"
+							]
+						},
+						"description": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f"
+					},
+					"response": [
+						{
+							"name": "Update One User",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"password\": \"N2TCDgS7PLFAwiB\",\n        \"lastName\": \"aaa\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"63c551e0ca77037c5a8a017f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-r1tIljWAy7Qz6AFbiAKvBjxWkqA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Jan 2023 11:15:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"emailVerified\": false,\n        \"_id\": \"63c551e0ca77037c5a8a017f\",\n        \"email\": \"Eda77@gmail.com\",\n        \"username\": \"Roxane24\",\n        \"firstName\": \"Casimir\",\n        \"lastName\": \"aaa\",\n        \"dob\": \"1987-11-25T19:09:22.834Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-16T13:32:16.716Z\",\n        \"updatedAt\": \"2023-01-20T11:15:36.637Z\"\n    }\n}"
 						}
 					]
 				}
