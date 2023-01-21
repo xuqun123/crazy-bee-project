@@ -143,34 +143,26 @@ describe("userRoutes", function () {
       });
     });
 
-    describe("400 response", function () {
-      it("returns an error message jwt token user.id is not equal to the request param user id", async function () {
-        const error = new Error("update call is failed");
+    it("returns an error message jwt token user.id is not equal to the request param user id", async function () {
+      const response = await request(app)
+        .patch(`${baseUrl}/${existingUser._id}-123`)
+        .send(payload)
+        .set("Accept", "application/json")
+        .set("Authorization", `bearer ${jwtToken}`);
 
-        const response = await request(app)
-          .patch(`${baseUrl}/${existingUser._id}-123`)
-          .send(payload)
-          .set("Accept", "application/json")
-          .set("Authorization", `bearer ${jwtToken}`);
-
-        expect(response.statusCode).to.equal(401);
-        expect(response.error).to.equal("you cannot update other users");
-      });
+      expect(response.statusCode).to.equal(401);
+      expect(response.body.error).to.equal("you cannot update other users");
     });
 
-    describe("400 response", function () {
-      it("returns an error message if user payload is not provided", async function () {
-        const error = new Error("update call is failed");
+    it("returns an error message if user payload is not provided", async function () {
+      const response = await request(app)
+        .patch(`${baseUrl}/${existingUser._id}`)
+        .send({ username: "123abc" })
+        .set("Accept", "application/json")
+        .set("Authorization", `bearer ${jwtToken}`);
 
-        const response = await request(app)
-          .patch(`${baseUrl}/${existingUser._id}`)
-          .send({ username: "123abc" })
-          .set("Accept", "application/json")
-          .set("Authorization", `bearer ${jwtToken}`);
-
-        expect(response.statusCode).to.equal(400);
-        expect(response.error).to.equal("missing user params");
-      });
+      expect(response.statusCode).to.equal(400);
+      expect(response.body.error).to.equal("missing user params");
     });
   });
 });

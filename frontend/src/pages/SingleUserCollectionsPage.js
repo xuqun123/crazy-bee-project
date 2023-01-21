@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
-import Container from '@mui/material/Container'
 import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
 import TokenIcon from '@mui/icons-material/Token'
+import CircularProgress from '@mui/material/CircularProgress'
 import NFTCollectionsList from '../components/NFTCollectionsList'
 import axiosClient from '../lib/axiosClient'
 
@@ -30,6 +30,7 @@ function SingleUserCollectionsPage() {
 
   return (
     <>
+      {loading && <CircularProgress />}
       {user && (
         <>
           <img src={user.bannerImageUrl} alt="banner" width="100%" height="300px" />

@@ -22,7 +22,7 @@ Object {
               >
                 <img
                   alt="logo"
-                  src="./logo.jpeg"
+                  src="/logo.jpeg"
                   style="margin-right: 10px;"
                   width="50"
                 />
@@ -193,7 +193,7 @@ Object {
             >
               <img
                 alt="logo"
-                src="./logo.jpeg"
+                src="/logo.jpeg"
                 style="margin-right: 10px;"
                 width="50"
               />

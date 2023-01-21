@@ -17,12 +17,12 @@ const updateUser = (req, res) => {
   const { user } = req.body || {};
   const id = req.params.id;
 
-  if (req.user._id != id) {
-    return res.status(UNAUTHORIZED).json({ error: "you cannot update other users" });
-  }
-
   if (!user) {
     return res.status(BAD_REQUEST).json({ error: "missing user params" });
+  }
+
+  if (req?.user?._id != id) {
+    return res.status(UNAUTHORIZED).json({ error: "you cannot update other users" });
   }
 
   userRepo

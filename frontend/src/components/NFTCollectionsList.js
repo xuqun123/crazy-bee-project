@@ -96,7 +96,12 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
         )}
       </Grid>
       {enableLoadMore && loadMore && (
-        <Button variant="contained" sx={{ mt: 4 }} onClick={handleLoadMore}>
+        <Button
+          data-testid="load-more-btn"
+          variant="contained"
+          sx={{ mt: 4 }}
+          onClick={handleLoadMore}
+        >
           Load More
         </Button>
       )}
