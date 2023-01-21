@@ -13,7 +13,7 @@ mongoose
     console.log("Connected to MongoDB!\n");
 
     const users = await UserModel.find({}).limit(10).exec();
-    const fakeData = Array.from({ length: 50 }, (_) => {
+    const fakeData = Array.from({ length: 20 }, (_) => {
       const pickedUser = sample(users);
       return createFakeNFTCollection(false, pickedUser._id);
     });
