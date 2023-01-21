@@ -5,12 +5,18 @@ const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 // get NFTCollections
 const getNFTCollections = (req, res) => {
   const query = req.query;
-  let payload = { name: query?.name };
-  if (query?.limit) payload = { ...payload, limit: query.limit };
+  let payload = {};
+
+  if (query?.name) payload = { ...payload, name: query.name };
+  if (query?.userId) payload = { ...payload, userId: query.userId };
+  if (query?.limit) payload = { ...payload, limit: Number(query.limit) };
+  if (query?.offset) payload = { ...payload, offset: Number(query.offset) };
 
   nftCollectionRepo
     .getMany(payload)
-    .then((data) => res.status(OK).json({ data }))
+    .then(([data, totalCount, offset, loadMore]) =>
+      res.status(OK).json({ data, totalCount, offset, loadMore })
+    )
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 

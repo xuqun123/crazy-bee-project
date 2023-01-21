@@ -19,7 +19,7 @@ const getByEmailAndPassword = async ({ email, password }) => {
  * Find one user by id while authenticating a user via JWT token
  */
 const getById = async (id) => {
-  return await UserModel.findById(id);
+  return await UserModel.findOne({ _id: id });
 };
 
 /**
@@ -29,9 +29,21 @@ const create = async (payload) => {
   return await UserModel.create(payload);
 };
 
+/**
+ * Update a user with its profile data
+ */
+const update = async (id, payload) => {
+  return await UserModel.findByIdAndUpdate(id, payload, {
+    new: true,
+    runValidators: true,
+    context: "query",
+  });
+};
+
 module.exports = {
   getByEmail,
   getByEmailAndPassword,
   getById,
   create,
+  update,
 };

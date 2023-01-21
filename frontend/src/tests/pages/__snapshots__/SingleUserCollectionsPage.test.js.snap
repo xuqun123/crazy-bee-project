@@ -1,0 +1,426 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleUserCollectionsPage get users data via api snapshot the SingleUserCollectionsPage view with all expected elements 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <img
+        alt="banner"
+        height="300px"
+        src="https://loremflickr.com/1024/200/nature"
+        width="100%"
+      />
+      <div
+        class="MuiGrid-root MuiGrid-container css-gbj8ee-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+        >
+          <div
+            class="MuiAvatar-root MuiAvatar-circular css-wvslt3-MuiAvatar-root"
+          >
+            <img
+              alt="avatar-abc123"
+              class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+        >
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+          >
+            abc123
+          </h3>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
+              data-testid="TokenIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
+              />
+            </svg>
+            0x57541aa3-11d7-4398-a5db-c3ac2eed517e
+             
+          </h5>
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
+          >
+            <span
+              class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+            >
+              Joined Since
+               
+            </span>
+            17 Jan 2023
+          </h5>
+          <br />
+          <h6
+            class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
+          >
+            Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+          </h6>
+        </div>
+      </div>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+        width="lg"
+      >
+        <form
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+          >
+            <input
+              aria-label="search google maps"
+              class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+              placeholder="Search NFT collections"
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            aria-label="search"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="SearchIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
+          />
+          <button
+            aria-label="directions"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="RestartAltIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+          >
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
+            >
+              <img
+                alt="random"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              />
+              <div
+                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+              >
+                <p
+                  class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
+                >
+                  21st January 2023
+                </p>
+                <h2
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+                >
+                  a testing nft collection
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                >
+                  this is a testing nft collection
+                </p>
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1njilb0-MuiButtonBase-root-MuiButton-root"
+          data-testid="load-more-btn"
+          tabindex="0"
+          type="button"
+        >
+          Load More
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <img
+      alt="banner"
+      height="300px"
+      src="https://loremflickr.com/1024/200/nature"
+      width="100%"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-container css-gbj8ee-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1lj5egr-MuiGrid-root"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-circular css-wvslt3-MuiAvatar-root"
+        >
+          <img
+            alt="avatar-abc123"
+            class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+        >
+          abc123
+        </h3>
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
+            data-testid="TokenIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
+            />
+          </svg>
+          0x57541aa3-11d7-4398-a5db-c3ac2eed517e
+           
+        </h5>
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+          >
+            Joined Since
+             
+          </span>
+          17 Jan 2023
+        </h5>
+        <br />
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
+        >
+          Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+      width="lg"
+    >
+      <form
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
+      >
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+        >
+          <input
+            aria-label="search google maps"
+            class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+            placeholder="Search NFT collections"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="search"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="SearchIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
+        />
+        <button
+          aria-label="directions"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="RestartAltIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
+          >
+            <img
+              alt="random"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+            />
+            <div
+              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+            >
+              <p
+                class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
+              >
+                21st January 2023
+              </p>
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+              >
+                a testing nft collection
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              >
+                this is a testing nft collection
+              </p>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1njilb0-MuiButtonBase-root-MuiButton-root"
+        data-testid="load-more-btn"
+        tabindex="0"
+        type="button"
+      >
+        Load More
+      </button>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

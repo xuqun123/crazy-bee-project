@@ -1,5 +1,6 @@
 const { NFTCollectionModel } = require("../models/NFTCollection");
 const { DEFAULT_RESULTS_LIMIT } = require("../lib/constants");
+const { PromiseProvider } = require("mongoose");
 
 /**
  * Get one nftCollection
@@ -17,15 +18,21 @@ const getOne = async ({ name, _id }) => {
 /**
  * Get multiple nftCollections
  */
-const getMany = async ({ name, limit = DEFAULT_RESULTS_LIMIT }) => {
+const getMany = async ({ name, userId, offset = 0, limit = DEFAULT_RESULTS_LIMIT }) => {
   let filter = {};
   if (name) filter = { ...filter, name };
+  if (userId) filter = { ...filter, userId };
+
+  const totalCount = await NFTCollectionModel.countDocuments(filter);
+  const loadMore = offset + limit < totalCount;
 
   const nftCollections = await NFTCollectionModel.find(filter)
     .sort({ publishedAt: -1 })
+    .skip(offset)
     .limit(limit)
     .exec();
-  return nftCollections;
+
+  return Promise.resolve([nftCollections, totalCount, offset, loadMore]);
 };
 
 /**

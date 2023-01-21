@@ -6,6 +6,7 @@ import App from './App'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
+import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
 
 import './index.css'
 
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: 'explore',
         element: <ExplorePage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'users/:userId/collections',
+        element: <SingleUserCollectionsPage />,
         errorElement: <ErrorPage />,
       },
     ],

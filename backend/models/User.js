@@ -27,7 +27,18 @@ const UserSchema = new Schema(
     },
     dob: {
       type: Date,
+      required: false,
     },
+    bio: {
+      type: String,
+      required: false,
+    },
+    walletAddresses: {
+      type: [String],
+      required: false,
+    },
+    avatarUrl: { type: String, required: false },
+    bannerImageUrl: { type: String, required: false },
     emailVerified: {
       type: Boolean,
       required: true,
