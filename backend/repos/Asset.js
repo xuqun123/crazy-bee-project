@@ -40,7 +40,15 @@ const getMany = async ({
   return Promise.resolve([assets, totalCount, offset, loadMore]);
 };
 
+/**
+ * Create a nftCollection
+ */
+const create = async (payload) => {
+  return await AssetModel.create(payload);
+};
+
 module.exports = {
   getOne,
   getMany,
+  create,
 };

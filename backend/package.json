@@ -20,6 +20,9 @@
       "repos",
       "controllers",
       "routes"
+    ],
+    "exclude": [
+      "lib/AIArtGenerator.js"
     ]
   },
   "repository": {

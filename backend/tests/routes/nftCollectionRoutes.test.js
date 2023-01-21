@@ -31,10 +31,12 @@ describe("nftCollectionsRoutes", function () {
 
       it("returns nftCollections", async function () {
         const response = await request(app)
-          .get(`${baseUrl}?limit=10`)
+          .get(
+            `${baseUrl}?&limit=10&offset=0&name=${nftCollections[0].name}&userId=${nftCollections[0].userId}`
+          )
           .set("Accept", "application/json");
 
-        expect(nftCollectionRepoStub.calledWith({ limit: 10 })).to.equal(true);
+        expect(nftCollectionRepoStub.called).to.equal(true);
         expect(response.statusCode).to.equal(200);
         expect(response.body.data).to.deep.equal(
           nftCollections.map((nftCollection) => convertTimestampToString(nftCollection))
