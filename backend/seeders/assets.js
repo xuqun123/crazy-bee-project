@@ -1,9 +1,10 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", true);
-const { NFTCollectionModel, collectionTypes, statuses } = require("../models/NFTCollection");
 const { UserModel } = require("../models/User");
-const { createFakeNFTCollection } = require("../lib/fakeDataHelper");
+const { NFTCollectionModel } = require("../models/NFTCollection");
+const { AssetModel } = require("../models/Asset");
+const { createFakeAsset } = require("../lib/fakeDataHelper");
 const { sample } = require("lodash");
 
 // connect to MongoDB
@@ -13,12 +14,15 @@ mongoose
     console.log("Connected to MongoDB!\n");
 
     const users = await UserModel.find({}).limit(10).exec();
+    const nftCollections = await NFTCollectionModel.find({}).limit(10).exec();
+
     const fakeData = Array.from({ length: 50 }, (_) => {
       const pickedUser = sample(users);
-      return createFakeNFTCollection(false, pickedUser._id);
+      const pickedNFTCollection = sample(nftCollections);
+      return createFakeAsset(false, pickedUser._id, pickedNFTCollection._id);
     });
 
-    NFTCollectionModel.insertMany(fakeData)
+    AssetModel.insertMany(fakeData)
       .then((result) => {
         console.log("Data inserted:", result);
         process.exit(1);

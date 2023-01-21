@@ -1,6 +1,7 @@
-const { sample, filter, omitBy, isNil } = require("lodash");
+const { sample, omitBy, isNil } = require("lodash");
 const { faker } = require("@faker-js/faker");
-const { collectionTypes, statuses } = require("../models/NFTCollection");
+const { collectionTypes, statuses: nftCollectionStatuses } = require("../models/NFTCollection");
+const { assetTypes, statuses: assetStatuses } = require("../models/Asset");
 
 const sampleImages = [
   faker.image.animals(),
@@ -12,6 +13,31 @@ const sampleImages = [
   faker.image.food(),
 ];
 
+const createFakeAsset = (withId = false, userId, nftCollectionId) =>
+  omitBy(
+    {
+      _id: withId ? faker.database.mongodbObjectId() : null,
+      userId,
+      nftCollectionId,
+      name: faker.lorem.words(6),
+      summary: faker.lorem.sentence(),
+      description: faker.lorem.paragraph(),
+      assetType: sample(collectionTypes),
+      status: sample(assetStatuses),
+      coverImageUrl: sample(sampleImages),
+      assetUrl: sample(sampleImages),
+      publishedAt: faker.date.past(),
+      tokenDetails: {
+        contractAdress: faker.datatype.uuid(),
+        tokenId: faker.datatype.uuid(),
+        tokenStandard: sample(["ERC-1155", "ERC-1156"]),
+        chain: sample(["Ethereum", "Polygon"]),
+        metadata: sample(["Centralized", "Decentralized"]),
+      },
+    },
+    isNil
+  );
+
 const createFakeNFTCollection = (withId = false, userId = null) =>
   omitBy(
     {
@@ -21,7 +47,7 @@ const createFakeNFTCollection = (withId = false, userId = null) =>
       summary: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),
       collectionType: sample(collectionTypes),
-      status: sample(statuses),
+      status: sample(nftCollectionStatuses),
       coverImageUrl: sample(sampleImages),
       publishedAt: faker.date.past(),
     },
@@ -57,6 +83,7 @@ const convertTimestampToString = (entity) => {
 };
 
 module.exports = {
+  createFakeAsset,
   createFakeNFTCollection,
   createFakeUser,
   sampleImages,

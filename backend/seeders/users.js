@@ -1,5 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 const { UserModel } = require("../models/User");
 const { createFakeUser } = require("../lib/fakeDataHelper");
 

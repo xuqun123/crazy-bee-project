@@ -30,9 +30,11 @@
 
 ## How to Seed Fake Data
 
+- To feed `users` data, run the following: `npm run seed-users-data`
+
 - To feed `NFT collections` data, run the following: `npm run seed-nft-collections-data`
 
-- To feed `users` data, run the following: `npm run seed-users-data`
+- To feed `assets` data, run the following: `npm run seed-assets-data`
 
 ## How to Run Unit Tests
 

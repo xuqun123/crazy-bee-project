@@ -9,8 +9,9 @@
     "test-single": "mocha --file ./tests/setup.js --reporter spec",
     "test-with-coverage": "nyc --all --no-cache --reporter=lcov --reporter=text mocha --file ./tests/setup.js tests/**/** --reporter spec",
     "make-coverage-badge": "lcov-badge2 ./coverage/lcov.info -o ./coverage-badge.svg",
+    "seed-users-data": "node seeders/users.js",
     "seed-nft-collections-data": "node seeders/nftCollections.js",
-    "seed-users-data": "node seeders/users.js"
+    "seed-assets-data": "node seeders/assets.js"
   },
   "nyc": {
     "include": [
