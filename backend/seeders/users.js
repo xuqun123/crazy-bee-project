@@ -11,7 +11,6 @@ mongoose
     console.log("Connected to MongoDB!\n");
 
     const fakeData = Array.from({ length: 5 }, (_) => createFakeUser());
-    console.log(fakeData);
     UserModel.insertMany(fakeData)
       .then((result) => {
         console.log("Data inserted:", result);

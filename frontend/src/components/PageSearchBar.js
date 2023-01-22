@@ -6,7 +6,7 @@ import IconButton from '@mui/material/IconButton'
 import SearchIcon from '@mui/icons-material/Search'
 import RestartAltIcon from '@mui/icons-material/RestartAlt'
 
-function PageSearchBar() {
+function PageSearchBar({ placeholder }) {
   return (
     <Paper
       component="form"
@@ -14,8 +14,8 @@ function PageSearchBar() {
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="Search NFT collections"
-        inputProps={{ 'aria-label': 'search google maps' }}
+        placeholder={placeholder}
+        inputProps={{ 'aria-label': placeholder }}
       />
       <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
         <SearchIcon />

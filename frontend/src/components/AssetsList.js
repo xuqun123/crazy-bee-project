@@ -11,7 +11,7 @@ import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
 import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
-import { defaultNFTCollectionsLimit } from '../lib/dataConstants'
+import { defaultAssetsLimit } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
   return (
@@ -29,8 +29,8 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
-  const [nftCollections, setNFTCollections] = useState([])
+function AssetsList({ assetId, enableLoadMore, enableSearch }) {
+  const [assets, setAssets] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -41,8 +41,8 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
   }, [])
 
   const loadData = (offset = 0) => {
-    let url = `/nftCollections?limit=${defaultNFTCollectionsLimit}&offset=${offset}`
-    if (userId) url = `${url}&userId=${userId}`
+    let url = `/assets?limit=${defaultAssetsLimit}&offset=${offset}`
+    if (assetId) url = `${url}&assetId=${assetId}`
 
     axiosClient
       .get(url)
@@ -51,45 +51,41 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
 
         setLoading(false)
         setOffset(offsetNumber)
-        setNFTCollections(nftCollections.concat(data))
+        setAssets(assets.concat(data))
         setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
         setLoading(false)
-        const message = `Get nftCollections data failed: ${error.message}`
+        const message = `Get assets data failed: ${error.message}`
         console.error(message)
       })
   }
 
   const handleLoadMore = () => {
-    loadData(offset + defaultNFTCollectionsLimit)
+    loadData(offset + defaultAssetsLimit)
   }
 
   return (
     <Container sx={{ py: 0 }} width="lg">
-      {enableSearch && <PageSearchBar placeholder={'Search NFT collections'} />}
+      {enableSearch && <PageSearchBar placeholder={'Search assets'} />}
       <Grid container spacing={4}>
         {loading ? (
           <LoadingSkeletons />
         ) : (
-          nftCollections.map((nftCollection) => (
-            <Grid item key={nftCollection._id} xs={12} sm={4} md={3}>
+          assets.map((asset) => (
+            <Grid item key={asset._id} xs={12} sm={4} md={3}>
               <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardMedia component="img" image={nftCollection.coverImageUrl} alt="random" />
+                <CardMedia component="img" image={asset.coverImageUrl} alt="random" />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="p" component="p">
-                    {moment(nftCollection.publishedAt).format('Do MMMM YYYY')}
+                    {moment(asset.publishedAt).format('Do MMMM YYYY')}
                   </Typography>
                   <Typography gutterBottom variant="h5" component="h2">
-                    {nftCollection.name}
+                    {asset.name}
                   </Typography>
-                  <Typography>{nftCollection.summary}</Typography>
-                  <Chip sx={{ mt: 1 }} label={nftCollection.collectionType} />
+                  <Typography>{asset.summary}</Typography>
+                  <Chip sx={{ mt: 1 }} label={asset.assetType} />
                 </CardContent>
-                {/* <CardActions>
-                  <Button size="small">View</Button>
-                  <Button size="small">Edit</Button>
-                </CardActions> */}
               </Card>
             </Grid>
           ))
@@ -109,4 +105,4 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
   )
 }
 
-export default NFTCollectionsList
+export default AssetsList

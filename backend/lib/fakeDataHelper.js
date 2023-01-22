@@ -1,4 +1,4 @@
-const { sample, omitBy, isNil } = require("lodash");
+const { sample, omitBy, isNil, sampleSize } = require("lodash");
 const { faker } = require("@faker-js/faker");
 const { collectionTypes, statuses: nftCollectionStatuses } = require("../models/NFTCollection");
 const { assetTypes, statuses: assetStatuses } = require("../models/Asset");
@@ -46,9 +46,10 @@ const createFakeNFTCollection = (withId = false, userId = null) =>
       name: faker.lorem.words(6),
       summary: faker.lorem.sentence(),
       description: faker.lorem.paragraph(),
-      collectionType: sample(collectionTypes),
+      collectionTypes: sampleSize(collectionTypes, 3),
       status: sample(nftCollectionStatuses),
       coverImageUrl: sample(sampleImages),
+      bannerImageUrl: faker.image.nature(1024, 200),
       publishedAt: faker.date.past(),
     },
     isNil
