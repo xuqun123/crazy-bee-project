@@ -14,9 +14,46 @@ const fakeUser = {
 }
 
 const fakeNftCollection = {
-  name: 'a testing nft collection',
-  _id: '1234-5678-abcd',
-  summary: 'this is a testing nft collection',
+  _id: '63cce9886f124b9e51502125',
+  userId: '63c551e0ca77037c5a8a017f',
+  name: 'dolor alias adipisci vel cumque labore',
+  summary: 'Natus praesentium inventore ab magni eveniet earum.',
+  description:
+    'Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.',
+  collectionTypes: ['document', 'video', 'audio'],
+  status: 'published',
+  coverImageUrl: 'https://loremflickr.com/640/480/animals',
+  bannerImageUrl: 'https://loremflickr.com/1024/200/nature',
+  publishedAt: '2022-11-30T17:08:21.681Z',
+  __v: 0,
+  createdAt: '2023-01-22T07:45:13.371Z',
+  updatedAt: '2023-01-22T07:45:13.371Z',
 }
 
-export { fakeUser, fakeNftCollection }
+const fakeAsset = {
+  _id: '63cce991b241f44010e06adf',
+  userId: '63ccd8a066916dc606f26ecb',
+  nftCollectionId: '63cce9886f124b9e51502125',
+  name: 'deserunt recusandae quis rerum quo amet',
+  summary: 'Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.',
+  description:
+    'Iure officiis libero sequi vel provident ipsum eius error nobis. Facilis quis ducimus. Atque unde soluta quasi error odit. Incidunt voluptates excepturi natus ut. Numquam neque eveniet dolorum debitis veritatis sapiente quam magnam.',
+  assetType: 'image',
+  status: 'draft',
+  coverImageUrl: 'https://loremflickr.com/640/480/nature',
+  assetUrl: 'https://loremflickr.com/640/480/sports',
+  tokenDetails: {
+    contractAdress: 'b72c0760-a728-4ac3-87d5-133c72b2a66a',
+    tokenId: 'd8f53656-b0ec-4f4f-9698-0c65b877dca3',
+    tokenStandard: 'ERC-1156',
+    chain: 'Ethereum',
+    metadata: 'Centralized',
+    _id: '63cce991b241f44010e06ae0',
+  },
+  publishedAt: '2022-12-11T10:27:53.400Z',
+  __v: 0,
+  createdAt: '2023-01-22T07:45:21.985Z',
+  updatedAt: '2023-01-22T07:45:21.985Z',
+}
+
+export { fakeUser, fakeNftCollection, fakeAsset }

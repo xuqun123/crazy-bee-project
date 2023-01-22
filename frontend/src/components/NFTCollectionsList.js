@@ -9,9 +9,10 @@ import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
 import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
-import { defaultNFTCollectionsLimit } from '../lib/dataConstants'
+import { defaultNFTCollectionsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
   return (
@@ -74,23 +75,45 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
         ) : (
           nftCollections.map((nftCollection) => (
             <Grid item key={nftCollection._id} xs={12} sm={4} md={3}>
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-                <CardMedia component="img" image={nftCollection.coverImageUrl} alt="random" />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="p" component="p">
-                    {moment(nftCollection.publishedAt).format('Do MMMM YYYY')}
-                  </Typography>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {nftCollection.name}
-                  </Typography>
-                  <Typography>{nftCollection.summary}</Typography>
-                  <Chip sx={{ mt: 1 }} label={nftCollection.collectionType} />
-                </CardContent>
-                {/* <CardActions>
+              <Link to={`/collections/${nftCollection._id}`} style={{ textDecoration: 'none' }}>
+                <Card
+                  sx={{
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    ':hover': {
+                      boxShadow: 5,
+                      transform: 'scale(1.05)',
+                    },
+                  }}
+                >
+                  <CardMedia component="img" image={nftCollection.coverImageUrl} alt="random" />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="p" component="p">
+                      {moment(nftCollection.publishedAt).format('Do MMMM YYYY')}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {nftCollection.name}
+                    </Typography>
+                    <Typography>{nftCollection.summary}</Typography>
+                    {nftCollection.collectionTypes?.map((collectionType) => (
+                      <Chip
+                        key={collectionType}
+                        sx={{
+                          mr: 1,
+                          color: '#fff',
+                          backgroundColor: collectionTypeLabelColors[collectionType],
+                        }}
+                        label={collectionType}
+                      />
+                    ))}
+                  </CardContent>
+                  {/* <CardActions>
                   <Button size="small">View</Button>
                   <Button size="small">Edit</Button>
                 </CardActions> */}
-              </Card>
+                </Card>
+              </Link>
             </Grid>
           ))
         )}

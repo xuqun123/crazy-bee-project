@@ -82,7 +82,12 @@ function SingleCollectionPage() {
                 <Typography component="span" align="left" sx={{ ml: 1, verticalAlign: 'top' }}>
                   {nftCollection.collectionTypes.map((collectionType) => (
                     <Chip
-                      sx={{ mr: 1, backgroundColor: collectionTypeLabelColors[collectionType] }}
+                      key={collectionType}
+                      sx={{
+                        mr: 1,
+                        color: '#fff',
+                        backgroundColor: collectionTypeLabelColors[collectionType],
+                      }}
                       label={collectionType}
                     />
                   ))}

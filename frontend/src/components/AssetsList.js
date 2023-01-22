@@ -29,7 +29,7 @@ function LoadingSkeletons() {
   )
 }
 
-function AssetsList({ assetId, enableLoadMore, enableSearch }) {
+function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
   const [assets, setAssets] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
@@ -42,7 +42,7 @@ function AssetsList({ assetId, enableLoadMore, enableSearch }) {
 
   const loadData = (offset = 0) => {
     let url = `/assets?limit=${defaultAssetsLimit}&offset=${offset}`
-    if (assetId) url = `${url}&assetId=${assetId}`
+    if (nftCollectionId) url = `${url}&nftCollectionId=${nftCollectionId}`
 
     axiosClient
       .get(url)
@@ -74,7 +74,17 @@ function AssetsList({ assetId, enableLoadMore, enableSearch }) {
         ) : (
           assets.map((asset) => (
             <Grid item key={asset._id} xs={12} sm={4} md={3}>
-              <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+              <Card
+                sx={{
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  ':hover': {
+                    boxShadow: 5,
+                    transform: 'scale(1.05)',
+                  },
+                }}
+              >
                 <CardMedia component="img" image={asset.coverImageUrl} alt="random" />
                 <CardContent sx={{ flexGrow: 1 }}>
                   <Typography variant="p" component="p">

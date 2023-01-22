@@ -4,10 +4,10 @@ const defaultAssetsLimit = 8
 const collectionTypes = ['image', 'video', 'audio', 'document']
 
 const collectionTypeLabelColors = {
-  image: '#671909',
+  image: '#d1ccbf',
   video: '#e09722',
   audio: '#fac427',
-  document: '#847360',
+  document: '#b7a59a',
 }
 
 export {
