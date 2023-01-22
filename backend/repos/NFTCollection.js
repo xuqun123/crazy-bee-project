@@ -1,6 +1,5 @@
 const { NFTCollectionModel } = require("../models/NFTCollection");
 const { DEFAULT_RESULTS_LIMIT } = require("../lib/constants");
-const { PromiseProvider } = require("mongoose");
 
 /**
  * Get one nftCollection

@@ -1,5 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
+mongoose.set("strictQuery", true);
 const { UserModel } = require("../models/User");
 const { createFakeUser } = require("../lib/fakeDataHelper");
 
@@ -9,8 +10,7 @@ mongoose
   .then(() => {
     console.log("Connected to MongoDB!\n");
 
-    const fakeData = Array.from({ length: 10 }, (_) => createFakeUser());
-    console.log(fakeData);
+    const fakeData = Array.from({ length: 5 }, (_) => createFakeUser());
     UserModel.insertMany(fakeData)
       .then((result) => {
         console.log("Data inserted:", result);

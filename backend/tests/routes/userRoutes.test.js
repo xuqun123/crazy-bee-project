@@ -37,7 +37,7 @@ describe("userRoutes", function () {
           .set("Accept", "application/json")
           .set("Authorization", `bearer ${jwtToken}`);
 
-        // expect(response.statusCode).to.equal(200);
+        expect(response.statusCode).to.equal(200);
         expect(response.body).to.deep.include(
           omit(convertTimestampToString(existingUser.toJSON()), ["password", "_id"])
         );

@@ -4,36 +4,37 @@ import moment from 'moment'
 import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
-import TokenIcon from '@mui/icons-material/Token'
+import Chip from '@mui/material/Chip'
 import CircularProgress from '@mui/material/CircularProgress'
-import NFTCollectionsList from '../components/NFTCollectionsList'
+import AssetsList from '../components/AssetsList'
 import axiosClient from '../lib/axiosClient'
+import { collectionTypeLabelColors } from '../lib/dataConstants'
 
-function SingleUserCollectionsPage() {
-  const { userId } = useParams()
-  const [user, setUser] = useState(null)
+function SingleCollectionPage() {
+  const { nftCollectionId } = useParams()
+  const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axiosClient
-      .get(`/users/${userId}`)
+      .get(`/nftCollections/${nftCollectionId}`)
       .then((response) => {
         setLoading(false)
-        setUser(response?.data?.data)
+        setNFTCollection(response?.data?.data)
       })
       .catch((error) => {
         setLoading(false)
-        const message = `Get nftCollections data failed: ${error.message}`
+        const message = `Get nftCollection data failed: ${error.message}`
         console.error(message)
       })
-  }, [userId])
+  }, [nftCollectionId])
 
   return (
     <>
       {loading && <CircularProgress />}
-      {user && (
+      {nftCollection && (
         <>
-          <img src={user.bannerImageUrl} alt="banner" width="100%" height="300px" />
+          <img src={nftCollection.bannerImageUrl} alt="banner" width="100%" height="300px" />
 
           <Grid
             container
@@ -53,30 +54,19 @@ function SingleUserCollectionsPage() {
               }}
             >
               <Avatar
+                variant="rounded"
                 sx={{
-                  height: { xs: 300, md: 300, lg: 250 },
-                  width: { xs: 300, md: 300, lg: 250 },
+                  height: { xs: 300, md: 300, lg: 300 },
+                  width: { xs: 300, md: 300, lg: 300 },
                   mx: 0,
                 }}
-                alt={`avatar-${user.username}`}
-                src={user.avatarUrl}
+                alt={`avatar-${nftCollection.nftCollectionname}`}
+                src={nftCollection.coverImageUrl}
               />
             </Grid>
             <Grid item md={8} xs={12}>
               <Typography component="h3" variant="h3" align="left" color="text.primary">
-                {user.username}
-              </Typography>
-              <Typography
-                component="h5"
-                variant="h5"
-                align="left"
-                color="grey"
-                sx={{ fontWeight: 'bold' }}
-              >
-                <TokenIcon color="primary" sx={{ pb: '3px', mr: '1px', verticalAlign: 'middle' }} />
-                {user.walletAddresses?.length > 0
-                  ? `0x${user.walletAddresses[0]}`
-                  : '0x***********'}{' '}
+                {nftCollection.name}
               </Typography>
               <Typography
                 component="h5"
@@ -86,21 +76,40 @@ function SingleUserCollectionsPage() {
                 sx={{ fontWeight: 'bold' }}
               >
                 <Typography component="span" variant="h5" align="left" color="grey">
-                  Joined Since{' '}
+                  Published{' '}
                 </Typography>
-                {moment(user.createdAt).format('DD MMM YYYY')}
+                {moment(nftCollection.publishedAt).format('DD MMM YYYY')}
+                <Typography component="span" align="left" sx={{ ml: 1, verticalAlign: 'top' }}>
+                  {nftCollection.collectionTypes.map((collectionType) => (
+                    <Chip
+                      key={collectionType}
+                      sx={{
+                        mr: 1,
+                        color: '#fff',
+                        backgroundColor: collectionTypeLabelColors[collectionType],
+                      }}
+                      label={collectionType}
+                    />
+                  ))}
+                </Typography>
+              </Typography>
+
+              <br />
+
+              <Typography component="h5" variant="h5" align="left" color="text.primary">
+                {nftCollection.summary}
               </Typography>
               <br />
               <Typography component="h6" variant="h6" align="left" color="grey">
-                {user.bio}
+                {nftCollection.description}
               </Typography>
             </Grid>
           </Grid>
         </>
       )}
-      <NFTCollectionsList userId={userId} enableLoadMore={true} enableSearch={true} />
+      <AssetsList nftCollectionId={nftCollectionId} enableLoadMore={true} enableSearch={true} />
     </>
   )
 }
 
-export default SingleUserCollectionsPage
+export default SingleCollectionPage

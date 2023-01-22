@@ -1,9 +1,9 @@
 import React from 'react'
-import { render, screen, waitFor, fireEvent, act } from '@testing-library/react'
+import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import SingleUserCollectionsPage from '../../pages/SingleUserCollectionsPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection } from '../../lib/testHelper'
-import 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -25,13 +25,13 @@ describe('SingleUserCollectionsPage', () => {
         if (url.includes('users')) {
           return Promise.resolve({ data: { data: { ...fakeUser } } })
         } else if (url.includes('nftCollections')) {
-          return Promise.resolve({ data: { data: { ...fakeNftCollection }, loadMore: true } })
+          return Promise.resolve({ data: { data: [fakeNftCollection], loadMore: true } })
         }
       })
     })
 
     it('render the SingleUserCollectionsPage view properly with expected elements', async () => {
-      const { rerender } = render(<SingleUserCollectionsPage />)
+      const { rerender } = render(<SingleUserCollectionsPage />, { wrapper: MemoryRouter })
       let usernameHeader
 
       await waitFor(() => {
@@ -44,7 +44,7 @@ describe('SingleUserCollectionsPage', () => {
 
       const loadMoreButton = screen.getByTestId('load-more-btn')
       expect(loadMoreButton).toBeInTheDocument()
-      rerender(<SingleUserCollectionsPage />)
+      rerender(<SingleUserCollectionsPage />, { wrapper: MemoryRouter })
 
       fireEvent.click(loadMoreButton)
       const userBioSections = await screen.findByText(fakeUser.bio)
@@ -52,7 +52,7 @@ describe('SingleUserCollectionsPage', () => {
     })
 
     it('snapshot the SingleUserCollectionsPage view with all expected elements', async () => {
-      const view = render(<SingleUserCollectionsPage />)
+      const view = render(<SingleUserCollectionsPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.getByText(fakeUser.username)).toBeInTheDocument()
@@ -71,7 +71,7 @@ describe('SingleUserCollectionsPage', () => {
     })
 
     it('render the SingleUserCollectionsPage view without rendering any user data', async () => {
-      render(<SingleUserCollectionsPage />)
+      render(<SingleUserCollectionsPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.queryByText(fakeUser.username)).not.toBeInTheDocument()

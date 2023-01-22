@@ -1,3 +1,3 @@
-const DEFAULT_RESULTS_LIMIT = 50;
+const DEFAULT_RESULTS_LIMIT = 20;
 
 module.exports = { DEFAULT_RESULTS_LIMIT };

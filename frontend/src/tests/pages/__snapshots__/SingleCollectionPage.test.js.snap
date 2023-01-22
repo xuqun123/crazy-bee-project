@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SingleUserCollectionsPage get users data via api snapshot the SingleUserCollectionsPage view with all expected elements 1`] = `
+exports[`SingleCollectionPage get users data via api snapshot the SingleCollectionPage view with all expected elements 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -18,12 +18,12 @@ Object {
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-circular css-1cjwto2-MuiAvatar-root"
+            class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
           >
             <img
-              alt="avatar-abc123"
+              alt="avatar-undefined"
               class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+              src="https://loremflickr.com/640/480/animals"
             />
           </div>
         </div>
@@ -33,41 +33,61 @@ Object {
           <h3
             class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
           >
-            abc123
+            dolor alias adipisci vel cumque labore
           </h3>
-          <h5
-            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
-              data-testid="TokenIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
-              />
-            </svg>
-            0x57541aa3-11d7-4398-a5db-c3ac2eed517e
-             
-          </h5>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
           >
             <span
               class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
             >
-              Joined Since
+              Published
                
             </span>
-            17 Jan 2023
+            01 Dec 2022
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+            >
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  document
+                </span>
+              </div>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  video
+                </span>
+              </div>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  audio
+                </span>
+              </div>
+            </span>
+          </h5>
+          <br />
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+          >
+            Natus praesentium inventore ab magni eveniet earum.
           </h5>
           <br />
           <h6
             class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
           >
-            Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+            Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
           </h6>
         </div>
       </div>
@@ -82,9 +102,9 @@ Object {
             class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
           >
             <input
-              aria-label="Search NFT collections"
+              aria-label="Search assets"
               class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
-              placeholder="Search NFT collections"
+              placeholder="Search assets"
               type="text"
               value=""
             />
@@ -141,66 +161,43 @@ Object {
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
           >
-            <a
-              href="/collections/63cce9886f124b9e51502125"
-              style="text-decoration: none;"
+            <div
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
             >
+              <img
+                alt="random"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                src="https://loremflickr.com/640/480/nature"
+              />
               <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
+                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
               >
-                <img
-                  alt="random"
-                  class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                  src="https://loremflickr.com/640/480/animals"
-                />
-                <div
-                  class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+                <p
+                  class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
                 >
-                  <p
-                    class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
+                  11th December 2022
+                </p>
+                <h2
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+                >
+                  deserunt recusandae quis rerum quo amet
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                >
+                  Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                </p>
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
                   >
-                    1st December 2022
-                  </p>
-                  <h2
-                    class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                  >
-                    dolor alias adipisci vel cumque labore
-                  </h2>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                  >
-                    Natus praesentium inventore ab magni eveniet earum.
-                  </p>
-                  <div
-                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
-                  >
-                    <span
-                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                    >
-                      document
-                    </span>
-                  </div>
-                  <div
-                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
-                  >
-                    <span
-                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                    >
-                      video
-                    </span>
-                  </div>
-                  <div
-                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
-                  >
-                    <span
-                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                    >
-                      audio
-                    </span>
-                  </div>
+                    image
+                  </span>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
         <button
@@ -228,12 +225,12 @@ Object {
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular css-1cjwto2-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
         >
           <img
-            alt="avatar-abc123"
+            alt="avatar-undefined"
             class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+            src="https://loremflickr.com/640/480/animals"
           />
         </div>
       </div>
@@ -243,41 +240,61 @@ Object {
         <h3
           class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
         >
-          abc123
+          dolor alias adipisci vel cumque labore
         </h3>
-        <h5
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
-            data-testid="TokenIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
-            />
-          </svg>
-          0x57541aa3-11d7-4398-a5db-c3ac2eed517e
-           
-        </h5>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
         >
           <span
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
           >
-            Joined Since
+            Published
              
           </span>
-          17 Jan 2023
+          01 Dec 2022
+          <span
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                document
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                video
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                audio
+              </span>
+            </div>
+          </span>
+        </h5>
+        <br />
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+        >
+          Natus praesentium inventore ab magni eveniet earum.
         </h5>
         <br />
         <h6
           class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
         >
-          Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+          Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
         </h6>
       </div>
     </div>
@@ -292,9 +309,9 @@ Object {
           class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
         >
           <input
-            aria-label="Search NFT collections"
+            aria-label="Search assets"
             class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
-            placeholder="Search NFT collections"
+            placeholder="Search assets"
             type="text"
             value=""
           />
@@ -351,66 +368,43 @@ Object {
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
         >
-          <a
-            href="/collections/63cce9886f124b9e51502125"
-            style="text-decoration: none;"
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
           >
+            <img
+              alt="random"
+              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+              src="https://loremflickr.com/640/480/nature"
+            />
             <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
+              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
             >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                src="https://loremflickr.com/640/480/animals"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+              <p
+                class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
               >
-                <p
-                  class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
+                11th December 2022
+              </p>
+              <h2
+                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+              >
+                deserunt recusandae quis rerum quo amet
+              </h2>
+              <p
+                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+              >
+                Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+              </p>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
                 >
-                  1st December 2022
-                </p>
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  dolor alias adipisci vel cumque labore
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  Natus praesentium inventore ab magni eveniet earum.
-                </p>
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                  >
-                    document
-                  </span>
-                </div>
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                  >
-                    video
-                  </span>
-                </div>
-                <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
-                >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                  >
-                    audio
-                  </span>
-                </div>
+                  image
+                </span>
               </div>
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <button
