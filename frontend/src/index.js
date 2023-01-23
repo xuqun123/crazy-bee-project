@@ -9,7 +9,8 @@ import ExplorePage from './pages/ExplorePage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 import UserProfilePage from './pages/UserProfilePage'
-import PasswordPage from './pages/PasswordPage'
+import PasswordPage1 from './pages/PasswordPage1'
+import PasswordPage2 from './pages/PasswordPage2'
 import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
 import SingleCollectionPage from './pages/SingleCollectionPage'
 
@@ -52,8 +53,13 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: 'Password',
-        element: <PasswordPage />,
+        path: 'Password1',
+        element: <PasswordPage1 />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'Password2',
+        element: <PasswordPage2 />,
         errorElement: <ErrorPage />,
       },
       {

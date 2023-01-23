@@ -1,9 +1,7 @@
 import * as React from 'react'
 import {useState} from 'react'
-import Button from '@mui/material/Button'
 
-export const Login = () => {
-    const [email, setEmail] = useState('')
+export const Password2 = () => {
     const [pass, setPass] = useState('')
 
     const handleSubmit = (e) => {
@@ -17,18 +15,18 @@ export const Login = () => {
             <h1 className="card-title">Log in</h1>
             <form className="login-form" onSubmit={handleSubmit}>
               <div className="form-group">
-                <label htmlFor="InputEmail">Email</label>
+                <label htmlFor="InputPassword">New password</label>
                 <input
-                  type="email"
+                  type="password"
                   className="form-control"
-                  id="InputEmail"
-                  placeholder='email@gmail.com'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  id="InputPassword"
+                  placeholder='***********'
+                  value={pass}
+                  onChange={(e) => setPass(e.target.value)}
                 />
               </div>
               <div className="form-group">
-                <label htmlFor="InputPassword">Password</label>
+                <label htmlFor="InputPassword">Comfirm password</label>
                 <input
                   type="password"
                   className="form-control"
@@ -42,11 +40,9 @@ export const Login = () => {
                 type="submit"
                 className="btn"
               >
-                LOG IN
+                CONFIRM
               </button>
             </form>
-            <Button href='password1'>Forgot password?</Button>
-            <Button href='signup'>Don't have an account? Sign up HERE</Button>
           </div>
       </div>
     )

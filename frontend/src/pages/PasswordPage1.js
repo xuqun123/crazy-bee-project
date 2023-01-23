@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Register } from '../jsx/Register'
-  
+import { Password1 } from '../jsx/Password1'
+
 function App() {
     return (
-    <Register />
+    <Password1 />
     )
 }
 

@@ -2,9 +2,8 @@ import * as React from 'react'
 import {useState} from 'react'
 import Button from '@mui/material/Button'
 
-export const Login = () => {
+export const Password1 = () => {
     const [email, setEmail] = useState('')
-    const [pass, setPass] = useState('')
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +13,7 @@ export const Login = () => {
     return (
       <div className="card-container">
           <div className="card-body">
-            <h1 className="card-title">Log in</h1>
+            <h1 className="card-title">Reset your password</h1>
             <form className="login-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="InputEmail">Email</label>
@@ -27,26 +26,14 @@ export const Login = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
-              <div className="form-group">
-                <label htmlFor="InputPassword">Password</label>
-                <input
-                  type="password"
-                  className="form-control"
-                  id="InputPassword"
-                  placeholder='***********'
-                  value={pass}
-                  onChange={(e) => setPass(e.target.value)}
-                />
-              </div>
               <button
                 type="submit"
                 className="btn"
               >
-                LOG IN
+                Send reset link
               </button>
             </form>
-            <Button href='password1'>Forgot password?</Button>
-            <Button href='signup'>Don't have an account? Sign up HERE</Button>
+            <Button href='login'>Back to Log in</Button>
           </div>
       </div>
     )
