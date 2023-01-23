@@ -6,6 +6,10 @@ import App from './App'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
+import SignupPage from './pages/SignupPage'
+import LoginPage from './pages/LoginPage'
+import UserProfilePage from './pages/UserProfilePage'
+import PasswordPage from './pages/PasswordPage'
 import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
 import SingleCollectionPage from './pages/SingleCollectionPage'
 
@@ -30,6 +34,26 @@ const router = createBrowserRouter([
       {
         path: 'users/:userId/collections',
         element: <SingleUserCollectionsPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'signup',
+        element: <SignupPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'user-profile',
+        element: <UserProfilePage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'Password',
+        element: <PasswordPage />,
         errorElement: <ErrorPage />,
       },
       {

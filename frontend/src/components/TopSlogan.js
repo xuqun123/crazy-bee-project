@@ -30,7 +30,7 @@ function TopSlogan({ header, summary, mainCTAText, secondaryCTA }) {
             </Button>
           )}
           {secondaryCTA && (
-            <Button data-testid="secondary-cta-btn" variant="outlined">
+            <Button data-testid="secondary-cta-btn" variant="outlined" href='signup'>
               {secondaryCTA}
             </Button>
           )}

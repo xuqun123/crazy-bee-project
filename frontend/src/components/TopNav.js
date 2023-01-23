@@ -43,7 +43,7 @@ function TopNav() {
             <IconButton>
               <WalletIcon />
             </IconButton>
-            <IconButton>
+            <IconButton href='login'>
               <LoginIcon />
             </IconButton>
           </Grid>
