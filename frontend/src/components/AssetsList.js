@@ -9,9 +9,10 @@ import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
 import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
+import { Link } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
-import { defaultAssetsLimit } from '../lib/dataConstants'
+import { defaultAssetsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
   return (
@@ -29,7 +30,14 @@ function LoadingSkeletons() {
   )
 }
 
-function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
+function AssetsList({
+  nftCollectionId,
+  userId,
+  excludeAssetId,
+  enableLoadMore,
+  enableSearch,
+  containerStyle,
+}) {
   const [assets, setAssets] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
@@ -43,6 +51,7 @@ function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
   const loadData = (offset = 0) => {
     let url = `/assets?limit=${defaultAssetsLimit}&offset=${offset}`
     if (nftCollectionId) url = `${url}&nftCollectionId=${nftCollectionId}`
+    if (userId) url = `${url}&userId=${userId}`
 
     axiosClient
       .get(url)
@@ -51,7 +60,7 @@ function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
 
         setLoading(false)
         setOffset(offsetNumber)
-        setAssets(assets.concat(data))
+        setAssets(assets.concat(data)?.filter((asset) => asset._id !== excludeAssetId))
         setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
@@ -66,7 +75,7 @@ function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
   }
 
   return (
-    <Container sx={{ py: 0 }} width="lg">
+    <Container sx={containerStyle || { py: 0 }}>
       {enableSearch && <PageSearchBar placeholder={'Search assets'} />}
       <Grid container spacing={4}>
         {loading ? (
@@ -74,29 +83,38 @@ function AssetsList({ nftCollectionId, enableLoadMore, enableSearch }) {
         ) : (
           assets.map((asset) => (
             <Grid item key={asset._id} xs={12} sm={4} md={3}>
-              <Card
-                sx={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  ':hover': {
-                    boxShadow: 5,
-                    transform: 'scale(1.05)',
-                  },
-                }}
-              >
-                <CardMedia component="img" image={asset.coverImageUrl} alt="random" />
-                <CardContent sx={{ flexGrow: 1 }}>
-                  <Typography variant="p" component="p">
-                    {moment(asset.publishedAt).format('Do MMMM YYYY')}
-                  </Typography>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {asset.name}
-                  </Typography>
-                  <Typography>{asset.summary}</Typography>
-                  <Chip sx={{ mt: 1 }} label={asset.assetType} />
-                </CardContent>
-              </Card>
+              <Link to={`/assets/${asset._id}`} style={{ textDecoration: 'none' }}>
+                <Card
+                  sx={{
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    ':hover': {
+                      boxShadow: 5,
+                      transform: 'scale(1.05)',
+                    },
+                  }}
+                >
+                  <CardMedia component="img" image={asset.coverImageUrl} alt="random" />
+                  <CardContent sx={{ flexGrow: 1 }}>
+                    <Typography variant="p" component="p">
+                      {moment(asset.publishedAt).format('Do MMMM YYYY')}
+                    </Typography>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {asset.name}
+                    </Typography>
+                    <Typography>{asset.summary}</Typography>
+                    <Chip
+                      sx={{
+                        mt: 1,
+                        color: '#fff',
+                        backgroundColor: collectionTypeLabelColors[asset.assetType],
+                      }}
+                      label={asset.assetType}
+                    />
+                  </CardContent>
+                </Card>
+              </Link>
             </Grid>
           ))
         )}

@@ -1,0 +1,830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleAssetPage get users data via api snapshot the SingleAssetPage view with all expected elements 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-qjtv57-MuiGrid-root"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-1fjvggn-MuiPaper-root-MuiAccordion-root"
+          >
+            <div
+              aria-controls="panel1a-content"
+              aria-expanded="true"
+              class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+              id="panel1a-header"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+              >
+                Asset Preview
+              </div>
+              <div
+                class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+              style="min-height: 0px;"
+            >
+              <div
+                class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+              >
+                <div
+                  class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                >
+                  <div
+                    aria-labelledby="panel1a-header"
+                    class="MuiAccordion-region"
+                    id="panel1a-content"
+                    role="region"
+                  >
+                    <div
+                      class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+                    >
+                      <img
+                        alt="asset-deserunt recusandae quis rerum quo amet"
+                        src="https://loremflickr.com/640/480/sports"
+                        width="80%"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+        >
+          <div
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-1fjvggn-MuiPaper-root-MuiAccordion-root"
+          >
+            <div
+              aria-controls="panel1a-content"
+              aria-expanded="true"
+              class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+              id="panel1a-header"
+              role="button"
+              tabindex="0"
+            >
+              <div
+                class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+              >
+                Details
+              </div>
+              <div
+                class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ExpandMoreIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+              style="min-height: 0px;"
+            >
+              <div
+                class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+              >
+                <div
+                  class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+                >
+                  <div
+                    aria-labelledby="panel1a-header"
+                    class="MuiAccordion-region"
+                    id="panel1a-content"
+                    role="region"
+                  >
+                    <div
+                      class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+                    >
+                      <h3
+                        class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+                      >
+                        deserunt recusandae quis rerum quo amet
+                      </h3>
+                      <h5
+                        class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
+                      >
+                        <span
+                          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+                        >
+                          Owned by
+                           
+                        </span>
+                        <a
+                          href="/users/63c551e0ca77037c5a8a017f/collections"
+                          style="text-decoration: none;"
+                        >
+                           
+                        </a>
+                        <span
+                          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+                        >
+                           
+                          Published
+                           
+                        </span>
+                        11 Dec 2022
+                        <span
+                          class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+                        >
+                          <div
+                            class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1she32l-MuiChip-root"
+                          >
+                            <span
+                              class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                            >
+                              image
+                            </span>
+                          </div>
+                        </span>
+                      </h5>
+                      <br />
+                      <h5
+                        class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+                      >
+                        Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                      </h5>
+                      <br />
+                      <h6
+                        class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
+                      >
+                        Iure officiis libero sequi vel provident ipsum eius error nobis. Facilis quis ducimus. Atque unde soluta quasi error odit. Incidunt voluptates excepturi natus ut. Numquam neque eveniet dolorum debitis veritatis sapiente quam magnam.
+                      </h6>
+                      <div
+                        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-f0bbej-MuiPaper-root-MuiTableContainer-root"
+                      >
+                        <table
+                          aria-label="simple table"
+                          class="MuiTable-root css-rqglhn-MuiTable-root"
+                        >
+                          <thead
+                            class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                          />
+                          <tbody
+                            class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                          >
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                contractAdress
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                b72c0760-a728-4ac3-87d5-133c72b2a66a
+                              </td>
+                            </tr>
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                tokenId
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                d8f53656-b0ec-4f4f-9698-0c65b877dca3
+                              </td>
+                            </tr>
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                tokenStandard
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                ERC-1156
+                              </td>
+                            </tr>
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                chain
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                Ethereum
+                              </td>
+                            </tr>
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                metadata
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                Centralized
+                              </td>
+                            </tr>
+                            <tr
+                              class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                            >
+                              <th
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                                scope="row"
+                              >
+                                _id
+                              </th>
+                              <td
+                                class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                              >
+                                63cce991b241f44010e06ae0
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-d66fqv-MuiPaper-root-MuiAccordion-root"
+      >
+        <div
+          aria-controls="panel1a-content"
+          aria-expanded="true"
+          class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+          id="panel1a-header"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+          >
+            More Assets from the Same User
+          </div>
+          <div
+            class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="ExpandMoreIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+          style="min-height: 0px;"
+        >
+          <div
+            class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+          >
+            <div
+              class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+            >
+              <div
+                aria-labelledby="panel1a-header"
+                class="MuiAccordion-region"
+                id="panel1a-content"
+                role="region"
+              >
+                <div
+                  class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+                >
+                  <div
+                    class="MuiContainer-root MuiContainer-maxWidthLg css-1qi5tjd-MuiContainer-root"
+                  >
+                    <div
+                      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+                    >
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                      <span
+                        class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-5 css-qjtv57-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-1fjvggn-MuiPaper-root-MuiAccordion-root"
+        >
+          <div
+            aria-controls="panel1a-content"
+            aria-expanded="true"
+            class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+            id="panel1a-header"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+            >
+              Asset Preview
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+            style="min-height: 0px;"
+          >
+            <div
+              class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+            >
+              <div
+                class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+              >
+                <div
+                  aria-labelledby="panel1a-header"
+                  class="MuiAccordion-region"
+                  id="panel1a-content"
+                  role="region"
+                >
+                  <div
+                    class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+                  >
+                    <img
+                      alt="asset-deserunt recusandae quis rerum quo amet"
+                      src="https://loremflickr.com/640/480/sports"
+                      width="80%"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+      >
+        <div
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-1fjvggn-MuiPaper-root-MuiAccordion-root"
+        >
+          <div
+            aria-controls="panel1a-content"
+            aria-expanded="true"
+            class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+            id="panel1a-header"
+            role="button"
+            tabindex="0"
+          >
+            <div
+              class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+            >
+              Details
+            </div>
+            <div
+              class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="ExpandMoreIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+            style="min-height: 0px;"
+          >
+            <div
+              class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+            >
+              <div
+                class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+              >
+                <div
+                  aria-labelledby="panel1a-header"
+                  class="MuiAccordion-region"
+                  id="panel1a-content"
+                  role="region"
+                >
+                  <div
+                    class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+                  >
+                    <h3
+                      class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+                    >
+                      deserunt recusandae quis rerum quo amet
+                    </h3>
+                    <h5
+                      class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
+                    >
+                      <span
+                        class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+                      >
+                        Owned by
+                         
+                      </span>
+                      <a
+                        href="/users/63c551e0ca77037c5a8a017f/collections"
+                        style="text-decoration: none;"
+                      >
+                         
+                      </a>
+                      <span
+                        class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+                      >
+                         
+                        Published
+                         
+                      </span>
+                      11 Dec 2022
+                      <span
+                        class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+                      >
+                        <div
+                          class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1she32l-MuiChip-root"
+                        >
+                          <span
+                            class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                          >
+                            image
+                          </span>
+                        </div>
+                      </span>
+                    </h5>
+                    <br />
+                    <h5
+                      class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+                    >
+                      Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                    </h5>
+                    <br />
+                    <h6
+                      class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
+                    >
+                      Iure officiis libero sequi vel provident ipsum eius error nobis. Facilis quis ducimus. Atque unde soluta quasi error odit. Incidunt voluptates excepturi natus ut. Numquam neque eveniet dolorum debitis veritatis sapiente quam magnam.
+                    </h6>
+                    <div
+                      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-f0bbej-MuiPaper-root-MuiTableContainer-root"
+                    >
+                      <table
+                        aria-label="simple table"
+                        class="MuiTable-root css-rqglhn-MuiTable-root"
+                      >
+                        <thead
+                          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+                        />
+                        <tbody
+                          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+                        >
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              contractAdress
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              b72c0760-a728-4ac3-87d5-133c72b2a66a
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              tokenId
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              d8f53656-b0ec-4f4f-9698-0c65b877dca3
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              tokenStandard
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              ERC-1156
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              chain
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              Ethereum
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              metadata
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              Centralized
+                            </td>
+                          </tr>
+                          <tr
+                            class="MuiTableRow-root css-34nofg-MuiTableRow-root"
+                          >
+                            <th
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-sizeMedium css-1ex1afd-MuiTableCell-root"
+                              scope="row"
+                            >
+                              _id
+                            </th>
+                            <td
+                              class="MuiTableCell-root MuiTableCell-body MuiTableCell-alignRight MuiTableCell-sizeMedium css-109rylr-MuiTableCell-root"
+                            >
+                              63cce991b241f44010e06ae0
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiAccordion-root Mui-expanded css-d66fqv-MuiPaper-root-MuiAccordion-root"
+    >
+      <div
+        aria-controls="panel1a-content"
+        aria-expanded="true"
+        class="MuiButtonBase-root MuiAccordionSummary-root Mui-expanded css-qjstg7-MuiButtonBase-root-MuiAccordionSummary-root"
+        id="panel1a-header"
+        role="button"
+        tabindex="0"
+      >
+        <div
+          class="MuiAccordionSummary-content Mui-expanded css-1betqn-MuiAccordionSummary-content"
+        >
+          More Assets from the Same User
+        </div>
+        <div
+          class="MuiAccordionSummary-expandIconWrapper Mui-expanded css-yw020d-MuiAccordionSummary-expandIconWrapper"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ExpandMoreIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16.59 8.59 12 13.17 7.41 8.59 6 10l6 6 6-6z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div
+        class="MuiCollapse-root MuiCollapse-vertical MuiCollapse-entered css-pwcg7p-MuiCollapse-root"
+        style="min-height: 0px;"
+      >
+        <div
+          class="MuiCollapse-wrapper MuiCollapse-vertical css-smkl36-MuiCollapse-wrapper"
+        >
+          <div
+            class="MuiCollapse-wrapperInner MuiCollapse-vertical css-9l5vo-MuiCollapse-wrapperInner"
+          >
+            <div
+              aria-labelledby="panel1a-header"
+              class="MuiAccordion-region"
+              id="panel1a-content"
+              role="region"
+            >
+              <div
+                class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
+              >
+                <div
+                  class="MuiContainer-root MuiContainer-maxWidthLg css-1qi5tjd-MuiContainer-root"
+                >
+                  <div
+                    class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+                  >
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                    <span
+                      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
