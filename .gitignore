@@ -5,3 +5,15 @@ dist/
 .env
 .nyc_output/
 /coverage
+coverage.json
+typechain
+typechain-types
+
+# Hardhat files
+cache
+artifacts
+
+# Hardhat files
+cache
+artifacts
+
