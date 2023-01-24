@@ -8,9 +8,9 @@ import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
-import UserProfilePage from './pages/UserProfilePage'
-import PasswordPage1 from './pages/PasswordPage1'
-import PasswordPage2 from './pages/PasswordPage2'
+// import UserProfilePage from './pages/UserProfilePage'
+import PasswordEmailLinkPage from './pages/PasswordEmailLinkPage'
+import PasswordResetPage from './pages/PasswordResetPage'
 import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
 import SingleCollectionPage from './pages/SingleCollectionPage'
 
@@ -47,19 +47,19 @@ const router = createBrowserRouter([
         element: <SignupPage />,
         errorElement: <ErrorPage />,
       },
+      // {
+      //   path: 'user-profile',
+      //   element: <UserProfilePage />,
+      //   errorElement: <ErrorPage />,
+      // },
       {
-        path: 'user-profile',
-        element: <UserProfilePage />,
+        path: 'passwordEmailLink',
+        element: <PasswordEmailLinkPage />,
         errorElement: <ErrorPage />,
       },
       {
-        path: 'Password1',
-        element: <PasswordPage1 />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: 'Password2',
-        element: <PasswordPage2 />,
+        path: 'passwordReset',
+        element: <PasswordResetPage />,
         errorElement: <ErrorPage />,
       },
       {
