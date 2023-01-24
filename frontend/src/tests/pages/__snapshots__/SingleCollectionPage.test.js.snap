@@ -93,7 +93,6 @@ Object {
       </div>
       <div
         class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
-        width="lg"
       >
         <form
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
@@ -161,43 +160,48 @@ Object {
           <div
             class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
           >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
+            <a
+              href="/assets/63cce991b241f44010e06adf"
+              style="text-decoration: none;"
             >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                src="https://loremflickr.com/640/480/nature"
-              />
               <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
               >
-                <p
-                  class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
-                >
-                  11th December 2022
-                </p>
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  deserunt recusandae quis rerum quo amet
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
-                </p>
+                <img
+                  alt="random"
+                  class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                  src="https://loremflickr.com/640/480/nature"
+                />
                 <div
-                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+                  class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
                 >
-                  <span
-                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                  <p
+                    class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
                   >
-                    image
-                  </span>
+                    11th December 2022
+                  </p>
+                  <h2
+                    class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+                  >
+                    deserunt recusandae quis rerum quo amet
+                  </h2>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                  >
+                    Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                  </p>
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-ybraq4-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                    >
+                      image
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
         <button
@@ -300,7 +304,6 @@ Object {
     </div>
     <div
       class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
-      width="lg"
     >
       <form
         class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
@@ -368,43 +371,48 @@ Object {
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
         >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
+          <a
+            href="/assets/63cce991b241f44010e06adf"
+            style="text-decoration: none;"
           >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-              src="https://loremflickr.com/640/480/nature"
-            />
             <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
             >
-              <p
-                class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
-              >
-                11th December 2022
-              </p>
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                deserunt recusandae quis rerum quo amet
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
-              </p>
+              <img
+                alt="random"
+                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                src="https://loremflickr.com/640/480/nature"
+              />
               <div
-                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-lu3mtj-MuiChip-root"
+                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
               >
-                <span
-                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                <p
+                  class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
                 >
-                  image
-                </span>
+                  11th December 2022
+                </p>
+                <h2
+                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+                >
+                  deserunt recusandae quis rerum quo amet
+                </h2>
+                <p
+                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                >
+                  Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                </p>
+                <div
+                  class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-ybraq4-MuiChip-root"
+                >
+                  <span
+                    class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                  >
+                    image
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       <button

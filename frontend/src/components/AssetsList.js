@@ -12,7 +12,7 @@ import moment from 'moment'
 import { Link } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
-import { defaultAssetsLimit } from '../lib/dataConstants'
+import { defaultAssetsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
   return (
@@ -30,7 +30,14 @@ function LoadingSkeletons() {
   )
 }
 
-function AssetsList({ nftCollectionId, userId, enableLoadMore, enableSearch, containerStyle }) {
+function AssetsList({
+  nftCollectionId,
+  userId,
+  excludeAssetId,
+  enableLoadMore,
+  enableSearch,
+  containerStyle,
+}) {
   const [assets, setAssets] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
@@ -53,7 +60,7 @@ function AssetsList({ nftCollectionId, userId, enableLoadMore, enableSearch, con
 
         setLoading(false)
         setOffset(offsetNumber)
-        setAssets(assets.concat(data))
+        setAssets(assets.concat(data)?.filter((asset) => asset._id !== excludeAssetId))
         setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
@@ -97,7 +104,14 @@ function AssetsList({ nftCollectionId, userId, enableLoadMore, enableSearch, con
                       {asset.name}
                     </Typography>
                     <Typography>{asset.summary}</Typography>
-                    <Chip sx={{ mt: 1 }} label={asset.assetType} />
+                    <Chip
+                      sx={{
+                        mt: 1,
+                        color: '#fff',
+                        backgroundColor: collectionTypeLabelColors[asset.assetType],
+                      }}
+                      label={asset.assetType}
+                    />
                   </CardContent>
                 </Card>
               </Link>

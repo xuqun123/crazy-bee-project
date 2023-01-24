@@ -3,7 +3,7 @@ import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import SingleCollectionPage from '../../pages/SingleCollectionPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection, fakeAsset } from '../../lib/testHelper'
-import 'react-router-dom'
+import { MemoryRouter } from 'react-router-dom'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -25,13 +25,13 @@ describe('SingleCollectionPage', () => {
         if (url.includes('/assets')) {
           return Promise.resolve({ data: { data: [fakeAsset], loadMore: true } })
         } else if (url.includes(`nftCollections/${fakeNftCollection._id}`)) {
-          return Promise.resolve({ data: { data: { ...fakeNftCollection } } })
+          return Promise.resolve({ data: { data: fakeNftCollection } })
         }
       })
     })
 
     it('render the SingleCollectionPage view properly with expected elements', async () => {
-      const { rerender } = render(<SingleCollectionPage />)
+      const { rerender } = render(<SingleCollectionPage />, { wrapper: MemoryRouter })
       let nftCollectionHeader
 
       await waitFor(() => {
@@ -44,7 +44,7 @@ describe('SingleCollectionPage', () => {
 
       const loadMoreButton = screen.getByTestId('load-more-btn')
       expect(loadMoreButton).toBeInTheDocument()
-      rerender(<SingleCollectionPage />)
+      rerender(<SingleCollectionPage />, { wrapper: MemoryRouter })
 
       fireEvent.click(loadMoreButton)
       const newNftCollectionSummary = await screen.findByText(fakeNftCollection.summary)
@@ -52,7 +52,7 @@ describe('SingleCollectionPage', () => {
     })
 
     it('snapshot the SingleCollectionPage view with all expected elements', async () => {
-      const view = render(<SingleCollectionPage />)
+      const view = render(<SingleCollectionPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.getByText(fakeNftCollection.name)).toBeInTheDocument()
@@ -71,7 +71,7 @@ describe('SingleCollectionPage', () => {
     })
 
     it('render the SingleCollectionPage view without rendering any nftCollection data', async () => {
-      render(<SingleCollectionPage />)
+      render(<SingleCollectionPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.queryByText(fakeUser.username)).not.toBeInTheDocument()

@@ -32,7 +32,7 @@ const fakeNftCollection = {
 
 const fakeAsset = {
   _id: '63cce991b241f44010e06adf',
-  userId: '63ccd8a066916dc606f26ecb',
+  userId: '63c551e0ca77037c5a8a017f',
   nftCollectionId: '63cce9886f124b9e51502125',
   name: 'deserunt recusandae quis rerum quo amet',
   summary: 'Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.',

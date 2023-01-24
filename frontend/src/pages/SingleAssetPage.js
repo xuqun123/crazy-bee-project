@@ -1,17 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
-import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
 import Chip from '@mui/material/Chip'
 import CircularProgress from '@mui/material/CircularProgress'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
-import CommentIcon from '@mui/icons-material/Comment'
-import IconButton from '@mui/material/IconButton'
 import { Accordion, AccordionSummary, AccordionDetails } from '../components/Accordion'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -27,6 +21,8 @@ import axiosClient from '../lib/axiosClient'
 function SingleCollectionPage() {
   const { assetId } = useParams()
   const [asset, setAsset] = useState(null)
+  const [user, setUser] = useState(null)
+  const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -42,6 +38,30 @@ function SingleCollectionPage() {
         console.error(message)
       })
   }, [assetId])
+
+  useEffect(() => {
+    if (asset) {
+      axiosClient
+        .get(`/users/${asset.userId}`)
+        .then((response) => {
+          setUser(response?.data?.data)
+        })
+        .catch((error) => {
+          const message = `Get user data failed: ${error.message}`
+          console.error(message)
+        })
+
+      axiosClient
+        .get(`/nftCollections/${asset.nftCollectionId}`)
+        .then((response) => {
+          setNFTCollection(response?.data?.data)
+        })
+        .catch((error) => {
+          const message = `Get asset data failed: ${error.message}`
+          console.error(message)
+        })
+    }
+  }, [asset])
 
   return (
     <>
@@ -66,7 +86,7 @@ function SingleCollectionPage() {
                   Asset Preview
                 </AccordionSummary>
                 <AccordionDetails>
-                  <img src={asset.assetUrl} alt={`asset-${asset.assetname}`} width="80%" />
+                  <img src={asset.assetUrl} alt={`asset-${asset.name}`} width="80%" />
                 </AccordionDetails>
               </Accordion>
             </Grid>
@@ -80,9 +100,17 @@ function SingleCollectionPage() {
                   Details
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography component="h6" variant="h6" align="left" color="grey">
-                    Collected in <strong style={{ color: '#000' }}>{asset.nftCollectionId}</strong>
-                  </Typography>
+                  {nftCollection && (
+                    <Typography component="h6" variant="h6" align="left" color="grey">
+                      Collected in{' '}
+                      <Link
+                        to={`/collections/${asset.nftCollectionId}`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        {nftCollection.name}
+                      </Link>
+                    </Typography>
+                  )}
                   <Typography component="h3" variant="h3" align="left" color="text.primary">
                     {asset.name}
                   </Typography>
@@ -96,7 +124,13 @@ function SingleCollectionPage() {
                     <Typography component="span" variant="h5" align="left" color="grey">
                       Owned by{' '}
                     </Typography>
-                    {asset.userId}
+                    <Link
+                      style={{ textDecoration: 'none' }}
+                      to={`/users/${asset.userId}/collections`}
+                    >
+                      {' '}
+                      {user?.username}
+                    </Link>
                     <Typography component="span" variant="h5" align="left" color="grey">
                       {' '}
                       Published{' '}
@@ -122,7 +156,6 @@ function SingleCollectionPage() {
                   <Typography component="h6" variant="h6" align="left" color="grey">
                     {asset.description}
                   </Typography>
-
                   <TableContainer component={Paper} sx={{ mt: 2, width: '100%' }}>
                     <Table aria-label="simple table">
                       <TableHead></TableHead>
@@ -159,6 +192,7 @@ function SingleCollectionPage() {
             <AccordionDetails>
               <AssetsList
                 userId={asset.userId}
+                excludeAssetId={asset._id}
                 enableLoadMore={true}
                 enableSearch={false}
                 containerStyle={{ py: 2.5, minWidth: '100%' }}
