@@ -2,10 +2,10 @@
 pragma solidity ^0.8.4;
 
 //INTERAL IMPORT FOR NFT OPENZIPLINE
-import "@openzeppelin/contracts/utils/Counters.sol"; //Keep track of NFT tokens
-import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import "hardhat/console.sol";
+import "node_modules/@openzeppelin/contracts/utils/Counters.sol"; //Keep track of NFT tokens
+import "node_modules/@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
+import "node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol";
+import "node_modules/hardhat/console.sol";
 
 contract marketplace is ERC721URIStorage{
     using Counters for Counters.Counter;
