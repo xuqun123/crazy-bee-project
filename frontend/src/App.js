@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import TopNav from './components/TopNav'
 import CurrentUserContext from './lib/CurrentUserContext'
 
+
 import './App.css'
 
 const theme = createTheme()
