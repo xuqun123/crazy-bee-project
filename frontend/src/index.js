@@ -6,6 +6,7 @@ import App from './App'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
+import CreatePage from './pages/CreatePage'
 
 import './index.css'
 
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: 'explore',
         element: <ExplorePage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'create',
+        element: <CreatePage />,
         errorElement: <ErrorPage />,
       },
     ],
