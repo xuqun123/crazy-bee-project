@@ -35,7 +35,7 @@ describe('SingleUserCollectionsPage', () => {
       let usernameHeader
 
       await waitFor(() => {
-        usernameHeader = screen.getByText(fakeUser.username)
+        usernameHeader = screen.getByText(`@${fakeUser.username}`)
       })
       expect(usernameHeader).toBeInTheDocument()
 
@@ -55,7 +55,7 @@ describe('SingleUserCollectionsPage', () => {
       const view = render(<SingleUserCollectionsPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
-        expect(screen.getByText(fakeUser.username)).toBeInTheDocument()
+        expect(screen.getByText(`@${fakeUser.username}`)).toBeInTheDocument()
       })
       expect(view).toMatchSnapshot()
     })

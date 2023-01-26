@@ -12,7 +12,7 @@ Object {
         width="100%"
       />
       <div
-        class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container css-3tr9xy-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
@@ -30,11 +30,30 @@ Object {
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
         >
-          <h3
-            class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+          <div
+            class="MuiBox-root css-gg4vpm"
+            direction="row"
           >
-            abc123
-          </h3>
+            <h4
+              class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-fokda-MuiTypography-root"
+            >
+              @
+              abc123
+            </h4>
+            <a
+              href="/users/63c551e0ca77037c5a8a017f/collections/new"
+              style="text-decoration: none;"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium css-ke5b6m-MuiButtonBase-root-MuiButton-root"
+                data-testid="create-nftcollection-btn"
+                tabindex="0"
+                type="button"
+              >
+                Create
+              </button>
+            </a>
+          </div>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
           >
@@ -222,7 +241,7 @@ Object {
       width="100%"
     />
     <div
-      class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-3tr9xy-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
@@ -240,11 +259,30 @@ Object {
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
       >
-        <h3
-          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+        <div
+          class="MuiBox-root css-gg4vpm"
+          direction="row"
         >
-          abc123
-        </h3>
+          <h4
+            class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-fokda-MuiTypography-root"
+          >
+            @
+            abc123
+          </h4>
+          <a
+            href="/users/63c551e0ca77037c5a8a017f/collections/new"
+            style="text-decoration: none;"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium css-ke5b6m-MuiButtonBase-root-MuiButton-root"
+              data-testid="create-nftcollection-btn"
+              tabindex="0"
+              type="button"
+            >
+              Create
+            </button>
+          </a>
+        </div>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
         >
