@@ -1,20 +1,11 @@
 import React from 'react'
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
-import NewCollectionPage from '../../pages/NewCollectionPage'
+import NewCollectionPage, { defaultValues } from '../../pages/NewCollectionPage'
 import axiosClient from '../../lib/axiosClient'
-import { fakeUser, fakeAsset } from '../../lib/testHelper'
+import { fakeUser } from '../../lib/testHelper'
 import { MemoryRouter } from 'react-router-dom'
 
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useParams: () => {
-    const { fakeUser } = require('../../lib/testHelper')
-
-    return {
-      userId: fakeUser._id,
-    }
-  },
-}))
+defaultValues.publishedAt = new Date(2023, 1, 1)
 
 describe('NewCollectionPage', () => {
   afterEach(() => jest.clearAllMocks())

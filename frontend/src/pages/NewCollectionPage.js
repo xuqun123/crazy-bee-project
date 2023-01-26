@@ -46,7 +46,7 @@ const validationSchema = Yup.object().shape({
   bannerImageUrl: Yup.string().required('you must provide a banner image'),
 })
 
-const defaultValues = {
+export const defaultValues = {
   name: '',
   status: '',
   summary: '',

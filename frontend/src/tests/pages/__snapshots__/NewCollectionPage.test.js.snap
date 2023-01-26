@@ -35,7 +35,7 @@ Object {
               abc123
             </h4>
             <a
-              href="/users/63c551e0ca77037c5a8a017f/collections/new"
+              href="/users/undefined/collections/new"
               style="text-decoration: none;"
             />
           </div>
@@ -346,13 +346,13 @@ Object {
                       id=":r9:"
                       placeholder="mm/dd/yyyy hh:mm (a|p)m"
                       type="tel"
-                      value="01/26/2023 06:44 PM"
+                      value="02/01/2023 12:00 AM"
                     />
                     <div
                       class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
                     >
                       <button
-                        aria-label="Choose date, selected date is Jan 26, 2023"
+                        aria-label="Choose date, selected date is Feb 1, 2023"
                         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
                         tabindex="0"
                         type="button"
@@ -613,7 +613,7 @@ Object {
             abc123
           </h4>
           <a
-            href="/users/63c551e0ca77037c5a8a017f/collections/new"
+            href="/users/undefined/collections/new"
             style="text-decoration: none;"
           />
         </div>
@@ -924,13 +924,13 @@ Object {
                     id=":r9:"
                     placeholder="mm/dd/yyyy hh:mm (a|p)m"
                     type="tel"
-                    value="01/26/2023 06:44 PM"
+                    value="02/01/2023 12:00 AM"
                   />
                   <div
                     class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
                   >
                     <button
-                      aria-label="Choose date, selected date is Jan 26, 2023"
+                      aria-label="Choose date, selected date is Feb 1, 2023"
                       class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1yq5fb3-MuiButtonBase-root-MuiIconButton-root"
                       tabindex="0"
                       type="button"
