@@ -35,17 +35,17 @@ Object {
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
-            <button
+            <a
               class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
               data-testid="secondary-cta-btn"
+              href="signup"
               tabindex="0"
-              type="button"
             >
               Signup Now
               <span
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -118,17 +118,17 @@ Object {
               class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </button>
-          <button
+          <a
             class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
             data-testid="secondary-cta-btn"
+            href="signup"
             tabindex="0"
-            type="button"
           >
             Signup Now
             <span
               class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
-          </button>
+          </a>
         </div>
       </div>
     </div>

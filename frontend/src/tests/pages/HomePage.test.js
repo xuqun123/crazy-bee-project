@@ -28,7 +28,7 @@ describe('HomePage', () => {
       expect(exploreButton).toBeInTheDocument()
       expect(exploreButton.tagName.toLowerCase()).toBe('button')
       expect(signupButton).toBeInTheDocument()
-      expect(signupButton.tagName.toLowerCase()).toBe('button')
+      expect(signupButton.tagName.toLowerCase()).toBe('a')
 
       rerender(<HomePage></HomePage>)
 
@@ -70,7 +70,7 @@ describe('HomePage', () => {
       expect(exploreButton).toBeInTheDocument()
       expect(exploreButton.tagName.toLowerCase()).toBe('button')
       expect(signupButton).toBeInTheDocument()
-      expect(signupButton.tagName.toLowerCase()).toBe('button')
+      expect(signupButton.tagName.toLowerCase()).toBe('a')
 
       rerender(<HomePage></HomePage>)
 

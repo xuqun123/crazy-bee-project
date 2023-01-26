@@ -113,10 +113,10 @@ Object {
                     class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                   />
                 </button>
-                <button
+                <a
                   class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                  href="login"
                   tabindex="0"
-                  type="button"
                 >
                   <svg
                     aria-hidden="true"
@@ -132,7 +132,7 @@ Object {
                   <span
                     class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                   />
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -284,10 +284,10 @@ Object {
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </button>
-              <button
+              <a
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-78trlr-MuiButtonBase-root-MuiIconButton-root"
+                href="login"
                 tabindex="0"
-                type="button"
               >
                 <svg
                   aria-hidden="true"
@@ -303,7 +303,7 @@ Object {
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </div>

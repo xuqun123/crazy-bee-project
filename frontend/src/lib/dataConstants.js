@@ -3,6 +3,8 @@ const defaultAssetsLimit = 8
 
 const collectionTypes = ['image', 'video', 'audio', 'document']
 
+const statuses = ['draft', 'published', 'archived']
+
 const collectionTypeLabelColors = {
   image: '#d1ccbf',
   video: '#e09722',
@@ -15,4 +17,5 @@ export {
   defaultAssetsLimit,
   collectionTypes,
   collectionTypeLabelColors,
+  statuses,
 }
