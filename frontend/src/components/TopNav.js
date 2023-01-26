@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import LoginIcon from '@mui/icons-material/Login'
+import LogoutIcon from '@mui/icons-material/Logout';
 import WalletIcon from '@mui/icons-material/Wallet'
 import Grid from '@mui/material/Grid'
 import IconButton from '@mui/material/IconButton'
@@ -15,7 +16,7 @@ function TopNav() {
       <Toolbar sx={{ background: '#faae15' }}>
         <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
           <Grid item sx={{ display: 'flex', alignItems: 'center' }} md={4}>
-            <img src="./logo.jpeg" alt="logo" width={50} style={{ marginRight: '10px' }} />
+            <img src="/logo.jpeg" alt="logo" width={50} style={{ marginRight: '10px' }} />
             <Typography variant="h5" color="inherit" fontWeight={'500'} noWrap>
               Crazy Bee
             </Typography>
@@ -46,7 +47,7 @@ function TopNav() {
             <IconButton>
               <WalletIcon />
             </IconButton>
-            <IconButton>
+            <IconButton href='login'>
               <LoginIcon />
             </IconButton>
           </Grid>

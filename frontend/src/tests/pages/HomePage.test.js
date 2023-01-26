@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, screen, waitFor } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
 import HomePage from '../../pages/HomePage'
 import axiosClient from '../../lib/axiosClient'
 
@@ -14,7 +15,7 @@ describe('HomePage', () => {
     })
 
     it('render the HomePage view properly with expected elements', async () => {
-      const { rerender } = render(<HomePage />)
+      const { rerender } = render(<HomePage />, { wrapper: MemoryRouter })
 
       const sloganHeader = screen.getByText(/#1 NFT Marketplace in Australia/)
       const exploreButton = screen.getByTestId('main-cta-btn')
@@ -37,7 +38,7 @@ describe('HomePage', () => {
     })
 
     it('snapshot the HomePage view with all expected elements', async () => {
-      const view = render(<HomePage />)
+      const view = render(<HomePage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.getByText(/#1 NFT Marketplace in Australia/)).toBeInTheDocument()
@@ -56,7 +57,7 @@ describe('HomePage', () => {
     })
 
     it('render the HomePage view without listing any nftCollections', async () => {
-      const { rerender } = render(<HomePage />)
+      const { rerender } = render(<HomePage />, { wrapper: MemoryRouter })
 
       const sloganHeader = screen.getByText(/#1 NFT Marketplace in Australia/)
       const exploreButton = screen.getByTestId('main-cta-btn')

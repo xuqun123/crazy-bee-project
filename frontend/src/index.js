@@ -7,6 +7,14 @@ import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
 import AICreatorPage from './pages/AICreatorPage'
+import SignupPage from './pages/SignupPage'
+import LoginPage from './pages/LoginPage'
+// import UserProfilePage from './pages/UserProfilePage'
+import PasswordEmailLinkPage from './pages/PasswordEmailLinkPage'
+import PasswordResetPage from './pages/PasswordResetPage'
+import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
+import SingleCollectionPage from './pages/SingleCollectionPage'
+import SingleAssetPage from './pages/SingleAssetPage'
 
 import './index.css'
 
@@ -29,6 +37,46 @@ const router = createBrowserRouter([
       {
         path: '/ai/creator',
         element: <AICreatorPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'users/:userId/collections',
+        element: <SingleUserCollectionsPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'login',
+        element: <LoginPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'signup',
+        element: <SignupPage />,
+        errorElement: <ErrorPage />,
+      },
+      // {
+      //   path: 'user-profile',
+      //   element: <UserProfilePage />,
+      //   errorElement: <ErrorPage />,
+      // },
+      {
+        path: 'passwordEmailLink',
+        element: <PasswordEmailLinkPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'passwordReset',
+        element: <PasswordResetPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'collections/:nftCollectionId',
+        element: <SingleCollectionPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'assets/:assetId',
+        element: <SingleAssetPage />,
         errorElement: <ErrorPage />,
       },
     ],

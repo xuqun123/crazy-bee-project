@@ -10,31 +10,19 @@
 			"item": [
 				{
 					"name": "Get User Profile Data",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzU1MWUwY2E3NzAzN2M1YThhMDE3ZiIsImVtYWlsIjoiRWRhNzdAZ21haWwuY29tIiwiaWF0IjoxNjczOTkzODUwLCJleHAiOjE2NzQwODAyNTB9.tyM_i_vNedXg4qQ7c2lxiSo2a0veXixdSZmoAQvj6nE",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzY2E3NjhlY2FmZDNmOTMzZGRjMWQ4ZCIsImVtYWlsIjoiRWRhN3M3Y2EyMjJzYUBhYmNjZC5jb20iLCJpYXQiOjE2NzQyMTM0MDgsImV4cCI6MTY3NDI5OTgwOH0.pOrZHiSKoqT0P0RjtOKi1HwwIQAidfuWdwZUGoh7rwg",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"Heidi_Quitzon@yahoo.com\",\n    \"password\": \"N2TCDgS7PLFAwiB\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:3000/api/users/me",
 							"protocol": "http",
@@ -128,7 +116,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"Eda77@gmail.com\",\n    \"password\": \"lknX_NndRFaLnFa\"\n}",
+							"raw": "{\n    \"email\": \"Eda7s7ca222sa@abccd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -226,7 +214,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"Eda7s7aa@abcd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\",\n    \"username\": \"abc1234\",\n    \"dob\": \"2021-01-01\",\n    \"firstName\": \"Dick\",\n    \"lastName\": \"Smith\"\n}",
+							"raw": "{\n    \"email\": \"Eda7s7ca222s1a@abccd.com\",\n    \"password\": \"lknX_NndRFc2aLnFa\",\n    \"username\": \"abc1122\",\n    \"dob\": \"2021-01-01\",\n    \"firstName\": \"Dick\",\n    \"lastName\": \"Smith\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -313,6 +301,201 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"user\": {\n        \"email\": \"Eda7s7aa@abcd.com\",\n        \"username\": \"abc1234\",\n        \"firstName\": \"Dick\",\n        \"lastName\": \"Smith\",\n        \"dob\": \"2021-01-01T00:00:00.000Z\",\n        \"_id\": \"63c69ffb110f2000d481fe70\",\n        \"createdAt\": \"2023-01-17T13:17:47.821Z\",\n        \"updatedAt\": \"2023-01-17T13:17:47.821Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One User",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"63c551e0ca77037c5a8a017f"
+							]
+						},
+						"description": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f"
+					},
+					"response": [
+						{
+							"name": "Get One User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"63c551e0ca77037c5a8a017f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-expG9XwSOmI0wa4xk4l2kPpbpC4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Jan 2023 11:14:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"emailVerified\": false,\n        \"_id\": \"63c551e0ca77037c5a8a017f\",\n        \"email\": \"Eda77@gmail.com\",\n        \"username\": \"Roxane24\",\n        \"firstName\": \"Casimir\",\n        \"lastName\": \"aaa\",\n        \"dob\": \"1987-11-25T19:09:22.834Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-16T13:32:16.716Z\",\n        \"updatedAt\": \"2023-01-20T11:13:56.020Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update One User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzYzU1MWUwY2E3NzAzN2M1YThhMDE3ZiIsImVtYWlsIjoiRWRhNzdAZ21haWwuY29tIiwiaWF0IjoxNjc0MjEyMzAxLCJleHAiOjE2NzQyOTg3MDF9.ZhDy3V3RC8FeoFOZLcQTQiUMwP7tjHjOGHkPw8ZQGmI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": {\n        \"password\": \"N2TCDgS7PLFAwiB\",\n        \"lastName\": \"aaa\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"63c551e0ca77037c5a8a017f"
+							]
+						},
+						"description": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f"
+					},
+					"response": [
+						{
+							"name": "Update One User",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user\": {\n        \"password\": \"N2TCDgS7PLFAwiB\",\n        \"lastName\": \"aaa\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/63c551e0ca77037c5a8a017f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"63c551e0ca77037c5a8a017f"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "271"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"10f-r1tIljWAy7Qz6AFbiAKvBjxWkqA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 20 Jan 2023 11:15:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"emailVerified\": false,\n        \"_id\": \"63c551e0ca77037c5a8a017f\",\n        \"email\": \"Eda77@gmail.com\",\n        \"username\": \"Roxane24\",\n        \"firstName\": \"Casimir\",\n        \"lastName\": \"aaa\",\n        \"dob\": \"1987-11-25T19:09:22.834Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-16T13:32:16.716Z\",\n        \"updatedAt\": \"2023-01-20T11:15:36.637Z\"\n    }\n}"
 						}
 					]
 				}
@@ -1022,6 +1205,201 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"_id\": \"63c3d3d962fdd0d95944af08\",\n        \"name\": \"explicabo ab non vero quam id\",\n        \"summary\": \"Corporis delectus quisquam accusantium qui.\",\n        \"description\": \"Fuga consequuntur cupiditate vero tempore porro eum. Asperiores facere ab labore assumenda voluptatum eligendi reprehenderit. Nesciunt quasi ab. Perspiciatis iste quia officia odio. Rerum explicabo maxime voluptates officia laboriosam sunt tenetur veniam. Fuga ex magnam magni porro illo harum.\",\n        \"collectionType\": \"video\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/571.jpg\",\n        \"publishedAt\": \"2023-01-12T12:11:28.093Z\",\n        \"__v\": 0,\n        \"created_at\": \"2023-01-15T10:22:18.658Z\",\n        \"updated_at\": \"2023-01-15T10:22:18.658Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Get Assets",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/assets?userId=63c54ffead511693e5db8ec6&nftCollectionId=63be66e1909e2d0a8f0e8ec4&limit=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"assets"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "63c54ffead511693e5db8ec6"
+								},
+								{
+									"key": "nftCollectionId",
+									"value": "63be66e1909e2d0a8f0e8ec4"
+								},
+								{
+									"key": "limit",
+									"value": "5"
+								}
+							]
+						},
+						"description": "http://localhost:3000/api/nftCollections"
+					},
+					"response": [
+						{
+							"name": "Get Assets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/assets?userId=63c54ffead511693e5db8ec6&nftCollectionId=63be66e1909e2d0a8f0e8ec4&limit=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"assets"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "63c54ffead511693e5db8ec6"
+										},
+										{
+											"key": "nftCollectionId",
+											"value": "63be66e1909e2d0a8f0e8ec4"
+										},
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "4908"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"132c-oZ/LOebsXHEuH8DqBgerF+F2O5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 04:30:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"63cb6a3c8da53d587b15097a\",\n            \"userId\": \"63c54ffead511693e5db8ec6\",\n            \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n            \"name\": \"aliquid aut reiciendis nesciunt officia nostrum\",\n            \"summary\": \"Laborum debitis iusto esse expedita saepe quasi.\",\n            \"description\": \"Deleniti aut quam. Earum autem reiciendis fuga nihil tempora deleniti. Vel inventore atque quis nulla at.\",\n            \"assetType\": \"video\",\n            \"status\": \"published\",\n            \"coverImageUrl\": \"https://loremflickr.com/640/480/food\",\n            \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n            \"tokenDetails\": {\n                \"contractAdress\": \"b893bb05-486d-4e42-ac55-35ad9dada8f5\",\n                \"tokenId\": \"c06facdc-f098-46a2-9d73-0ad65d6ab52b\",\n                \"tokenStandard\": \"ERC-1156\",\n                \"chain\": \"Polygon\",\n                \"metadata\": \"Centralized\",\n                \"_id\": \"63cb6a3c8da53d587b15097b\"\n            },\n            \"publishedAt\": \"2023-01-03T11:51:44.859Z\",\n            \"__v\": 0,\n            \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n            \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n        },\n        {\n            \"_id\": \"63cb65a7a9f141d551eff7c5\",\n            \"userId\": \"63c54ffead511693e5db8ec6\",\n            \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n            \"name\": \"rem fugit veniam dicta impedit quam\",\n            \"summary\": \"Vitae consequuntur similique nobis.\",\n            \"description\": \"Cumque suscipit dignissimos delectus accusamus alias. Doloribus repudiandae aperiam deserunt. Nam reprehenderit ipsum dignissimos dolorum asperiores doloribus ipsum iusto. Officia aperiam odit impedit sapiente. Quas dolores modi temporibus esse corporis omnis. Perspiciatis dignissimos omnis numquam harum temporibus ratione sint.\",\n            \"assetType\": \"image\",\n            \"status\": \"draft\",\n            \"coverImageUrl\": \"https://loremflickr.com/640/480/fashion\",\n            \"assetUrl\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/117.jpg\",\n            \"tokenDetails\": {\n                \"contractAdress\": \"d236506a-7d89-453a-9743-bfaf35b69cce\",\n                \"tokenId\": \"f811bf52-f1c1-4060-bf28-c7b0bfea4fe4\",\n                \"tokenStandard\": \"ERC-1156\",\n                \"chain\": \"Polygon\",\n                \"metadata\": \"Decentralized\",\n                \"_id\": \"63cb65a7a9f141d551eff7c6\"\n            },\n            \"publishedAt\": \"2022-12-08T03:47:34.362Z\",\n            \"__v\": 0,\n            \"createdAt\": \"2023-01-21T04:10:16.172Z\",\n            \"updatedAt\": \"2023-01-21T04:10:16.172Z\"\n        },\n        {\n            \"_id\": \"63cb6a3c8da53d587b150972\",\n            \"userId\": \"63c54ffead511693e5db8ec6\",\n            \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n            \"name\": \"eligendi eius eveniet tempore alias voluptatibus\",\n            \"summary\": \"Consequatur fuga error.\",\n            \"description\": \"Libero accusantium consequuntur fugit quas minus voluptas accusamus voluptates. Unde occaecati cumque ex in accusamus animi eveniet delectus iure. Est beatae cupiditate illum quibusdam ab magni quidem nisi. Officiis voluptas distinctio libero possimus rem ipsum facere. Vitae quos error dolor ipsam reiciendis animi. Maxime dignissimos porro porro ullam error aspernatur libero.\",\n            \"assetType\": \"document\",\n            \"status\": \"published\",\n            \"coverImageUrl\": \"https://loremflickr.com/640/480/fashion\",\n            \"assetUrl\": \"https://loremflickr.com/640/480/animals\",\n            \"tokenDetails\": {\n                \"contractAdress\": \"c5d27eed-4fe7-4727-a6fb-7129f1190bdd\",\n                \"tokenId\": \"8138f72d-10a6-47fb-a64f-c27f8ec416e8\",\n                \"tokenStandard\": \"ERC-1156\",\n                \"chain\": \"Polygon\",\n                \"metadata\": \"Centralized\",\n                \"_id\": \"63cb6a3c8da53d587b150973\"\n            },\n            \"publishedAt\": \"2022-11-14T05:25:56.010Z\",\n            \"__v\": 0,\n            \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n            \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n        },\n        {\n            \"_id\": \"63cb6a3c8da53d587b150974\",\n            \"userId\": \"63c54ffead511693e5db8ec6\",\n            \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n            \"name\": \"nulla incidunt unde cupiditate eaque unde\",\n            \"summary\": \"Alias ratione molestias unde laboriosam sequi.\",\n            \"description\": \"Vero facere voluptatem sapiente. Et vel ad. Sit commodi libero non consectetur maiores quibusdam rem iste ipsum. Dicta beatae nobis officiis eos voluptates id.\",\n            \"assetType\": \"document\",\n            \"status\": \"published\",\n            \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n            \"assetUrl\": \"https://loremflickr.com/640/480/animals\",\n            \"tokenDetails\": {\n                \"contractAdress\": \"6f394f23-1fa5-4284-9b8e-df9939810344\",\n                \"tokenId\": \"59229ed3-a8fa-49ce-bf3f-9af681ec0dd3\",\n                \"tokenStandard\": \"ERC-1156\",\n                \"chain\": \"Ethereum\",\n                \"metadata\": \"Decentralized\",\n                \"_id\": \"63cb6a3c8da53d587b150975\"\n            },\n            \"publishedAt\": \"2022-11-09T08:52:02.023Z\",\n            \"__v\": 0,\n            \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n            \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n        },\n        {\n            \"_id\": \"63cb6a3c8da53d587b150976\",\n            \"userId\": \"63c54ffead511693e5db8ec6\",\n            \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n            \"name\": \"nulla dolorem ea minima quo eaque\",\n            \"summary\": \"Vitae autem soluta.\",\n            \"description\": \"Iusto atque id ut adipisci ducimus iusto. Doloribus odio magni fuga facere et consequatur porro. Mollitia molestiae accusantium adipisci modi blanditiis.\",\n            \"assetType\": \"video\",\n            \"status\": \"archived\",\n            \"coverImageUrl\": \"https://loremflickr.com/640/480/fashion\",\n            \"assetUrl\": \"https://loremflickr.com/640/480/animals\",\n            \"tokenDetails\": {\n                \"contractAdress\": \"16e9b9c2-69a9-47bb-9323-200a1f602d6b\",\n                \"tokenId\": \"82db13f4-8ef9-4c1c-b296-4bebd1bd413b\",\n                \"tokenStandard\": \"ERC-1155\",\n                \"chain\": \"Polygon\",\n                \"metadata\": \"Centralized\",\n                \"_id\": \"63cb6a3c8da53d587b150977\"\n            },\n            \"publishedAt\": \"2022-05-21T20:44:38.036Z\",\n            \"__v\": 0,\n            \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n            \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n        }\n    ],\n    \"totalCount\": 6,\n    \"offset\": 0,\n    \"loadMore\": true\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Asset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/assets/63cb6a3c8da53d587b15097a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"assets",
+								"63cb6a3c8da53d587b15097a"
+							]
+						},
+						"description": "http://localhost:3000/api/nftCollections/63c3d3d962fdd0d95944af08"
+					},
+					"response": [
+						{
+							"name": "Get One Asset",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/assets/63cb6a3c8da53d587b15097a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"assets",
+										"63cb6a3c8da53d587b15097a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "864"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"360-x2EH0/m8XH5SFrSib0JmTiKOUM0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 21 Jan 2023 04:30:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"63cb6a3c8da53d587b15097a\",\n        \"userId\": \"63c54ffead511693e5db8ec6\",\n        \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n        \"name\": \"aliquid aut reiciendis nesciunt officia nostrum\",\n        \"summary\": \"Laborum debitis iusto esse expedita saepe quasi.\",\n        \"description\": \"Deleniti aut quam. Earum autem reiciendis fuga nihil tempora deleniti. Vel inventore atque quis nulla at.\",\n        \"assetType\": \"video\",\n        \"status\": \"published\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/food\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"tokenDetails\": {\n            \"contractAdress\": \"b893bb05-486d-4e42-ac55-35ad9dada8f5\",\n            \"tokenId\": \"c06facdc-f098-46a2-9d73-0ad65d6ab52b\",\n            \"tokenStandard\": \"ERC-1156\",\n            \"chain\": \"Polygon\",\n            \"metadata\": \"Centralized\",\n            \"_id\": \"63cb6a3c8da53d587b15097b\"\n        },\n        \"publishedAt\": \"2023-01-03T11:51:44.859Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n        \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n    }\n}"
 						}
 					]
 				}

@@ -4,6 +4,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles'
 import { Outlet } from 'react-router-dom'
 import Footer from './components/Footer'
 import TopNav from './components/TopNav'
+import CurrentUserContext from './lib/CurrentUserContext'
+
 
 import './App.css'
 
@@ -13,12 +15,14 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <TopNav />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
+        <CurrentUserContext.Provider value={null}>
+          <CssBaseline />
+          <TopNav />
+          <main>
+            <Outlet />
+          </main>
+          <Footer />
+        </CurrentUserContext.Provider>
       </ThemeProvider>
     </div>
   )
