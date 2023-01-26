@@ -6,6 +6,7 @@ import App from './App'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
+import AICreatorPage from './pages/AICreatorPage'
 import SignupPage from './pages/SignupPage'
 import LoginPage from './pages/LoginPage'
 // import UserProfilePage from './pages/UserProfilePage'
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: 'explore',
         element: <ExplorePage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: '/ai/creator',
+        element: <AICreatorPage />,
         errorElement: <ErrorPage />,
       },
       {

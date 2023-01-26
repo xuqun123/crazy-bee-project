@@ -28,6 +28,9 @@ function TopNav() {
             <Link style={{ marginRight: 30 }} to="/explore">
               Explore
             </Link>
+            <Link style={{ marginRight: 30 }} to="/ai/creator">
+              Create
+            </Link>
             <Link style={{ marginRight: 30 }} to="/about">
               About
             </Link>
