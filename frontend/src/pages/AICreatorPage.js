@@ -4,7 +4,7 @@ import TopSlogan from '../components/TopSlogan'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
 
-function HomePage() {
+function AICreatorPage() {
   return (
     <>
       <TopSlogan
@@ -29,4 +29,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default AICreatorPage

@@ -6,7 +6,7 @@ import App from './App'
 import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
-import CreatePage from './pages/CreatePage'
+import AICreatorPage from './pages/AICreatorPage'
 
 import './index.css'
 
@@ -27,8 +27,8 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: 'create',
-        element: <CreatePage />,
+        path: '/ai/creator',
+        element: <AICreatorPage />,
         errorElement: <ErrorPage />,
       },
     ],
