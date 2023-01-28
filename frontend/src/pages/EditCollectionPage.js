@@ -22,7 +22,7 @@ export const defaultValues = {
 function EditCollectionPage() {
   const { state } = useLocation()
   const { nftCollectionId } = useParams()
-  const userId = state.userId
+  const userId = state?.userId
   const navigate = useNavigate()
   const [user, setUser] = useState(null)
   const [serverError, setsSrverError] = useState(null)

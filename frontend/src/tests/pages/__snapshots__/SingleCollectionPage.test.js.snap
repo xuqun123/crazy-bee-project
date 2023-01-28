@@ -31,9 +31,21 @@ Object {
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
         >
           <h3
-            class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
           >
             dolor alias adipisci vel cumque labore
+            <a
+              href="/collections/63cce9886f124b9e51502125/edit"
+              style="text-decoration: none;"
+            >
+              <button
+                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1uaqrku-MuiButtonBase-root-MuiButton-root"
+                tabindex="0"
+                type="button"
+              >
+                Edit
+              </button>
+            </a>
           </h3>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
@@ -242,9 +254,21 @@ Object {
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
       >
         <h3
-          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
         >
           dolor alias adipisci vel cumque labore
+          <a
+            href="/collections/63cce9886f124b9e51502125/edit"
+            style="text-decoration: none;"
+          >
+            <button
+              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1uaqrku-MuiButtonBase-root-MuiButton-root"
+              tabindex="0"
+              type="button"
+            >
+              Edit
+            </button>
+          </a>
         </h3>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"

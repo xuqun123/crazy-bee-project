@@ -111,13 +111,14 @@ function CollectionForm({
                     control={control}
                     render={({ field }) => (
                       <FormControl fullWidth sx={{ my: 2 }}>
-                        <InputLabel id="status-label">Status*</InputLabel>
+                        <InputLabel id="status">Status*</InputLabel>
                         <Select
                           {...field}
                           fullWidth
                           labelId="status-label"
                           id="status"
                           label="Status"
+                          data-testid="status-select-field"
                           error={errors.status ? true : false}
                         >
                           {statuses.map((status) => (
@@ -226,6 +227,7 @@ function CollectionForm({
               <Grid container spacing={2}>
                 <Grid item md={6} xs={12}>
                   <TextField
+                    data-testid="cover-image-input"
                     fullWidth
                     id="coverImageUrl"
                     label="Cover Image URL"
@@ -258,7 +260,7 @@ function CollectionForm({
                 variant="contained"
                 sx={{ boxShadow: 'none', mt: 2, justifyContent: 'flex-end' }}
               >
-                <Button color="success" type="submit">
+                <Button data-testid="form-submit-btn" color="success" type="submit">
                   {submitButtonText}
                 </Button>
                 <Button color="inherit" onClick={handleCancelClick}>
