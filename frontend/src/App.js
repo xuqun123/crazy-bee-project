@@ -7,14 +7,17 @@ import TopNav from './components/TopNav'
 import CurrentUserContext from './lib/CurrentUserContext'
 
 import './App.css'
+import useCurrentUser from './lib/useCurrentUser'
 
 const theme = createTheme()
 
 function App() {
+  const [currentUser] = useCurrentUser()
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <CurrentUserContext.Provider value={null}>
+        <CurrentUserContext.Provider value={currentUser}>
           <CssBaseline />
           <TopNav />
           <main>
