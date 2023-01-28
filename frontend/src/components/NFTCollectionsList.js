@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
+import CardActions from '@mui/material/CardActions'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
@@ -9,7 +10,7 @@ import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
 import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import axiosClient from '../lib/axiosClient'
 import { defaultNFTCollectionsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
@@ -30,7 +31,8 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
+function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit }) {
+  const navigate = useNavigate()
   const [nftCollections, setNFTCollections] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
@@ -66,6 +68,11 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
     loadData(offset + defaultNFTCollectionsLimit)
   }
 
+  const handleEditClick = (event, nftCollection) => {
+    event.preventDefault()
+    navigate(`/collections/${nftCollection._id}/edit`, { state: { userId: nftCollection.userId } })
+  }
+
   return (
     <Container sx={{ py: 0 }} width="lg">
       {enableSearch && <PageSearchBar placeholder={'Search NFT collections'} />}
@@ -87,7 +94,11 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
                     },
                   }}
                 >
-                  <CardMedia component="img" image={nftCollection.coverImageUrl} alt="random" />
+                  <CardMedia
+                    component="img"
+                    image={nftCollection.coverImageUrl}
+                    alt="cover-image"
+                  />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography variant="p" component="p">
                       {moment(nftCollection.publishedAt).format('Do MMMM YYYY')}
@@ -108,10 +119,19 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch }) {
                       />
                     ))}
                   </CardContent>
-                  {/* <CardActions>
-                  <Button size="small">View</Button>
-                  <Button size="small">Edit</Button>
-                </CardActions> */}
+                  {enableEdit && (
+                    <CardActions sx={{ flexDirection: 'row-reverse', pt: 0 }}>
+                      <Button
+                        key={nftCollection._id}
+                        size="small"
+                        variant="contained"
+                        color="info"
+                        onClick={(e) => handleEditClick(e, nftCollection)}
+                      >
+                        Edit
+                      </Button>
+                    </CardActions>
+                  )}
                 </Card>
               </Link>
             </Grid>
