@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
 import Chip from '@mui/material/Chip'
+import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import AssetsList from '../components/AssetsList'
 import axiosClient from '../lib/axiosClient'
@@ -65,9 +66,25 @@ function SingleCollectionPage() {
               />
             </Grid>
             <Grid item md={8} xs={12}>
-              <Typography component="h3" variant="h3" align="left" color="text.primary">
+              <Typography
+                component="h3"
+                variant="h3"
+                align="left"
+                color="text.primary"
+                sx={{ justifyContent: 'space-between', display: 'flex', alignItems: 'center' }}
+              >
                 {nftCollection.name}
+                <Link
+                  style={{ textDecoration: 'none' }}
+                  to={`/collections/${nftCollectionId}/edit`}
+                  state={{ userId: nftCollection.userId }}
+                >
+                  <Button size="small" variant="contained" color="info">
+                    Edit
+                  </Button>
+                </Link>
               </Typography>
+
               <Typography
                 component="h5"
                 variant="h5"

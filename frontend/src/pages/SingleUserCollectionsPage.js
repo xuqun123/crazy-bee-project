@@ -26,7 +26,12 @@ function SingleUserCollectionsPage() {
   return (
     <>
       <UserSummary userId={userId} user={user} loading={loading} enableCreate={true} />
-      <NFTCollectionsList userId={userId} enableLoadMore={true} enableSearch={true} />
+      <NFTCollectionsList
+        userId={userId}
+        enableLoadMore={true}
+        enableSearch={true}
+        enableEdit={true}
+      />
     </>
   )
 }

@@ -1,30 +1,50 @@
 import React from 'react'
 import { render, screen, waitFor, fireEvent, act } from '@testing-library/react'
-import NewCollectionPage, { defaultValues } from '../../pages/NewCollectionPage'
+import EditCollectionPage, { defaultValues } from '../../pages/EditCollectionPage'
 import axiosClient from '../../lib/axiosClient'
-import { fakeNftCollection, fakeUser } from '../../lib/testHelper'
+import { fakeUser, fakeNftCollection } from '../../lib/testHelper'
 import { MemoryRouter } from 'react-router-dom'
 
 defaultValues.publishedAt = new Date(2023, 1, 1)
 
-describe('NewCollectionPage', () => {
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useParams: () => {
+    const { fakeNftCollection } = require('../../lib/testHelper')
+
+    return {
+      nftCollectionId: fakeNftCollection._id,
+    }
+  },
+  useLocation: () => {
+    const { fakeUser } = require('../../lib/testHelper')
+
+    return {
+      state: { userId: fakeUser._id },
+    }
+  },
+}))
+
+describe('EditCollectionPage', () => {
   afterEach(() => jest.clearAllMocks())
 
-  describe('get users data via api', () => {
+  describe('get users and collection data via api', () => {
     beforeEach(() => {
       jest.spyOn(axiosClient, 'get').mockImplementation((url) => {
         if (url.includes('/users')) {
           return Promise.resolve({ data: { data: fakeUser } })
+        } else if (url.includes(`/nftCollections/${fakeNftCollection._id}`)) {
+          return Promise.resolve({ data: { data: fakeNftCollection } })
         }
       })
       jest
-        .spyOn(axiosClient, 'post')
+        .spyOn(axiosClient, 'patch')
         .mockImplementation(() => Promise.resolve({ data: { data: fakeNftCollection } }))
       jest.spyOn(console, 'log').mockImplementation()
     })
 
-    it('render the NewCollectionPage view with validaiton errors', async () => {
-      const { rerender } = render(<NewCollectionPage />, { wrapper: MemoryRouter })
+    it('render the EditCollectionPage view properly with expected elements', async () => {
+      const { rerender } = render(<EditCollectionPage />, { wrapper: MemoryRouter })
       let usernameHeader
 
       await waitFor(() => {
@@ -35,28 +55,20 @@ describe('NewCollectionPage', () => {
       const userBio = screen.getByText(fakeUser.bio)
       expect(userBio).toBeInTheDocument()
 
-      const newFormHeader = screen.getByText('Create New NFT Collection')
-      expect(newFormHeader).toBeInTheDocument()
-
-      const submitButton = screen.getByTestId('form-submit-btn')
-      // submit the form
-      fireEvent.submit(submitButton)
-
-      // get validation errors
-      const nameError = await screen.findByText('name is required')
-      expect(nameError).toBeInTheDocument()
+      const editFormHeader = screen.getByText('Edit NFT Collection')
+      expect(editFormHeader).toBeInTheDocument()
 
       const cancelButton = screen.getByText('Cancel')
       fireEvent.click(cancelButton)
 
-      rerender(<NewCollectionPage />, { wrapper: MemoryRouter })
+      rerender(<EditCollectionPage />, { wrapper: MemoryRouter })
     })
 
-    it('render the NewCollectionPage view and submit the form properly', async () => {
-      render(<NewCollectionPage />, { wrapper: MemoryRouter })
+    it('render the EditCollectionPage view and submit the form properly', async () => {
+      render(<EditCollectionPage />, { wrapper: MemoryRouter })
 
-      const newFormHeader = screen.getByText('Create New NFT Collection')
-      expect(newFormHeader).toBeInTheDocument()
+      const editFormHeader = screen.getByText('Edit NFT Collection')
+      expect(editFormHeader).toBeInTheDocument()
 
       // enter valid form details
       fireEvent.input(screen.getByRole('textbox', { name: /name/i }), {
@@ -95,8 +107,8 @@ describe('NewCollectionPage', () => {
       })
     })
 
-    it('snapshot the NewCollectionPage view with all expected elements', async () => {
-      const view = render(<NewCollectionPage />, { wrapper: MemoryRouter })
+    it('snapshot the EditCollectionPage view with all expected elements', async () => {
+      const view = render(<EditCollectionPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.getByText(`@${fakeUser.username}`)).toBeInTheDocument()
@@ -114,8 +126,8 @@ describe('NewCollectionPage', () => {
       mockConsoleError = jest.spyOn(console, 'error').mockImplementation((error) => error)
     })
 
-    it('render the NewCollectionPage view without rendering any nftCollection data', async () => {
-      render(<NewCollectionPage />, { wrapper: MemoryRouter })
+    it('render the EditCollectionPage view without rendering any nftCollection data', async () => {
+      render(<EditCollectionPage />, { wrapper: MemoryRouter })
 
       await waitFor(() => {
         expect(screen.queryByText(`@${fakeUser.username}`)).not.toBeInTheDocument()

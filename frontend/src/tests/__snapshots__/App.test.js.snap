@@ -48,6 +48,12 @@ Object {
                   Explore
                 </a>
                 <a
+                  href="/ai/creator"
+                  style="margin-right: 30px;"
+                >
+                  Create
+                </a>
+                <a
                   href="/about"
                   style="margin-right: 30px;"
                 >
@@ -217,6 +223,12 @@ Object {
                 style="margin-right: 30px;"
               >
                 Explore
+              </a>
+              <a
+                href="/ai/creator"
+                style="margin-right: 30px;"
+              >
+                Create
               </a>
               <a
                 href="/about"

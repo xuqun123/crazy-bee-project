@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AICreatorPage get users data via api snapshot the AICreatorPage view with all expected elements 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiBox-root css-10m0cap"
+      >
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthSm css-cuefkz-MuiContainer-root"
+        >
+          <h1
+            class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter MuiTypography-gutterBottom css-10759ka-MuiTypography-root"
+          >
+            Create Unique Art with our AI Generator
+          </h1>
+          <p
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter MuiTypography-paragraph css-17rfbpd-MuiTypography-root"
+          >
+            Enter your prompt below and start creating your own art!
+          </p>
+          <div
+            class="css-d1ev6n-MuiStack-root"
+          />
+        </div>
+      </div>
+      <form
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-9dmh1q-MuiPaper-root"
+      >
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+        >
+          <input
+            aria-label="Generate Artwork"
+            class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+            placeholder="Input prompt..."
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="generate"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ArrowForwardIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-tj4w3q-MuiContainer-root"
+      >
+        <h2
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+        >
+          Frequently Asked Questions
+        </h2>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+        >
+          Can I use this for commercial use? Yes, all commercial use is allowed for the generated images.
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+        >
+          Can I use the generated images for NFT? Yes.
+        </p>
+        <p
+          class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+        >
+          Who owns the output? The images are considered public domain, that is, they have no owner.
+        </p>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiBox-root css-10m0cap"
+    >
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthSm css-cuefkz-MuiContainer-root"
+      >
+        <h1
+          class="MuiTypography-root MuiTypography-h2 MuiTypography-alignCenter MuiTypography-gutterBottom css-10759ka-MuiTypography-root"
+        >
+          Create Unique Art with our AI Generator
+        </h1>
+        <p
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignCenter MuiTypography-paragraph css-17rfbpd-MuiTypography-root"
+        >
+          Enter your prompt below and start creating your own art!
+        </p>
+        <div
+          class="css-d1ev6n-MuiStack-root"
+        />
+      </div>
+    </div>
+    <form
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-9dmh1q-MuiPaper-root"
+    >
+      <div
+        class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+      >
+        <input
+          aria-label="Generate Artwork"
+          class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+          placeholder="Input prompt..."
+          type="text"
+          value=""
+        />
+      </div>
+      <button
+        aria-label="generate"
+        class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+        tabindex="0"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+          data-testid="ArrowForwardIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="m12 4-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+        />
+      </button>
+    </form>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-tj4w3q-MuiContainer-root"
+    >
+      <h2
+        class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+      >
+        Frequently Asked Questions
+      </h2>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+      >
+        Can I use this for commercial use? Yes, all commercial use is allowed for the generated images.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+      >
+        Can I use the generated images for NFT? Yes.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom css-d3wcwz-MuiTypography-root"
+      >
+        Who owns the output? The images are considered public domain, that is, they have no owner.
+      </p>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
