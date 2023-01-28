@@ -11,7 +11,7 @@ function Logout() {
 
   return (
     <Tooltip title="logout">
-      <IconButton onClick={logoutUser}>
+      <IconButton data-testid="logout-btn" onClick={logoutUser}>
         <LogoutIcon />
       </IconButton>
     </Tooltip>

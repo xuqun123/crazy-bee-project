@@ -60,7 +60,7 @@ function LoginPopup() {
   return (
     <div>
       <Tooltip title="login">
-        <IconButton onClick={handleClickOpen}>
+        <IconButton onClick={handleClickOpen} data-testid="login-trigger">
           <LoginIcon />
         </IconButton>
       </Tooltip>
@@ -80,7 +80,6 @@ function LoginPopup() {
             autoComplete="off"
           >
             <TextField
-              autoFocus
               margin="dense"
               id="email"
               label="Email"
@@ -95,7 +94,6 @@ function LoginPopup() {
               {errors.email?.message}
             </Typography>
             <TextField
-              autoFocus
               margin="dense"
               id="password"
               label="Password"
@@ -105,6 +103,7 @@ function LoginPopup() {
               placeholder="Please enter your password"
               {...register('password')}
               error={errors.password ? true : false}
+              inputProps={{ 'data-testid': 'password-field' }}
             />
             <Typography className="validation-error" variant="inherit" color="red">
               {errors.password?.message}
@@ -137,6 +136,7 @@ function LoginPopup() {
             <Button
               variant="contained"
               className="primary-action-btn"
+              data-testid="login-btn"
               onClick={handleSubmit(onSubmit)}
             >
               Login
