@@ -18,7 +18,7 @@ app.use(morgan("combined"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/auth", userAuthRoutes);
+app.use("/api/auth", userAuthRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/nftCollections", nftCollectionRoutes);
 app.use("/api/assets", assetRoutes);
