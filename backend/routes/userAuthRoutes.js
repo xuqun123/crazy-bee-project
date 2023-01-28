@@ -11,7 +11,7 @@ router.post("/signup", function (req, res) {
   passport.authenticate("local-signup", { session: false }, (err, user, info) => {
     if (err || !user) {
       return res.status(400).json({
-        message: err?.message || info?.message,
+        error: err?.message || info?.message,
       });
     }
 
@@ -23,7 +23,7 @@ router.post("/login", function (req, res) {
   passport.authenticate("local", { session: false }, (err, user, info) => {
     if (err || !user) {
       return res.status(400).json({
-        message: err?.message || info?.message,
+        error: err?.message || info?.message,
       });
     }
 
