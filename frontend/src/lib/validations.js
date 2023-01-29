@@ -12,4 +12,9 @@ const collectionValidationSchema = Yup.object().shape({
   bannerImageUrl: Yup.string().required('you must provide a banner image'),
 })
 
-export { collectionValidationSchema }
+const loginValidationSchema = Yup.object().shape({
+  email: Yup.string().email('must be a valid email').required('email is required'),
+  password: Yup.string().required('password is required'),
+})
+
+export { collectionValidationSchema, loginValidationSchema }

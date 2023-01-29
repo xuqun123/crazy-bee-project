@@ -9,7 +9,7 @@ const { createFakeUser, convertTimestampToString } = require("../../lib/fakeData
 const userRepo = require("../../repos/User");
 const userAuthRoutes = require("../../routes/userAuthRoutes");
 
-const baseUrl = "/auth";
+const baseUrl = "/api/auth";
 const app = express();
 app.use(express.json());
 app.use(baseUrl, userAuthRoutes);
@@ -28,7 +28,7 @@ describe("userAuthRoutes", function () {
     if (userRepoStub) userRepoStub.restore();
   });
 
-  describe("POST /auth/signup", function () {
+  describe("POST api/auth/signup", function () {
     describe("400 response", function () {
       const newUserPayload = convertTimestampToString(createFakeUser());
 
@@ -39,7 +39,7 @@ describe("userAuthRoutes", function () {
           .set("Accept", "application/json");
 
         expect(response.statusCode).to.equal(400);
-        expect(response.body.message).to.contain("The user email has been taken already");
+        expect(response.body.error).to.contain("The user email has been taken already");
       });
 
       it("returns an error message when the payload is missing mandatory attributes", async function () {
@@ -49,7 +49,7 @@ describe("userAuthRoutes", function () {
           .set("Accept", "application/json");
 
         expect(response.statusCode).to.equal(400);
-        expect(response.body.message).to.contain("User validation failed: username");
+        expect(response.body.error).to.contain("User validation failed: username");
       });
 
       it("returns an error message when User.getByEmail call is failed", async function () {
@@ -62,7 +62,7 @@ describe("userAuthRoutes", function () {
           .set("Accept", "application/json");
 
         expect(response.statusCode).to.equal(400);
-        expect(response.body.message).to.contain(error.message);
+        expect(response.body.error).to.contain(error.message);
       });
     });
 
@@ -90,7 +90,7 @@ describe("userAuthRoutes", function () {
           .set("Accept", "application/json");
 
         expect(response.statusCode).to.equal(400);
-        expect(response.body.message).to.contain("Incorrect user email or password");
+        expect(response.body.error).to.contain("Incorrect user email or password");
       });
 
       it("returns an error message when User.getByEmailAndPassword call is failed", async function () {
@@ -103,7 +103,7 @@ describe("userAuthRoutes", function () {
           .set("Accept", "application/json");
 
         expect(response.statusCode).to.equal(400);
-        expect(response.body.message).to.contain(error.message);
+        expect(response.body.error).to.contain(error.message);
       });
     });
 

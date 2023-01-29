@@ -8,7 +8,6 @@ import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
 import AICreatorPage from './pages/AICreatorPage'
 import SignupPage from './pages/SignupPage'
-import LoginPage from './pages/LoginPage'
 // import UserProfilePage from './pages/UserProfilePage'
 import PasswordEmailLinkPage from './pages/PasswordEmailLinkPage'
 import PasswordResetPage from './pages/PasswordResetPage'
@@ -54,11 +53,6 @@ const router = createBrowserRouter([
       {
         path: '/collections/:nftCollectionId/edit',
         element: <EditCollectionPage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: 'login',
-        element: <LoginPage />,
         errorElement: <ErrorPage />,
       },
       {

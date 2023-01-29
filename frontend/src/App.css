@@ -28,7 +28,6 @@
   color: #61dafb;
 }
 
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -38,7 +37,19 @@
   }
 }
 
-.card-container, .card-body, .login-form, .register-form, .form-group {
+.primary-action-btn {
+  background-color: #faae15 !important;
+}
+
+.primary-action-link {
+  color: #faae15 !important;
+}
+
+.card-container,
+.card-body,
+.login-form,
+.register-form,
+.form-group {
   display: flex;
   flex-direction: column;
 }
@@ -50,7 +61,7 @@
   border-radius: 10px solid black;
 }
 
-label {
+/* label {
   text-align: left;
   padding: 0.25rem 0;
 }
@@ -68,4 +79,4 @@ button {
   border-radius: 10px;
   cursor: pointer;
   color: orange;
-}
+} */
