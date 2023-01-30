@@ -1,15 +1,19 @@
-const deepai = require('deepai');
+const deepai = require("deepai");
 
-deepai.setApiKey('quickstart-QUdJIGlzIGNvbWluZy4uLi4K') //This key free (untested)
+const create = (text) => {
+  deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
+  //   console.log(text);
+  //   return deepai
+  //     .callStandardApi("text2img", { text })
+  return Promise.resolve({ output: "image url here" })
+    .then((data) => {
+      console.log("test", data);
+      return data;
+    })
+    .catch((error) => {
+      //   console.log(error);
+      return error;
+    });
+};
 
-//pass text to AI model
-
-var result = deepai.callStandardApi("sentiment-analysis", {text:"Image of a Crazy Bee!",}) .then((data) => console.log(data))
-.catch((error) => console.log(error));
-
-    //TODO
-//retreive prompt from front end 
-//post result to front end by calling into an existing HTML element, such as a div, with the id "yourResultContainerId".
-//https://github.com/deepai-org/deepai-js-client
-
-module.exports = result
+module.exports = { create };

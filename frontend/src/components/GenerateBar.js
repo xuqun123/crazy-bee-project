@@ -5,9 +5,12 @@ import IconButton from '@mui/material/IconButton'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 
 function GenerateBar() {
+  const handleSubmit = (payload) => {}
+
   return (
     <Paper
       component="form"
+      onSubmit={handleSubmit}
       sx={{
         mr: 2,
         display: 'inline-flex',
