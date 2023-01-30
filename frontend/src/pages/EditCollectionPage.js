@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useNavigate, useLocation, useParams } from 'react-router-dom'
 import moment from 'moment'
 import { useForm } from 'react-hook-form'
 import { pick } from 'lodash'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
+import AlertMessageContext from '../lib/AlertMessageContext'
 import CollectionForm from '../components/CollectionForm'
 import { collectionValidationSchema } from '../lib/validations'
 
@@ -27,6 +28,7 @@ function EditCollectionPage() {
   const [user, setUser] = useState(null)
   const [serverError, setsSrverError] = useState(null)
   const [loading, setLoading] = useState(true)
+  const { setAlert } = useContext(AlertMessageContext)
 
   const {
     register,
@@ -50,6 +52,7 @@ function EditCollectionPage() {
         setLoading(false)
         const message = `Get user data failed: ${error.message}`
         console.error(message)
+        setAlert({ message, severity: 'error' })
       })
 
     axiosClient
@@ -60,8 +63,9 @@ function EditCollectionPage() {
       .catch((error) => {
         const message = `Get user data failed: ${error.message}`
         console.error(message)
+        setAlert({ message, severity: 'error' })
       })
-  }, [userId, nftCollectionId, reset])
+  }, [userId, nftCollectionId, reset, setAlert])
 
   const handleCancelClick = () => {
     navigate(-1)
@@ -73,7 +77,9 @@ function EditCollectionPage() {
     axiosClient
       .patch(`/nftCollections/${nftCollectionId}`, { nftCollection: data })
       .then((response) => {
-        console.log('NFT collection is updated successfully', response.data)
+        const message = 'NFT collection is updated successfully'
+        console.log(message, response.data)
+        setAlert({ message })
         navigate(-1)
       })
       .catch((error) => {
@@ -81,6 +87,7 @@ function EditCollectionPage() {
         const message = `Update NFT collection failed: ${errMsg}`
         console.error(message)
         setsSrverError(message)
+        setAlert({ message, severity: 'error' })
       })
   }
 
