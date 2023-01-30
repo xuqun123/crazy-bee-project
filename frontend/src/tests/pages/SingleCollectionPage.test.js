@@ -28,6 +28,9 @@ describe('SingleCollectionPage', () => {
           return Promise.resolve({ data: { data: fakeNftCollection } })
         }
       })
+      jest.spyOn(axiosClient, 'delete').mockImplementation((url) => {
+        return Promise.resolve({ data: { data: fakeNftCollection, loadMore: true } })
+      })
     })
 
     it('render the SingleCollectionPage view properly with expected elements', async () => {
@@ -49,6 +52,14 @@ describe('SingleCollectionPage', () => {
       fireEvent.click(loadMoreButton)
       const newNftCollectionSummary = await screen.findByText(fakeNftCollection.summary)
       expect(newNftCollectionSummary).toBeInTheDocument()
+
+      const actionButton = screen.getByTestId('action-btn')
+      fireEvent.click(actionButton)
+
+      const deleteButton = screen.getByTestId('action-confirm-btn')
+      fireEvent.click(deleteButton)
+
+      expect(await screen.findByText(fakeNftCollection.summary)).toBeInTheDocument()
     })
 
     it('snapshot the SingleCollectionPage view with all expected elements', async () => {

@@ -19,6 +19,7 @@ function SingleUserCollectionsPage() {
       .catch((error) => {
         setLoading(false)
         const message = `Get nftCollections data failed: ${error.message}`
+
         console.error(message)
       })
   }, [userId])
@@ -31,6 +32,7 @@ function SingleUserCollectionsPage() {
         enableLoadMore={true}
         enableSearch={true}
         enableEdit={true}
+        enableDelete={true}
       />
     </>
   )
