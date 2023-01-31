@@ -6,14 +6,18 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
 import axiosClient from '../lib/axiosClient'
 
 function GenerateBar() {
-  const handleSubmit = (text) => {
+  const [inputValue, setInputValue] = ''
+
+  const handleSubmit = async (artPrompt) => {
+    artPrompt.preventDefault()
+
     axiosClient
-      .post(`api/aiCreator`, { ...text })
+      .post(`/aiCreator`, { input: inputValue })
       .then((response) => {
-        console.log('Generator successful', response.payload)
+        console.log('Generator successful', response.data)
       })
       .catch((error) => {
-        const errMsg = error.response?.payload?.error || error.message
+        const errMsg = error.response?.artPrompt?.error || error.message
         const message = `Generator failed: ${errMsg}`
         console.error(message)
       })
@@ -35,8 +39,11 @@ function GenerateBar() {
         sx={{ ml: 1, flex: 1 }}
         placeholder="Input prompt..."
         inputProps={{ 'aria-label': 'Generate Artwork' }}
+        type="text"
+        value={inputValue}
+        onChange={(artPrompt) => setInputValue(artPrompt.target.value)}
       />
-      <IconButton type="button" sx={{ p: '10px' }} aria-label="generate">
+      <IconButton type="submit" sx={{ p: '10px' }} aria-label="generate">
         <ArrowForwardIcon />
       </IconButton>
     </Paper>
