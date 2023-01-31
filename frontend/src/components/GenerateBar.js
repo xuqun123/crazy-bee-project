@@ -3,9 +3,21 @@ import Paper from '@mui/material/Paper'
 import InputBase from '@mui/material/InputBase'
 import IconButton from '@mui/material/IconButton'
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'
+import axiosClient from '../lib/axiosClient'
 
 function GenerateBar() {
-  const handleSubmit = (payload) => {}
+  const handleSubmit = (text) => {
+    axiosClient
+      .post(`api/aiCreator`, { ...text })
+      .then((response) => {
+        console.log('Generator successful', response.payload)
+      })
+      .catch((error) => {
+        const errMsg = error.response?.payload?.error || error.message
+        const message = `Generator failed: ${errMsg}`
+        console.error(message)
+      })
+  }
 
   return (
     <Paper
