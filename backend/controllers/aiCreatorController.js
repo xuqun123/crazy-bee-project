@@ -1,14 +1,26 @@
 const StatusCodes = require("http-status-codes");
-const { create } = require("../lib/aiArtGenerator");
+const aiArtGenerator = require("../lib/aiArtGenerator");
 const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 
-// get Assets
 const createAIArt = (req, res) => {
-  const { text } = req.body;
+  const { text, style } = req.body;
 
-  create(text)
-    .then((data) => res.status(OK).json(data))
-    .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
+  aiArtGenerator
+    .create(text, style || "cute-creature-generator")
+    .then((response) => {
+      console.log(
+        `[DeepAI] Successfully generated an AI art from '${text}' (${style}):`,
+        response?.data || response
+      );
+
+      res.status(OK).json(response?.data);
+    })
+    .catch((error) => {
+      const errMsg = error?.response?.data?.status || error.message;
+      console.log(`[DeepAI] Failed to generate an AI art from '${text}' (${style}):`, errMsg);
+
+      res.status(BAD_REQUEST).json({ error: errMsg });
+    });
 };
 
 module.exports = {
