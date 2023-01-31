@@ -17,13 +17,7 @@ const getOne = async ({ _id }) => {
 /**
  * Get multiple assets
  */
-const getMany = async ({
-  name,
-  userId,
-  nftCollectionId,
-  offset = 0,
-  limit = DEFAULT_RESULTS_LIMIT,
-}) => {
+const getMany = async ({ userId, nftCollectionId, offset = 0, limit = DEFAULT_RESULTS_LIMIT }) => {
   let filter = {};
   if (userId) filter = { ...filter, userId };
   if (nftCollectionId) filter = { ...filter, nftCollectionId };
@@ -41,14 +35,34 @@ const getMany = async ({
 };
 
 /**
- * Create a nftCollection
+ * Create an asset
  */
 const create = async (payload) => {
   return await AssetModel.create(payload);
+};
+
+/**
+ * Update an asset
+ */
+const update = async (id, payload) => {
+  return await AssetModel.findByIdAndUpdate(id, payload, {
+    new: true,
+    runValidators: true,
+    context: "query",
+  });
+};
+
+/**
+ * Delete an asset
+ */
+const _delete = async (id) => {
+  return await AssetModel.findByIdAndDelete(id);
 };
 
 module.exports = {
   getOne,
   getMany,
   create,
+  update,
+  delete: _delete,
 };

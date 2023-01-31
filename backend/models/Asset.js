@@ -15,7 +15,7 @@ const TokenDetailsSchema = new Schema({
 const AssetSchema = new Schema(
   {
     userId: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    nftCollectionId: { type: Schema.Types.ObjectId, ref: "Asset", required: true },
+    nftCollectionId: { type: Schema.Types.ObjectId, ref: "NFTCollection", required: true },
     name: { type: String, required: true, unique: true },
     summary: { type: String },
     description: { type: String },
