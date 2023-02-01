@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import moment from 'moment'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
+import AlertMessageContext from '../lib/AlertMessageContext'
 import CollectionForm from '../components/CollectionForm'
 import { collectionValidationSchema } from '../lib/validations'
 
@@ -24,6 +25,7 @@ function NewCollectionPage() {
   const [user, setUser] = useState(null)
   const [serverError, setsSrverError] = useState(null)
   const [loading, setLoading] = useState(true)
+  const { setAlert } = useContext(AlertMessageContext)
 
   const {
     register,
@@ -46,8 +48,9 @@ function NewCollectionPage() {
         setLoading(false)
         const message = `Get user data failed: ${error.message}`
         console.error(message)
+        setAlert({ message, severity: 'error' })
       })
-  }, [userId])
+  }, [userId, setAlert])
 
   const handleCancelClick = () => {
     navigate(-1)
@@ -59,7 +62,9 @@ function NewCollectionPage() {
     axiosClient
       .post(`/nftCollections`, { nftCollection: { ...data, userId } })
       .then((response) => {
-        console.log('NFT collection is created successfully', response.data)
+        const message = 'NFT collection is created successfully'
+        console.log(message, response.data)
+        setAlert({ message })
         navigate(-1)
       })
       .catch((error) => {
@@ -67,6 +72,7 @@ function NewCollectionPage() {
         const message = `Create NFT collection failed: ${errMsg}`
         console.error(message)
         setsSrverError(message)
+        setAlert({ message, severity: 'error' })
       })
   }
 

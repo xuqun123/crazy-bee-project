@@ -185,6 +185,9 @@ Object {
             .
           </p>
         </footer>
+        <div
+          class="css-f779bt-MuiStack-root"
+        />
       </div>
     </div>
   </body>,
@@ -369,6 +372,9 @@ Object {
           .
         </p>
       </footer>
+      <div
+        class="css-f779bt-MuiStack-root"
+      />
     </div>
   </div>,
   "debug": [Function],

@@ -1,20 +1,36 @@
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
 import Avatar from '@mui/material/Avatar'
 import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 import Chip from '@mui/material/Chip'
 import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import AssetsList from '../components/AssetsList'
+import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
 import { collectionTypeLabelColors } from '../lib/dataConstants'
 
 function SingleCollectionPage() {
+  const navigate = useNavigate()
   const { nftCollectionId } = useParams()
   const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
+
+  const handleDelete = (id) => {
+    axiosClient
+      .delete(`/nftCollections/${id}`)
+      .then((response) => {
+        console.log('The NFT collection has been deleted successfully!')
+        navigate(-1)
+      })
+      .catch((error) => {
+        const message = `Delte NFT collection failed: ${error.message}`
+        console.error(message)
+      })
+  }
 
   useEffect(() => {
     axiosClient
@@ -74,15 +90,28 @@ function SingleCollectionPage() {
                 sx={{ justifyContent: 'space-between', display: 'flex', alignItems: 'center' }}
               >
                 {nftCollection.name}
-                <Link
-                  style={{ textDecoration: 'none' }}
-                  to={`/collections/${nftCollectionId}/edit`}
-                  state={{ userId: nftCollection.userId }}
-                >
-                  <Button size="small" variant="contained" color="info">
-                    Edit
-                  </Button>
-                </Link>
+                <Box>
+                  <Link
+                    style={{ textDecoration: 'none' }}
+                    to={`/collections/${nftCollectionId}/edit`}
+                    state={{ userId: nftCollection.userId }}
+                  >
+                    <Button size="small" variant="contained" color="info">
+                      Edit
+                    </Button>
+                  </Link>{' '}
+                  <ActionConfirm
+                    variant="contained"
+                    size="small"
+                    color="error"
+                    buttonText={'Delete'}
+                    title="Are you sure to delete this NFT collection?"
+                    description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                    confirmText="Confirm"
+                    cancelText="Cancel"
+                    confrimAction={() => handleDelete(nftCollection._id)}
+                  />
+                </Box>
               </Typography>
 
               <Typography

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
@@ -12,7 +12,9 @@ import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
+import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
+import AlertMessageContext from '../lib/AlertMessageContext'
 import { defaultNFTCollectionsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
@@ -31,19 +33,20 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit }) {
+function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit, enableDelete }) {
   const navigate = useNavigate()
   const [nftCollections, setNFTCollections] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
   const [loading, setLoading] = useState(true)
+  const { setAlert } = useContext(AlertMessageContext)
 
   useEffect(() => {
     loadData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const loadData = (offset = 0) => {
+  const loadData = (offset = 0, reset = false) => {
     let url = `/nftCollections?limit=${defaultNFTCollectionsLimit}&offset=${offset}`
     if (userId) url = `${url}&userId=${userId}`
 
@@ -54,13 +57,15 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit }
 
         setLoading(false)
         setOffset(offsetNumber)
-        setNFTCollections(nftCollections.concat(data))
+        if (reset) setNFTCollections(data)
+        else setNFTCollections(nftCollections.concat(data))
         setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
         setLoading(false)
         const message = `Get nftCollections data failed: ${error.message}`
         console.error(message)
+        setAlert({ message, severity: 'error' })
       })
   }
 
@@ -71,6 +76,22 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit }
   const handleEditClick = (event, nftCollection) => {
     event.preventDefault()
     navigate(`/collections/${nftCollection._id}/edit`, { state: { userId: nftCollection.userId } })
+  }
+
+  const handleDelete = (id) => {
+    axiosClient
+      .delete(`/nftCollections/${id}`)
+      .then((response) => {
+        const message = 'The NFT collection has been deleted successfully!'
+        console.log(message)
+        loadData(0, true)
+        setAlert({ message })
+      })
+      .catch((error) => {
+        const message = `Delte NFT collection failed: ${error.message}`
+        console.error(message)
+        setAlert({ message, severity: 'error' })
+      })
   }
 
   return (
@@ -121,7 +142,20 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit }
                   </CardContent>
                   {enableEdit && (
                     <CardActions sx={{ flexDirection: 'row-reverse', pt: 0 }}>
+                      <ActionConfirm
+                        variant="contained"
+                        size="small"
+                        color="error"
+                        buttonText={'Delete'}
+                        title="Are you sure to delete this NFT collection?"
+                        description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                        confirmText="Confirm"
+                        cancelText="Cancel"
+                        confrimAction={() => handleDelete(nftCollection._id)}
+                        // onClick={()=>}
+                      />
                       <Button
+                        sx={{ mr: 1 }}
                         key={nftCollection._id}
                         size="small"
                         variant="contained"
