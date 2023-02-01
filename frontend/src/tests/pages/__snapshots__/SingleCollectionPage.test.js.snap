@@ -3,9 +3,7 @@
 exports[`SingleCollectionPage get users data via api snapshot the SingleCollectionPage view with all expected elements 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body
-    style=""
-  >
+  "baseElement": <body>
     <div>
       <img
         alt="banner"
@@ -36,31 +34,6 @@ Object {
             class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
           >
             dolor alias adipisci vel cumque labore
-            <div
-              class="MuiBox-root css-0"
-            >
-              <a
-                href="/collections/63cce9886f124b9e51502125/edit"
-                style="text-decoration: none;"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1uaqrku-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                </button>
-              </a>
-               
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall css-3wxg0j-MuiButtonBase-root-MuiButton-root"
-                data-testid="action-btn"
-                tabindex="0"
-                type="button"
-              >
-                Delete
-              </button>
-            </div>
           </h3>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
@@ -120,6 +93,224 @@ Object {
       </div>
       <div
         class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+      >
+        <div
+          class="MuiBox-root css-70qvj9"
+        >
+          <form
+            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
+          >
+            <div
+              class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+            >
+              <input
+                aria-label="Search assets"
+                class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+                placeholder="Search assets"
+                type="text"
+                value=""
+              />
+            </div>
+            <button
+              aria-label="search"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="SearchIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+            <hr
+              class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
+            />
+            <button
+              aria-label="directions"
+              class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
+              tabindex="0"
+              type="button"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="RestartAltIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
+                />
+              </svg>
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </form>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+          >
+            <a
+              href="/assets/63cce991b241f44010e06adf"
+              style="text-decoration: none;"
+            >
+              <div
+                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
+              >
+                <img
+                  alt="random"
+                  class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
+                  src="https://loremflickr.com/640/480/nature"
+                />
+                <div
+                  class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
+                >
+                  <p
+                    class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
+                  >
+                    11th December 2022
+                  </p>
+                  <h2
+                    class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
+                  >
+                    deserunt recusandae quis rerum quo amet
+                  </h2>
+                  <p
+                    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+                  >
+                    Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
+                  </p>
+                  <div
+                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-ybraq4-MuiChip-root"
+                  >
+                    <span
+                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                    >
+                      image
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1njilb0-MuiButtonBase-root-MuiButton-root"
+          data-testid="load-more-btn"
+          tabindex="0"
+          type="button"
+        >
+          Load More
+        </button>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <img
+      alt="banner"
+      height="300px"
+      src="https://loremflickr.com/1024/200/nature"
+      width="100%"
+    />
+    <div
+      class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
+        >
+          <img
+            alt="avatar-undefined"
+            class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
+            src="https://loremflickr.com/640/480/animals"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
+      >
+        <h3
+          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
+        >
+          dolor alias adipisci vel cumque labore
+        </h3>
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
+        >
+          <span
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
+          >
+            Published
+             
+          </span>
+          01 Dec 2022
+          <span
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                document
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                video
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                audio
+              </span>
+            </div>
+          </span>
+        </h5>
+        <br />
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+        >
+          Natus praesentium inventore ab magni eveniet earum.
+        </h5>
+        <br />
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
+        >
+          Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
+        </h6>
+      </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+    >
+      <div
+        class="MuiBox-root css-70qvj9"
       >
         <form
           class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
@@ -181,310 +372,7 @@ Object {
             />
           </button>
         </form>
-        <div
-          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
-        >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <a
-              href="/assets/63cce991b241f44010e06adf"
-              style="text-decoration: none;"
-            >
-              <div
-                class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-3mgkv0-MuiPaper-root-MuiCard-root"
-              >
-                <img
-                  alt="random"
-                  class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-o69gx8-MuiCardMedia-root"
-                  src="https://loremflickr.com/640/480/nature"
-                />
-                <div
-                  class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-                >
-                  <p
-                    class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
-                  >
-                    11th December 2022
-                  </p>
-                  <h2
-                    class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                  >
-                    deserunt recusandae quis rerum quo amet
-                  </h2>
-                  <p
-                    class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                  >
-                    Quod dolorem dolorum ipsam explicabo excepturi vel eligendi dolorum nostrum.
-                  </p>
-                  <div
-                    class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-ybraq4-MuiChip-root"
-                  >
-                    <span
-                      class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-                    >
-                      image
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-1njilb0-MuiButtonBase-root-MuiButton-root"
-          data-testid="load-more-btn"
-          tabindex="0"
-          type="button"
-        >
-          Load More
-        </button>
       </div>
-    </div>
-    <div
-      aria-hidden="true"
-      class="MuiDialog-root MuiModal-root MuiModal-hidden css-ew73zq-MuiModal-root-MuiDialog-root"
-      role="presentation"
-    >
-      <div
-        aria-hidden="true"
-        class="MuiBackdrop-root MuiModal-backdrop css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop"
-        style="opacity: 0; visibility: hidden;"
-      />
-      <div
-        data-testid="sentinelStart"
-        tabindex="-1"
-      />
-      <div
-        class="MuiDialog-container MuiDialog-scrollPaper css-hz1bth-MuiDialog-container"
-        role="presentation"
-        style="visibility: hidden; webkit-transform: translateY(768px); transform: translateY(768px);"
-        tabindex="-1"
-      >
-        <div
-          aria-describedby="alert-dialog-slide-description"
-          aria-labelledby=":r1:"
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-1t1j96h-MuiPaper-root-MuiDialog-paper"
-          role="dialog"
-        >
-          <h2
-            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-bdhsul-MuiTypography-root-MuiDialogTitle-root"
-            id=":r1:"
-          >
-            Are you sure to delete this NFT collection?
-          </h2>
-          <div
-            class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
-          >
-            <p
-              class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiDialogContentText-root css-qfso29-MuiTypography-root-MuiDialogContentText-root"
-              id="alert-dialog-slide-description"
-            >
-              Please be aware there is no turning back! Please cancel this action if this is not what you want.
-            </p>
-          </div>
-          <div
-            class="MuiDialogActions-root MuiDialogActions-spacing css-hlj6pa-MuiDialogActions-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1sszw6i-MuiButtonBase-root-MuiButton-root"
-              data-testid="action-confirm-btn"
-              tabindex="0"
-              type="button"
-            >
-              Confirm
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        data-testid="sentinelEnd"
-        tabindex="-1"
-      />
-    </div>
-  </body>,
-  "container": <div>
-    <img
-      alt="banner"
-      height="300px"
-      src="https://loremflickr.com/1024/200/nature"
-      width="100%"
-    />
-    <div
-      class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
-    >
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
-      >
-        <div
-          class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
-        >
-          <img
-            alt="avatar-undefined"
-            class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-            src="https://loremflickr.com/640/480/animals"
-          />
-        </div>
-      </div>
-      <div
-        class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
-      >
-        <h3
-          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
-        >
-          dolor alias adipisci vel cumque labore
-          <div
-            class="MuiBox-root css-0"
-          >
-            <a
-              href="/collections/63cce9886f124b9e51502125/edit"
-              style="text-decoration: none;"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1uaqrku-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-              </button>
-            </a>
-             
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall css-3wxg0j-MuiButtonBase-root-MuiButton-root"
-              data-testid="action-btn"
-              tabindex="0"
-              type="button"
-            >
-              Delete
-            </button>
-          </div>
-        </h3>
-        <h5
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
-        >
-          <span
-            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
-          >
-            Published
-             
-          </span>
-          01 Dec 2022
-          <span
-            class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
-          >
-            <div
-              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
-            >
-              <span
-                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-              >
-                document
-              </span>
-            </div>
-            <div
-              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
-            >
-              <span
-                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-              >
-                video
-              </span>
-            </div>
-            <div
-              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
-            >
-              <span
-                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
-              >
-                audio
-              </span>
-            </div>
-          </span>
-        </h5>
-        <br />
-        <h5
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
-        >
-          Natus praesentium inventore ab magni eveniet earum.
-        </h5>
-        <br />
-        <h6
-          class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
-        >
-          Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
-        </h6>
-      </div>
-    </div>
-    <div
-      class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
-    >
-      <form
-        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-paob4f-MuiPaper-root"
-      >
-        <div
-          class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
-        >
-          <input
-            aria-label="Search assets"
-            class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
-            placeholder="Search assets"
-            type="text"
-            value=""
-          />
-        </div>
-        <button
-          aria-label="search"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-            data-testid="SearchIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-            />
-          </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
-        <hr
-          class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
-        />
-        <button
-          aria-label="directions"
-          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
-          tabindex="0"
-          type="button"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
-            data-testid="RestartAltIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
-            />
-          </svg>
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </button>
-      </form>
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
       >

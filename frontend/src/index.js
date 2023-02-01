@@ -16,6 +16,7 @@ import SingleCollectionPage from './pages/SingleCollectionPage'
 import SingleAssetPage from './pages/SingleAssetPage'
 import NewCollectionPage from './pages/NewCollectionPage'
 import EditCollectionPage from './pages/EditCollectionPage'
+import NewAssetPage from './pages/NewAssetPage'
 
 import './index.css'
 
@@ -46,13 +47,28 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
       },
       {
-        path: 'users/:userId/collections/new',
+        path: '/collections/new',
         element: <NewCollectionPage />,
         errorElement: <ErrorPage />,
       },
       {
         path: '/collections/:nftCollectionId/edit',
         element: <EditCollectionPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: '/collections/:nftCollectionId/assets/new',
+        element: <NewAssetPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'collections/:nftCollectionId',
+        element: <SingleCollectionPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: 'assets/:assetId',
+        element: <SingleAssetPage />,
         errorElement: <ErrorPage />,
       },
       {
@@ -73,16 +89,6 @@ const router = createBrowserRouter([
       {
         path: 'passwordReset',
         element: <PasswordResetPage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: 'collections/:nftCollectionId',
-        element: <SingleCollectionPage />,
-        errorElement: <ErrorPage />,
-      },
-      {
-        path: 'assets/:assetId',
-        element: <SingleAssetPage />,
         errorElement: <ErrorPage />,
       },
     ],

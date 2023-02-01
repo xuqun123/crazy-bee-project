@@ -51,18 +51,18 @@ function UserSummary({ userId, user, loading, enableBannerImage = true, enableCr
                 <Typography component="h4" variant="h4" align="left" color="text.primary">
                   @{user.username}
                 </Typography>
-                <Link style={{ textDecoration: 'none' }} to={`/users/${userId}/collections/new`}>
-                  {enableCreate && (
+                {enableCreate && (
+                  <Link style={{ textDecoration: 'none' }} to={`/collections/new`}>
                     <Button
                       data-testid="create-nftcollection-btn"
                       variant="contained"
                       color="success"
                       // onClick={handleLoadMore}
                     >
-                      Create
+                      Create New Collection
                     </Button>
-                  )}
-                </Link>
+                  </Link>
+                )}
               </Box>
               <Typography
                 component="h5"
