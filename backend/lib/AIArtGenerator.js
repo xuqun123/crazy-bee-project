@@ -1,8 +1,9 @@
 require("dotenv").config();
+//const deepai = require("deepai");
 const axios = require("axios");
 const FormData = require("form-data");
 
-// Previous with Jamie's API key
+// // Previous with Jamie's API key
 // const create = (text) => {
 //   //deepai.setApiKey("quickstart-QUdJIGlzIGNvbWluZy4uLi4K");
 //   deepai.setApiKey("7fec5eb0-443c-4a9f-95f4-29dbf032e820");
@@ -20,6 +21,7 @@ const FormData = require("form-data");
 //         return error;
 //       })
 //   );
+// };
 
 const deepAIBaseUrl = "https://api.deepai.org/api";
 
