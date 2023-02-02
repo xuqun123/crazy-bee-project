@@ -8,7 +8,6 @@ import axiosClient from '../lib/axiosClient'
 function GenerateBar() {
   const [inputValue, setInputValue] = React.useState('')
 
-  console.log(inputValue)
   const handleSubmit = async (event) => {
     event.preventDefault()
 
