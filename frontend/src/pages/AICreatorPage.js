@@ -3,6 +3,7 @@ import GenerateBar from '../components/GenerateBar'
 import TopSlogan from '../components/TopSlogan'
 import Container from '@mui/material/Container'
 import Typography from '@mui/material/Typography'
+import ArtworkDisplay from '../components/ArtworkDisplay'
 
 function AICreatorPage() {
   return (
@@ -11,6 +12,7 @@ function AICreatorPage() {
         header="Create Unique Art with our AI Generator"
         summary="Enter your prompt below and start creating your own art!"
       />
+      <ArtworkDisplay />
       <GenerateBar />
       <Container sx={{ py: 12 }} maxWidth="lg">
         <Typography gutterBottom variant="h5" component="h2">
