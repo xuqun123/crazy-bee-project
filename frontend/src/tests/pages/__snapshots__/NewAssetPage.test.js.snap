@@ -1,92 +1,87 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`EditCollectionPage get users and collection data via api snapshot the EditCollectionPage view with all expected elements 1`] = `
+exports[`NewAssetPage get users data via api snapshot the NewAssetPage view with all expected elements 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <span
-        class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
-        role="progressbar"
-        style="width: 40px; height: 40px;"
-      >
-        <svg
-          class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-          viewBox="22 22 44 44"
-        >
-          <circle
-            class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-            cx="44"
-            cy="44"
-            fill="none"
-            r="20.2"
-            stroke-width="3.6"
-          />
-        </svg>
-      </span>
       <div
-        class="MuiGrid-root MuiGrid-container css-3tr9xy-MuiGrid-root"
+        class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
       >
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
         >
           <div
-            class="MuiAvatar-root MuiAvatar-circular css-1cjwto2-MuiAvatar-root"
+            class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
           >
             <img
-              alt="avatar-abc123"
+              alt="avatar-undefined"
               class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-              src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+              src="https://loremflickr.com/640/480/animals"
             />
           </div>
         </div>
         <div
           class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
         >
-          <div
-            class="MuiBox-root css-gg4vpm"
-            direction="row"
+          <h3
+            class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
           >
-            <h4
-              class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-fokda-MuiTypography-root"
-            >
-              @
-              abc123
-            </h4>
-          </div>
-          <h5
-            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
-              data-testid="TokenIcon"
-              focusable="false"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
-              />
-            </svg>
-            0x57541aa3-11d7-4398-a5db-c3ac2eed517e
-             
-          </h5>
+            dolor alias adipisci vel cumque labore
+          </h3>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
           >
             <span
               class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
             >
-              Joined Since
+              Published
                
             </span>
-            17 Jan 2023
+            01 Dec 2022
+            <span
+              class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+            >
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  document
+                </span>
+              </div>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  video
+                </span>
+              </div>
+              <div
+                class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
+              >
+                <span
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                >
+                  audio
+                </span>
+              </div>
+            </span>
+          </h5>
+          <br />
+          <h5
+            class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+          >
+            Natus praesentium inventore ab magni eveniet earum.
           </h5>
           <br />
           <h6
             class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
           >
-            Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+            Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
           </h6>
         </div>
       </div>
@@ -104,7 +99,7 @@ Object {
             <h4
               class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-b60hfg-MuiTypography-root"
             >
-              Edit NFT Collection
+              Create New Asset
             </h4>
             <div
               class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -116,8 +111,8 @@ Object {
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="true"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
                     for="name"
                     id="name-label"
                   >
@@ -148,7 +143,7 @@ Object {
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-14lo706"
+                        class="css-yjsfm1"
                       >
                         <span>
                           Name
@@ -242,8 +237,8 @@ Object {
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="true"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
                     for="summary"
                     id="summary-label"
                   >
@@ -272,7 +267,7 @@ Object {
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-14lo706"
+                        class="css-yjsfm1"
                       >
                         <span>
                           Summary
@@ -292,8 +287,8 @@ Object {
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="true"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
                     for="description"
                     id="description-label"
                   >
@@ -322,7 +317,7 @@ Object {
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-14lo706"
+                        class="css-yjsfm1"
                       >
                         <span>
                           Description
@@ -408,7 +403,7 @@ Object {
                 />
               </div>
               <div
-                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-12xeub0-MuiGrid-root"
               >
                 <div
                   class="MuiFormControl-root MuiFormControl-fullWidth css-cq5a0p-MuiFormControl-root"
@@ -416,19 +411,20 @@ Object {
                   <label
                     class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
                     data-shrink="false"
-                    id="collection-types-label"
+                    id="assetType"
                   >
-                    Collection Types
+                    Asset Type*
                   </label>
                   <div
-                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                    class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-1ualgfl-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                    data-testid="asset-type-select-field"
                   >
                     <div
                       aria-expanded="false"
                       aria-haspopup="listbox"
-                      aria-labelledby="collection-types-label collectionTypes"
-                      class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-                      id="collectionTypes"
+                      aria-labelledby="asset-type-label assetType"
+                      class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                      id="assetType"
                       role="button"
                       tabindex="0"
                     >
@@ -441,7 +437,7 @@ Object {
                     <input
                       aria-hidden="true"
                       class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                      name="collectionTypes"
+                      name="assetType"
                       tabindex="-1"
                       value=""
                     />
@@ -464,7 +460,7 @@ Object {
                         class="css-yjsfm1"
                       >
                         <span>
-                          Collection Types
+                          Asset Type
                         </span>
                       </legend>
                     </fieldset>
@@ -486,8 +482,8 @@ Object {
                   data-testid="cover-image-input"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="true"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
                     for="coverImageUrl"
                     id="coverImageUrl-label"
                   >
@@ -509,7 +505,7 @@ Object {
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-14lo706"
+                        class="css-yjsfm1"
                       >
                         <span>
                           Cover Image URL
@@ -529,12 +525,12 @@ Object {
                   class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
                 >
                   <label
-                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                    data-shrink="true"
-                    for="bannerImageUrl"
-                    id="bannerImageUrl-label"
+                    class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                    data-shrink="false"
+                    for="assetUrl"
+                    id="assetUrl-label"
                   >
-                    Banner Image URL
+                    Asset URL
                   </label>
                   <div
                     class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
@@ -542,8 +538,8 @@ Object {
                     <input
                       aria-invalid="false"
                       class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                      id="bannerImageUrl"
-                      name="bannerImageUrl"
+                      id="assetUrl"
+                      name="assetUrl"
                       type="text"
                       value=""
                     />
@@ -552,10 +548,10 @@ Object {
                       class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                     >
                       <legend
-                        class="css-14lo706"
+                        class="css-yjsfm1"
                       >
                         <span>
-                          Banner Image URL
+                          Asset URL
                         </span>
                       </legend>
                     </fieldset>
@@ -566,9 +562,6 @@ Object {
                 />
               </div>
             </div>
-            <p
-              class="MuiTypography-root MuiTypography-inherit validation-error css-1agcmbk-MuiTypography-root"
-            />
             <div
               class="MuiButtonGroup-root MuiButtonGroup-contained css-1xhy00u-MuiButtonGroup-root"
               role="group"
@@ -579,7 +572,7 @@ Object {
                 tabindex="0"
                 type="submit"
               >
-                Update
+                Create
                 <span
                   class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
@@ -601,88 +594,83 @@ Object {
     </div>
   </body>,
   "container": <div>
-    <span
-      class="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
-      role="progressbar"
-      style="width: 40px; height: 40px;"
-    >
-      <svg
-        class="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
-        viewBox="22 22 44 44"
-      >
-        <circle
-          class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
-          cx="44"
-          cy="44"
-          fill="none"
-          r="20.2"
-          stroke-width="3.6"
-        />
-      </svg>
-    </span>
     <div
-      class="MuiGrid-root MuiGrid-container css-3tr9xy-MuiGrid-root"
+      class="MuiGrid-root MuiGrid-container css-h06wow-MuiGrid-root"
     >
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-4 css-1het00i-MuiGrid-root"
       >
         <div
-          class="MuiAvatar-root MuiAvatar-circular css-1cjwto2-MuiAvatar-root"
+          class="MuiAvatar-root MuiAvatar-rounded css-1jwgmgz-MuiAvatar-root"
         >
           <img
-            alt="avatar-abc123"
+            alt="avatar-undefined"
             class="MuiAvatar-img css-1pqm26d-MuiAvatar-img"
-            src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/297.jpg"
+            src="https://loremflickr.com/640/480/animals"
           />
         </div>
       </div>
       <div
         class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-8 css-9drkqd-MuiGrid-root"
       >
-        <div
-          class="MuiBox-root css-gg4vpm"
-          direction="row"
+        <h3
+          class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1tbwcak-MuiTypography-root"
         >
-          <h4
-            class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-fokda-MuiTypography-root"
-          >
-            @
-            abc123
-          </h4>
-        </div>
-        <h5
-          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-1hd5cgq-MuiSvgIcon-root"
-            data-testid="TokenIcon"
-            focusable="false"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M19.97 6.43 12 2 4.03 6.43 9.1 9.24C9.83 8.48 10.86 8 12 8s2.17.48 2.9 1.24l5.07-2.81zM10 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm1 9.44L3 17V8.14l5.13 2.85c-.09.32-.13.66-.13 1.01 0 1.86 1.27 3.43 3 3.87v5.57zm2 0v-5.57c1.73-.44 3-2.01 3-3.87 0-.35-.04-.69-.13-1.01L21 8.14V17l-8 4.44z"
-            />
-          </svg>
-          0x57541aa3-11d7-4398-a5db-c3ac2eed517e
-           
-        </h5>
+          dolor alias adipisci vel cumque labore
+        </h3>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
         >
           <span
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
           >
-            Joined Since
+            Published
              
           </span>
-          17 Jan 2023
+          01 Dec 2022
+          <span
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-alignLeft css-1pvjwlp-MuiTypography-root"
+          >
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1xur0t1-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                document
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1o92u0b-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                video
+              </span>
+            </div>
+            <div
+              class="MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-filledDefault css-1yl503k-MuiChip-root"
+            >
+              <span
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+              >
+                audio
+              </span>
+            </div>
+          </span>
+        </h5>
+        <br />
+        <h5
+          class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-j45ghh-MuiTypography-root"
+        >
+          Natus praesentium inventore ab magni eveniet earum.
         </h5>
         <br />
         <h6
           class="MuiTypography-root MuiTypography-h6 MuiTypography-alignLeft css-11qvwo8-MuiTypography-root"
         >
-          Aliquid iste soluta harum. Modi nobis sequi laudantium dolorem dolorum consectetur omnis ipsam. Perspiciatis deleniti atque temporibus labore soluta deleniti quisquam. Eos itaque consectetur similique beatae maiores ipsum eveniet. Dolore vitae fugit. Sint perferendis amet vero. Dolore vero sit magnam unde mollitia cum labore. Beatae accusantium dolorem veniam nulla ex earum tempore. Ea quaerat perferendis officiis ipsa molestiae rem hic consequatur.
+          Alias quam id. Officiis occaecati molestias. Sed repudiandae aut dolores ea quae autem. Iusto magni et doloribus nesciunt. Natus architecto dicta laudantium saepe repudiandae.
         </h6>
       </div>
     </div>
@@ -700,7 +688,7 @@ Object {
           <h4
             class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft css-b60hfg-MuiTypography-root"
           >
-            Edit NFT Collection
+            Create New Asset
           </h4>
           <div
             class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 css-mhc70k-MuiGrid-root"
@@ -712,8 +700,8 @@ Object {
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
                   for="name"
                   id="name-label"
                 >
@@ -744,7 +732,7 @@ Object {
                     class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="css-14lo706"
+                      class="css-yjsfm1"
                     >
                       <span>
                         Name
@@ -838,8 +826,8 @@ Object {
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
                   for="summary"
                   id="summary-label"
                 >
@@ -868,7 +856,7 @@ Object {
                     class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="css-14lo706"
+                      class="css-yjsfm1"
                     >
                       <span>
                         Summary
@@ -888,8 +876,8 @@ Object {
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
                   for="description"
                   id="description-label"
                 >
@@ -918,7 +906,7 @@ Object {
                     class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="css-14lo706"
+                      class="css-yjsfm1"
                     >
                       <span>
                         Description
@@ -1004,7 +992,7 @@ Object {
               />
             </div>
             <div
-              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6 css-1fyyp8j-MuiGrid-root"
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-2 css-12xeub0-MuiGrid-root"
             >
               <div
                 class="MuiFormControl-root MuiFormControl-fullWidth css-cq5a0p-MuiFormControl-root"
@@ -1012,19 +1000,20 @@ Object {
                 <label
                   class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
                   data-shrink="false"
-                  id="collection-types-label"
+                  id="assetType"
                 >
-                  Collection Types
+                  Asset Type*
                 </label>
                 <div
-                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+                  class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl  css-1ualgfl-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+                  data-testid="asset-type-select-field"
                 >
                   <div
                     aria-expanded="false"
                     aria-haspopup="listbox"
-                    aria-labelledby="collection-types-label collectionTypes"
-                    class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
-                    id="collectionTypes"
+                    aria-labelledby="asset-type-label assetType"
+                    class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+                    id="assetType"
                     role="button"
                     tabindex="0"
                   >
@@ -1037,7 +1026,7 @@ Object {
                   <input
                     aria-hidden="true"
                     class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-                    name="collectionTypes"
+                    name="assetType"
                     tabindex="-1"
                     value=""
                   />
@@ -1060,7 +1049,7 @@ Object {
                       class="css-yjsfm1"
                     >
                       <span>
-                        Collection Types
+                        Asset Type
                       </span>
                     </legend>
                   </fieldset>
@@ -1082,8 +1071,8 @@ Object {
                 data-testid="cover-image-input"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
                   for="coverImageUrl"
                   id="coverImageUrl-label"
                 >
@@ -1105,7 +1094,7 @@ Object {
                     class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="css-14lo706"
+                      class="css-yjsfm1"
                     >
                       <span>
                         Cover Image URL
@@ -1125,12 +1114,12 @@ Object {
                 class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
               >
                 <label
-                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
-                  data-shrink="true"
-                  for="bannerImageUrl"
-                  id="bannerImageUrl-label"
+                  class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+                  data-shrink="false"
+                  for="assetUrl"
+                  id="assetUrl-label"
                 >
-                  Banner Image URL
+                  Asset URL
                 </label>
                 <div
                   class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
@@ -1138,8 +1127,8 @@ Object {
                   <input
                     aria-invalid="false"
                     class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-                    id="bannerImageUrl"
-                    name="bannerImageUrl"
+                    id="assetUrl"
+                    name="assetUrl"
                     type="text"
                     value=""
                   />
@@ -1148,10 +1137,10 @@ Object {
                     class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
                   >
                     <legend
-                      class="css-14lo706"
+                      class="css-yjsfm1"
                     >
                       <span>
-                        Banner Image URL
+                        Asset URL
                       </span>
                     </legend>
                   </fieldset>
@@ -1162,9 +1151,6 @@ Object {
               />
             </div>
           </div>
-          <p
-            class="MuiTypography-root MuiTypography-inherit validation-error css-1agcmbk-MuiTypography-root"
-          />
           <div
             class="MuiButtonGroup-root MuiButtonGroup-contained css-1xhy00u-MuiButtonGroup-root"
             role="group"
@@ -1175,7 +1161,7 @@ Object {
               tabindex="0"
               type="submit"
             >
-              Update
+              Create
               <span
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />

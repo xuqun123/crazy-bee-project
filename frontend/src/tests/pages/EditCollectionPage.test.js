@@ -1,9 +1,10 @@
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { render, screen, waitFor, fireEvent, act } from '@testing-library/react'
 import EditCollectionPage, { defaultValues } from '../../pages/EditCollectionPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection } from '../../lib/testHelper'
-import { MemoryRouter } from 'react-router-dom'
+import CurrentUserContext from '../../lib/CurrentUserContext'
 
 defaultValues.publishedAt = new Date(2023, 1, 1)
 
@@ -44,7 +45,12 @@ describe('EditCollectionPage', () => {
     })
 
     it('render the EditCollectionPage view properly with expected elements', async () => {
-      const { rerender } = render(<EditCollectionPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <EditCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
       let usernameHeader
 
       await waitFor(() => {
@@ -60,12 +66,15 @@ describe('EditCollectionPage', () => {
 
       const cancelButton = screen.getByText('Cancel')
       fireEvent.click(cancelButton)
-
-      rerender(<EditCollectionPage />, { wrapper: MemoryRouter })
     })
 
     it('render the EditCollectionPage view and submit the form properly', async () => {
-      render(<EditCollectionPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <EditCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       const editFormHeader = screen.getByText('Edit NFT Collection')
       expect(editFormHeader).toBeInTheDocument()
@@ -108,7 +117,12 @@ describe('EditCollectionPage', () => {
     })
 
     it('snapshot the EditCollectionPage view with all expected elements', async () => {
-      const view = render(<EditCollectionPage />, { wrapper: MemoryRouter })
+      const view = render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <EditCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
         expect(screen.getByText(`@${fakeUser.username}`)).toBeInTheDocument()
@@ -127,10 +141,15 @@ describe('EditCollectionPage', () => {
     })
 
     it('render the EditCollectionPage view without rendering any nftCollection data', async () => {
-      render(<EditCollectionPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <EditCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
-        expect(screen.queryByText(`@${fakeUser.username}`)).not.toBeInTheDocument()
+        expect(screen.queryByRole('textbox', { name: /name/i }).value).toBe('')
       })
 
       expect(mockConsoleError).toHaveBeenCalled()
