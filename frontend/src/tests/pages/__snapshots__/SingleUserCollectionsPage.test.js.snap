@@ -40,19 +40,6 @@ Object {
               @
               abc123
             </h4>
-            <a
-              href="/users/63c551e0ca77037c5a8a017f/collections/new"
-              style="text-decoration: none;"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium css-ke5b6m-MuiButtonBase-root-MuiButton-root"
-                data-testid="create-nftcollection-btn"
-                tabindex="0"
-                type="button"
-              >
-                Create
-              </button>
-            </a>
           </div>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
@@ -218,25 +205,6 @@ Object {
                     </span>
                   </div>
                 </div>
-                <div
-                  class="MuiCardActions-root MuiCardActions-spacing css-15f5lf7-MuiCardActions-root"
-                >
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall css-3wxg0j-MuiButtonBase-root-MuiButton-root"
-                    data-testid="action-btn"
-                    tabindex="0"
-                    type="button"
-                  >
-                    Delete
-                  </button>
-                  <button
-                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
-                    tabindex="0"
-                    type="button"
-                  >
-                    Edit
-                  </button>
-                </div>
               </div>
             </a>
           </div>
@@ -250,74 +218,6 @@ Object {
           Load More
         </button>
       </div>
-    </div>
-    <div
-      aria-hidden="true"
-      class="MuiDialog-root MuiModal-root MuiModal-hidden css-ew73zq-MuiModal-root-MuiDialog-root"
-      role="presentation"
-    >
-      <div
-        aria-hidden="true"
-        class="MuiBackdrop-root MuiModal-backdrop css-yiavyu-MuiBackdrop-root-MuiDialog-backdrop"
-        style="opacity: 0; visibility: hidden;"
-      />
-      <div
-        data-testid="sentinelStart"
-        tabindex="-1"
-      />
-      <div
-        class="MuiDialog-container MuiDialog-scrollPaper css-hz1bth-MuiDialog-container"
-        role="presentation"
-        style="visibility: hidden; webkit-transform: translateY(768px); transform: translateY(768px);"
-        tabindex="-1"
-      >
-        <div
-          aria-describedby="alert-dialog-slide-description"
-          aria-labelledby=":r1:"
-          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation24 MuiDialog-paper MuiDialog-paperScrollPaper MuiDialog-paperWidthSm css-1t1j96h-MuiPaper-root-MuiDialog-paper"
-          role="dialog"
-        >
-          <h2
-            class="MuiTypography-root MuiTypography-h6 MuiDialogTitle-root css-bdhsul-MuiTypography-root-MuiDialogTitle-root"
-            id=":r1:"
-          >
-            Are you sure to delete this NFT collection?
-          </h2>
-          <div
-            class="MuiDialogContent-root css-ypiqx9-MuiDialogContent-root"
-          >
-            <p
-              class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiDialogContentText-root css-qfso29-MuiTypography-root-MuiDialogContentText-root"
-              id="alert-dialog-slide-description"
-            >
-              Please be aware there is no turning back! Please cancel this action if this is not what you want.
-            </p>
-          </div>
-          <div
-            class="MuiDialogActions-root MuiDialogActions-spacing css-hlj6pa-MuiDialogActions-root"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
-              tabindex="0"
-              type="button"
-            >
-              Cancel
-            </button>
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeMedium MuiButton-containedSizeMedium css-1sszw6i-MuiButtonBase-root-MuiButton-root"
-              data-testid="action-confirm-btn"
-              tabindex="0"
-              type="button"
-            >
-              Confirm
-            </button>
-          </div>
-        </div>
-      </div>
-      <div
-        data-testid="sentinelEnd"
-        tabindex="-1"
-      />
     </div>
   </body>,
   "container": <div>
@@ -356,19 +256,6 @@ Object {
             @
             abc123
           </h4>
-          <a
-            href="/users/63c551e0ca77037c5a8a017f/collections/new"
-            style="text-decoration: none;"
-          >
-            <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedSuccess MuiButton-sizeMedium MuiButton-containedSizeMedium css-ke5b6m-MuiButtonBase-root-MuiButton-root"
-              data-testid="create-nftcollection-btn"
-              tabindex="0"
-              type="button"
-            >
-              Create
-            </button>
-          </a>
         </div>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
@@ -533,25 +420,6 @@ Object {
                     audio
                   </span>
                 </div>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-15f5lf7-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedError MuiButton-sizeSmall MuiButton-containedSizeSmall css-3wxg0j-MuiButtonBase-root-MuiButton-root"
-                  data-testid="action-btn"
-                  tabindex="0"
-                  type="button"
-                >
-                  Delete
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                </button>
               </div>
             </div>
           </a>

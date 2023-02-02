@@ -34,10 +34,6 @@ Object {
               @
               abc123
             </h4>
-            <a
-              href="/users/undefined/collections/new"
-              style="text-decoration: none;"
-            />
           </div>
           <h5
             class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"
@@ -615,10 +611,6 @@ Object {
             @
             abc123
           </h4>
-          <a
-            href="/users/undefined/collections/new"
-            style="text-decoration: none;"
-          />
         </div>
         <h5
           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-1fh2sue-MuiTypography-root"

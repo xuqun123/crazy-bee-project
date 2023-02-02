@@ -57,12 +57,14 @@ function TopNav() {
 
             {localStorage.getItem('jwt') ? <Logout /> : <LoginPopup />}
             {currentUser && (
-              <Tooltip title={currentUser.username}>
-                <Avatar
-                  alt={`${currentUser.firstName} ${currentUser.lastName}`}
-                  src={currentUser.avatarUrl}
-                />
-              </Tooltip>
+              <Link to={`/users/${currentUser._id}/collections`}>
+                <Tooltip title={currentUser.username}>
+                  <Avatar
+                    alt={`${currentUser.firstName} ${currentUser.lastName}`}
+                    src={currentUser.avatarUrl}
+                  />
+                </Tooltip>
+              </Link>
             )}
           </Grid>
         </Grid>

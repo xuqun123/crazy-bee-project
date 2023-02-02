@@ -53,6 +53,7 @@ describe('LoginPopup', () => {
       delete window.location
       window.location = { reload: jest.fn() }
       jest.spyOn(console, 'log').mockImplementation()
+      jest.spyOn(console, 'error').mockImplementation()
     })
 
     it('failed to login user', async () => {

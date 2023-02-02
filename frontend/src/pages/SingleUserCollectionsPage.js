@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useParams } from 'react-router-dom'
 import NFTCollectionsList from '../components/NFTCollectionsList'
 import axiosClient from '../lib/axiosClient'
+import CurrentUserContext from '../lib/CurrentUserContext'
 import UserSummary from '../components/UserSummary'
 
 function SingleUserCollectionsPage() {
   const { userId } = useParams()
   const [user, setUser] = useState(null)
   const [loading, setLoading] = useState(true)
+  const currentUser = useContext(CurrentUserContext)
 
   useEffect(() => {
     axiosClient
@@ -26,13 +28,18 @@ function SingleUserCollectionsPage() {
 
   return (
     <>
-      <UserSummary userId={userId} user={user} loading={loading} enableCreate={true} />
+      <UserSummary
+        userId={userId}
+        user={user}
+        loading={loading}
+        enableCreate={currentUser && currentUser._id === userId}
+      />
       <NFTCollectionsList
         userId={userId}
         enableLoadMore={true}
         enableSearch={true}
-        enableEdit={true}
-        enableDelete={true}
+        enableEdit={currentUser && currentUser._id === userId}
+        enableDelete={currentUser && currentUser._id === userId}
       />
     </>
   )

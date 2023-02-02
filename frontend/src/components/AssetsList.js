@@ -4,6 +4,7 @@ import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
+import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
@@ -36,6 +37,7 @@ function AssetsList({
   excludeAssetId,
   enableLoadMore,
   enableSearch,
+  enableCreate = false,
   containerStyle,
 }) {
   const [assets, setAssets] = useState([])
@@ -75,8 +77,20 @@ function AssetsList({
   }
 
   return (
-    <Container sx={containerStyle || { py: 0 }}>
-      {enableSearch && <PageSearchBar placeholder={'Search assets'} />}
+    <Container sx={{ py: 0 }}>
+      <Box display="flex" sx={{ alignItems: 'center' }}>
+        {enableSearch && <PageSearchBar placeholder={'Search assets'} />}
+        {enableCreate && (
+          <Link
+            style={{ textDecoration: 'none', marginLeft: '15px' }}
+            to={`/collections/${nftCollectionId}/assets/new`}
+          >
+            <Button size="small" variant="contained" color="success">
+              Create New Asset
+            </Button>
+          </Link>
+        )}
+      </Box>
       <Grid container spacing={4}>
         {loading ? (
           <LoadingSkeletons />

@@ -1,14 +1,13 @@
-import { useState, useEffect, useContext } from 'react'
-import { useNavigate, useLocation, useParams } from 'react-router-dom'
+import { useState, useContext, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import moment from 'moment'
 import { useForm } from 'react-hook-form'
-import { pick } from 'lodash'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import CurrentUserContext from '../lib/CurrentUserContext'
-import CollectionForm from '../components/CollectionForm'
-import { collectionValidationSchema } from '../lib/validations'
+import AssetForm from '../components/AssetForm'
+import { assetValidationSchema } from '../lib/validations'
 
 export const defaultValues = {
   name: '',
@@ -16,29 +15,26 @@ export const defaultValues = {
   summary: '',
   description: '',
   publishedAt: moment(new Date(), moment.ISO_8601),
-  collectionTypes: [],
+  assetType: '',
   coverImageUrl: '',
-  bannerImageUrl: '',
+  assetUrl: '',
 }
 
-function EditCollectionPage() {
-  const { state } = useLocation()
-  const { nftCollectionId } = useParams()
-  const userId = state?.userId
+function NewAssetPage() {
   const navigate = useNavigate()
-  const [serverError, setsSrverError] = useState(null)
-  const [loading, setLoading] = useState(true)
+  const { nftCollectionId } = useParams()
   const { setAlert } = useContext(AlertMessageContext)
   const currentUser = useContext(CurrentUserContext)
+  const [nftCollection, setNFTCollection] = useState(null)
+  const [loading, setLoading] = useState(true)
 
   const {
     register,
     control,
     handleSubmit,
     formState: { errors },
-    reset,
   } = useForm({
-    resolver: yupResolver(collectionValidationSchema),
+    resolver: yupResolver(assetValidationSchema),
     defaultValues,
   })
 
@@ -47,55 +43,51 @@ function EditCollectionPage() {
       .get(`/nftCollections/${nftCollectionId}`)
       .then((response) => {
         setLoading(false)
-        reset(pick(response?.data?.data, Object.keys(defaultValues)))
+        setNFTCollection(response?.data?.data)
       })
       .catch((error) => {
         setLoading(false)
-        const message = `Get user data failed: ${error.message}`
+        const message = `Get nftCollection data failed: ${error.message}`
         console.error(message)
       })
-  }, [userId, nftCollectionId, reset])
+  }, [nftCollectionId])
 
   const handleCancelClick = () => {
     navigate(-1)
   }
 
   const onSubmit = (data) => {
-    setsSrverError(null)
-
     axiosClient
-      .patch(`/nftCollections/${nftCollectionId}`, { nftCollection: data })
+      .post(`/assets`, { asset: { ...data, userId: currentUser?._id, nftCollectionId } })
       .then((response) => {
-        const message = 'NFT collection is updated successfully'
+        const message = 'Asset is created successfully'
         console.log(message, response.data)
         setAlert({ message })
         navigate(-1)
       })
       .catch((error) => {
         const errMsg = error.response?.data?.error || error.message
-        const message = `Update NFT collection failed: ${errMsg}`
+        const message = `Create asset failed: ${errMsg}`
         console.error(message)
-        setsSrverError(message)
         setAlert({ message, severity: 'error' })
       })
   }
 
   return (
-    <CollectionForm
-      formTitle="Edit NFT Collection"
-      submitButtonText="Update"
+    <AssetForm
+      formTitle="Create New Asset"
+      submitButtonText="Create"
       userId={currentUser?._id}
       user={currentUser}
       loading={loading}
+      nftCollection={nftCollection}
       control={control}
       formOnSubmit={handleSubmit(onSubmit)}
       handleCancelClick={handleCancelClick}
-      serverError={serverError}
       errors={errors}
       register={register}
-      InputLabelProps={{ shrink: true }}
     />
   )
 }
 
-export default EditCollectionPage
+export default NewAssetPage
