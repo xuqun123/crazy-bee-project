@@ -348,8 +348,11 @@ Object {
                   class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
                 >
                   <div
-                    class="MuiContainer-root MuiContainer-maxWidthLg css-1qi5tjd-MuiContainer-root"
+                    class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
                   >
+                    <div
+                      class="MuiBox-root css-70qvj9"
+                    />
                     <div
                       class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
                     >
@@ -734,8 +737,11 @@ Object {
                 class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
               >
                 <div
-                  class="MuiContainer-root MuiContainer-maxWidthLg css-1qi5tjd-MuiContainer-root"
+                  class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
                 >
+                  <div
+                    class="MuiBox-root css-70qvj9"
+                  />
                   <div
                     class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
                   >

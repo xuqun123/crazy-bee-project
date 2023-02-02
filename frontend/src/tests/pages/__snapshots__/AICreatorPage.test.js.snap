@@ -44,7 +44,7 @@ Object {
           aria-label="generate"
           class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
           tabindex="0"
-          type="button"
+          type="submit"
         >
           <svg
             aria-hidden="true"
@@ -128,7 +128,7 @@ Object {
         aria-label="generate"
         class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
         tabindex="0"
-        type="button"
+        type="submit"
       >
         <svg
           aria-hidden="true"

@@ -156,26 +156,28 @@ function SingleCollectionPage() {
                   <Typography component="h6" variant="h6" align="left" color="grey">
                     {asset.description}
                   </Typography>
-                  <TableContainer component={Paper} sx={{ mt: 2, width: '100%' }}>
-                    <Table aria-label="simple table">
-                      <TableHead></TableHead>
-                      <TableBody>
-                        {Object.keys(asset.tokenDetails).map((key) => (
-                          <TableRow
-                            key={key}
-                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                          >
-                            <TableCell component="th" scope="row">
-                              {key}
-                            </TableCell>
-                            <TableCell align="right" sx={{ fontWeight: 'bold' }}>
-                              {asset.tokenDetails[key]}
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </TableContainer>
+                  {asset.tokenDetails && (
+                    <TableContainer component={Paper} sx={{ mt: 2, width: '100%' }}>
+                      <Table aria-label="simple table">
+                        <TableHead></TableHead>
+                        <TableBody>
+                          {Object.keys(asset.tokenDetails).map((key) => (
+                            <TableRow
+                              key={key}
+                              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                            >
+                              <TableCell component="th" scope="row">
+                                {key}
+                              </TableCell>
+                              <TableCell align="right" sx={{ fontWeight: 'bold' }}>
+                                {asset.tokenDetails[key]}
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </TableContainer>
+                  )}
                 </AccordionDetails>
               </Accordion>
             </Grid>

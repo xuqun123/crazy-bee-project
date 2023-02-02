@@ -1,9 +1,11 @@
 import React from 'react'
+import { MemoryRouter } from 'react-router-dom'
 import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import SingleCollectionPage from '../../pages/SingleCollectionPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection, fakeAsset } from '../../lib/testHelper'
-import { MemoryRouter } from 'react-router-dom'
+import CurrentUserContext from '../../lib/CurrentUserContext'
+import { defaultAssetsLimit } from '../../lib/dataConstants'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -22,8 +24,14 @@ describe('SingleCollectionPage', () => {
   describe('get users data via api', () => {
     beforeEach(() => {
       jest.spyOn(axiosClient, 'get').mockImplementation((url) => {
-        if (url.includes('/assets')) {
-          return Promise.resolve({ data: { data: [fakeAsset], loadMore: true } })
+        if (url.includes(`/assets?limit=${defaultAssetsLimit}&offset=0`)) {
+          return Promise.resolve({ data: { data: [fakeAsset], offset: 0, loadMore: true } })
+        } else if (
+          url.includes(`/assets?limit=${defaultAssetsLimit}&offset=${defaultAssetsLimit}`)
+        ) {
+          return Promise.resolve({
+            data: { data: [{ ...fakeAsset, _id: '123456' }], loadMore: false },
+          })
         } else if (url.includes(`nftCollections/${fakeNftCollection._id}`)) {
           return Promise.resolve({ data: { data: fakeNftCollection } })
         }
@@ -34,7 +42,12 @@ describe('SingleCollectionPage', () => {
     })
 
     it('render the SingleCollectionPage view properly with expected elements', async () => {
-      const { rerender } = render(<SingleCollectionPage />, { wrapper: MemoryRouter })
+      const { rerender } = render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
       let nftCollectionHeader
 
       await waitFor(() => {
@@ -47,7 +60,12 @@ describe('SingleCollectionPage', () => {
 
       const loadMoreButton = screen.getByTestId('load-more-btn')
       expect(loadMoreButton).toBeInTheDocument()
-      rerender(<SingleCollectionPage />, { wrapper: MemoryRouter })
+      rerender(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       fireEvent.click(loadMoreButton)
       const newNftCollectionSummary = await screen.findByText(fakeNftCollection.summary)
@@ -63,7 +81,12 @@ describe('SingleCollectionPage', () => {
     })
 
     it('snapshot the SingleCollectionPage view with all expected elements', async () => {
-      const view = render(<SingleCollectionPage />, { wrapper: MemoryRouter })
+      const view = render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
         expect(screen.getByText(fakeNftCollection.name)).toBeInTheDocument()
@@ -82,7 +105,12 @@ describe('SingleCollectionPage', () => {
     })
 
     it('render the SingleCollectionPage view without rendering any nftCollection data', async () => {
-      render(<SingleCollectionPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleCollectionPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
         expect(screen.queryByText(fakeUser.username)).not.toBeInTheDocument()

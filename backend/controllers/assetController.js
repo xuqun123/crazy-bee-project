@@ -30,7 +30,49 @@ const getAsset = (req, res) => {
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 
+// create an asset
+const createAsset = (req, res) => {
+  const { asset } = req.body || {};
+
+  if (!asset) {
+    return res.status(BAD_REQUEST).json({ error: "missing asset params" });
+  }
+
+  assetRepo
+    .create(asset)
+    .then((data) => res.status(OK).json({ data }))
+    .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
+};
+
+// update an asset
+const updateAsset = (req, res) => {
+  const { asset } = req.body || {};
+  const id = req.params.id;
+
+  if (!asset) {
+    return res.status(BAD_REQUEST).json({ error: "missing asset params" });
+  }
+
+  assetRepo
+    .update(id, asset)
+    .then((data) => res.status(OK).json({ data }))
+    .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
+};
+
+// delete an asset
+const deleteAsset = (req, res) => {
+  const id = req.params.id;
+
+  assetRepo
+    .delete(id)
+    .then((data) => res.status(OK).json({ data }))
+    .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
+};
+
 module.exports = {
   getAssets,
   getAsset,
+  createAsset,
+  updateAsset,
+  deleteAsset,
 };

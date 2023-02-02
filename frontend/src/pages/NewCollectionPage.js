@@ -1,10 +1,11 @@
-import { useState, useEffect, useContext } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useState, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import moment from 'moment'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
+import CurrentUserContext from '../lib/CurrentUserContext'
 import CollectionForm from '../components/CollectionForm'
 import { collectionValidationSchema } from '../lib/validations'
 
@@ -20,12 +21,10 @@ export const defaultValues = {
 }
 
 function NewCollectionPage() {
-  const { userId } = useParams()
   const navigate = useNavigate()
-  const [user, setUser] = useState(null)
   const [serverError, setsSrverError] = useState(null)
-  const [loading, setLoading] = useState(true)
   const { setAlert } = useContext(AlertMessageContext)
+  const currentUser = useContext(CurrentUserContext)
 
   const {
     register,
@@ -37,21 +36,6 @@ function NewCollectionPage() {
     defaultValues,
   })
 
-  useEffect(() => {
-    axiosClient
-      .get(`/users/${userId}`)
-      .then((response) => {
-        setLoading(false)
-        setUser(response?.data?.data)
-      })
-      .catch((error) => {
-        setLoading(false)
-        const message = `Get user data failed: ${error.message}`
-        console.error(message)
-        setAlert({ message, severity: 'error' })
-      })
-  }, [userId, setAlert])
-
   const handleCancelClick = () => {
     navigate(-1)
   }
@@ -60,7 +44,7 @@ function NewCollectionPage() {
     setsSrverError(null)
 
     axiosClient
-      .post(`/nftCollections`, { nftCollection: { ...data, userId } })
+      .post(`/nftCollections`, { nftCollection: { ...data, userId: currentUser?._id } })
       .then((response) => {
         const message = 'NFT collection is created successfully'
         console.log(message, response.data)
@@ -80,9 +64,8 @@ function NewCollectionPage() {
     <CollectionForm
       formTitle="Create New NFT Collection"
       submitButtonText="Create"
-      userId={userId}
-      user={user}
-      loading={loading}
+      userId={currentUser?._id}
+      user={currentUser}
       control={control}
       formOnSubmit={handleSubmit(onSubmit)}
       handleCancelClick={handleCancelClick}
