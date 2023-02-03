@@ -1,6 +1,6 @@
 import React from 'react'
 import { MemoryRouter } from 'react-router-dom'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import SingleAssetPage from '../../pages/SingleAssetPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection, fakeAsset } from '../../lib/testHelper'
@@ -33,6 +33,10 @@ describe('SingleAssetPage', () => {
           return Promise.resolve({ data: { data: [fakeAsset] }, loadMore: true })
         }
       })
+
+      jest.spyOn(axiosClient, 'delete').mockImplementation((url) => {
+        return Promise.resolve({ data: { data: fakeAsset } })
+      })
     })
 
     it('render the SingleAssetPage view properly with expected elements', async () => {
@@ -59,6 +63,14 @@ describe('SingleAssetPage', () => {
 
       const usernameSection = screen.getByText(fakeUser.username)
       expect(usernameSection).toBeInTheDocument()
+
+      const actionButton = screen.getByTestId('asset-action-btn')
+      fireEvent.click(actionButton)
+
+      const deleteButton = screen.getByTestId('asset-action-confirm-btn')
+      fireEvent.click(deleteButton)
+
+      expect(await screen.findByText(fakeNftCollection.name)).toBeInTheDocument()
     })
 
     it('snapshot the SingleAssetPage view with all expected elements', async () => {
@@ -85,7 +97,7 @@ describe('SingleAssetPage', () => {
       mockConsoleError = jest.spyOn(console, 'error').mockImplementation((error) => error)
     })
 
-    it('render the SingleAssetPage view without rendering any nftCollection data', async () => {
+    it('render the SingleAssetPage view without rendering any asset data', async () => {
       render(
         <CurrentUserContext.Provider value={fakeUser}>
           <SingleAssetPage />

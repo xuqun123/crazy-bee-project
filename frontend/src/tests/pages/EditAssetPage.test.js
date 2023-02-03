@@ -91,8 +91,12 @@ describe('EditAssetPage', () => {
       })
 
       const statusSelect = screen.getByTestId('status-select-field')
-      const selectNode = statusSelect.childNodes[1]
-      fireEvent.input(selectNode, { target: { value: 'draft' } })
+      const statusSelectNode = statusSelect.childNodes[1]
+      fireEvent.input(statusSelectNode, { target: { value: 'draft' } })
+
+      const assetTypeSelect = screen.getByTestId('asset-type-select-field')
+      const assetSelectNode = assetTypeSelect.childNodes[1]
+      fireEvent.input(assetSelectNode, { target: { value: 'image' } })
 
       fireEvent.input(screen.getByLabelText('Cover Image URL'), {
         target: {
