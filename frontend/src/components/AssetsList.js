@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import Button from '@mui/material/Button'
 import Card from '@mui/material/Card'
 import CardContent from '@mui/material/CardContent'
+import CardActions from '@mui/material/CardActions'
 import CardMedia from '@mui/material/CardMedia'
 import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
@@ -10,9 +11,11 @@ import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
 import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
+import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
+import AlertMessageContext from '../lib/AlertMessageContext'
 import { defaultAssetsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
 
 function LoadingSkeletons() {
@@ -39,11 +42,14 @@ function AssetsList({
   enableSearch,
   enableCreate = false,
   containerStyle,
+  enableEdit,
 }) {
+  const navigate = useNavigate()
   const [assets, setAssets] = useState([])
   const [loadMore, setLoadMore] = useState(false)
   const [offset, setOffset] = useState(0)
   const [loading, setLoading] = useState(true)
+  const { setAlert } = useContext(AlertMessageContext)
 
   useEffect(() => {
     loadData()
@@ -75,6 +81,27 @@ function AssetsList({
   const handleLoadMore = () => {
     loadData(offset + defaultAssetsLimit)
   }
+
+  const handleEditClick = (event, asset) => {
+    event.preventDefault()
+    navigate(`/collections/${asset.nftCollectionId}/assets/${asset._id}/edit`)
+  }
+
+  // const handleDelete = (id) => {
+  //   axiosClient
+  //     .delete(`/assets/${id}`)
+  //     .then((response) => {
+  //       const message = 'The Asset has been deleted successfully!'
+  //       console.log(message)
+  //       loadData(0, true)
+  //       setAlert({ message })
+  //     })
+  //     .catch((error) => {
+  //       const message = `Delte Asset failed: ${error.message}`
+  //       console.error(message)
+  //       setAlert({ message, severity: 'error' })
+  //     })
+  // }
 
   return (
     <Container sx={{ py: 0 }}>
@@ -127,6 +154,32 @@ function AssetsList({
                       label={asset.assetType}
                     />
                   </CardContent>
+                  {enableEdit && (
+                    <CardActions sx={{ flexDirection: 'row-reverse', pt: 0 }}>
+                      {/* <ActionConfirm
+                        variant="contained"
+                        size="small"
+                        color="error"
+                        buttonText={'Delete'}
+                        title="Are you sure to delete this NFT collection?"
+                        description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                        confirmText="Confirm"
+                        cancelText="Cancel"
+                        confrimAction={() => handleDelete(asset._id)}
+                        // onClick={()=>}
+                      /> */}
+                      <Button
+                        sx={{ mr: 1 }}
+                        key={asset._id}
+                        size="small"
+                        variant="contained"
+                        color="info"
+                        onClick={(e) => handleEditClick(e, asset)}
+                      >
+                        Edit
+                      </Button>
+                    </CardActions>
+                  )}
                 </Card>
               </Link>
             </Grid>

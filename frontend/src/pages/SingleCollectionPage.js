@@ -38,6 +38,7 @@ function SingleCollectionPage() {
         enableLoadMore={true}
         enableSearch={true}
         enableCreate={currentUser && currentUser._id === nftCollection?.userId}
+        enableEdit={currentUser && currentUser._id === nftCollection?.userId}
       />
     </>
   )

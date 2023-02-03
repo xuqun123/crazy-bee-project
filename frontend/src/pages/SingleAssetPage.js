@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
 import Chip from '@mui/material/Chip'
+import Button from '@mui/material/Button'
 import CircularProgress from '@mui/material/CircularProgress'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 import { Accordion, AccordionSummary, AccordionDetails } from '../components/Accordion'
@@ -17,13 +18,14 @@ import Paper from '@mui/material/Paper'
 import { collectionTypeLabelColors } from '../lib/dataConstants'
 import AssetsList from '../components/AssetsList'
 import axiosClient from '../lib/axiosClient'
+import CurrentUserContext from '../lib/CurrentUserContext'
 
 function SingleCollectionPage() {
   const { assetId } = useParams()
   const [asset, setAsset] = useState(null)
-  const [user, setUser] = useState(null)
   const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
+  const currentUser = useContext(CurrentUserContext)
 
   useEffect(() => {
     axiosClient
@@ -41,16 +43,6 @@ function SingleCollectionPage() {
 
   useEffect(() => {
     if (asset) {
-      axiosClient
-        .get(`/users/${asset.userId}`)
-        .then((response) => {
-          setUser(response?.data?.data)
-        })
-        .catch((error) => {
-          const message = `Get user data failed: ${error.message}`
-          console.error(message)
-        })
-
       axiosClient
         .get(`/nftCollections/${asset.nftCollectionId}`)
         .then((response) => {
@@ -111,8 +103,31 @@ function SingleCollectionPage() {
                       </Link>
                     </Typography>
                   )}
-                  <Typography component="h3" variant="h3" align="left" color="text.primary">
+                  <Typography
+                    component="h3"
+                    variant="h3"
+                    align="left"
+                    color="text.primary"
+                    sx={{ display: 'flex', justifyContent: 'space-between' }}
+                  >
                     {asset.name}
+                    {currentUser && currentUser._id === asset.userId && (
+                      <Link
+                        sx={{ float: 'right' }}
+                        to={`/collections/${asset.nftCollectionId}/assets/${asset._id}/edit`}
+                        style={{ textDecoration: 'none' }}
+                      >
+                        <Button
+                          sx={{ mr: 1 }}
+                          key={asset._id}
+                          size="small"
+                          variant="contained"
+                          color="info"
+                        >
+                          Edit
+                        </Button>
+                      </Link>
+                    )}
                   </Typography>
                   <Typography
                     component="h5"
@@ -129,7 +144,7 @@ function SingleCollectionPage() {
                       to={`/users/${asset.userId}/collections`}
                     >
                       {' '}
-                      {user?.username}
+                      {currentUser?.username}
                     </Link>
                     <Typography component="span" variant="h5" align="left" color="grey">
                       {' '}
