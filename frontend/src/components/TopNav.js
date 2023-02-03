@@ -34,10 +34,7 @@ function TopNav() {
               Explore
             </Link>
             <Link style={{ marginRight: 30 }} to="/ai/creator">
-              Create
-            </Link>
-            <Link style={{ marginRight: 30 }} to="/about">
-              About
+              Create AI Art
             </Link>
           </Grid>
           <Grid

@@ -5,7 +5,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 
-function TopSlogan({ header, summary, mainCTAText, secondaryCTA }) {
+function TopSlogan({ header, summary, secondarySummary, mainCTAText, secondaryCTA }) {
   return (
     <Box
       sx={{
@@ -23,6 +23,11 @@ function TopSlogan({ header, summary, mainCTAText, secondaryCTA }) {
             {summary}
           </Typography>
         )}
+        {secondarySummary && (
+          <Typography variant="h5" align="center" color="text.secondary" paragraph>
+            {secondarySummary}
+          </Typography>
+        )}
         <Stack sx={{ pt: 4 }} direction="row" spacing={2} justifyContent="center">
           {mainCTAText && (
             <Button data-testid="main-cta-btn" variant="contained">
@@ -30,7 +35,7 @@ function TopSlogan({ header, summary, mainCTAText, secondaryCTA }) {
             </Button>
           )}
           {secondaryCTA && (
-            <Button data-testid="secondary-cta-btn" variant="outlined" href='signup'>
+            <Button data-testid="secondary-cta-btn" variant="outlined" href="signup">
               {secondaryCTA}
             </Button>
           )}
