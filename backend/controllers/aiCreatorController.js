@@ -5,11 +5,12 @@ const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
 const createAIArt = (req, res) => {
   const { text, style } = req.body;
 
+  const generatorStyle = style || "cute-creature-generator";
   aiArtGenerator
-    .create(text, style || "cute-creature-generator")
+    .create(text, generatorStyle)
     .then((response) => {
       console.log(
-        `[DeepAI] Successfully generated an AI art from '${text}' (${style}):`,
+        `[DeepAI] Successfully generated an AI art from '${text}' (${generatorStyle}):`,
         response?.data || response
       );
 

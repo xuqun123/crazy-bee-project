@@ -8,15 +8,15 @@ describe('HomePage', () => {
 
     const homeLink = screen.getByText(/Home/)
     const exploreLink = screen.getByText(/Explore/)
-    const aboutLink = screen.getByText(/About/)
+    const createAIArtLink = screen.getByText(/Create AI Art/)
     const footerNote = screen.getByText(/We fly tokens to your pockets/i)
 
     expect(homeLink).toBeInTheDocument()
     expect(homeLink.tagName.toLowerCase()).toBe('a')
     expect(exploreLink).toBeInTheDocument()
     expect(exploreLink.tagName.toLowerCase()).toBe('a')
-    expect(aboutLink).toBeInTheDocument()
-    expect(aboutLink.tagName.toLowerCase()).toBe('a')
+    expect(createAIArtLink).toBeInTheDocument()
+    expect(createAIArtLink.tagName.toLowerCase()).toBe('a')
     expect(footerNote).toBeInTheDocument()
     expect(footerNote.tagName.toLowerCase()).toBe('p')
   })

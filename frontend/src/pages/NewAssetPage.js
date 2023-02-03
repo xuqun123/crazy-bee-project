@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
 import moment from 'moment'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
@@ -22,11 +22,21 @@ export const defaultValues = {
 
 function NewAssetPage() {
   const navigate = useNavigate()
+  const { state } = useLocation()
   const { nftCollectionId } = useParams()
   const { setAlert } = useContext(AlertMessageContext)
   const currentUser = useContext(CurrentUserContext)
   const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
+
+  const defaultValuesWithAIArtUrl = () => {
+    let result = defaultValues
+
+    if (state?.output_url) result = { ...result, assetUrl: state.output_url, assetType: 'image' }
+    if (state?.text) result = { ...result, name: state.text }
+
+    return result
+  }
 
   const {
     register,
@@ -35,7 +45,7 @@ function NewAssetPage() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(assetValidationSchema),
-    defaultValues,
+    defaultValues: defaultValuesWithAIArtUrl(),
   })
 
   useEffect(() => {
@@ -63,7 +73,8 @@ function NewAssetPage() {
         const message = 'Asset is created successfully'
         console.log(message, response.data)
         setAlert({ message })
-        navigate(-1)
+
+        state?.output_url ? navigate(`/assets/${response.data.data._id}`) : navigate(-1)
       })
       .catch((error) => {
         const errMsg = error.response?.data?.error || error.message

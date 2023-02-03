@@ -51,13 +51,7 @@ Object {
                   href="/ai/creator"
                   style="margin-right: 30px;"
                 >
-                  Create
-                </a>
-                <a
-                  href="/about"
-                  style="margin-right: 30px;"
-                >
-                  About
+                  Create AI Art
                 </a>
               </div>
               <div
@@ -238,13 +232,7 @@ Object {
                 href="/ai/creator"
                 style="margin-right: 30px;"
               >
-                Create
-              </a>
-              <a
-                href="/about"
-                style="margin-right: 30px;"
-              >
-                About
+                Create AI Art
               </a>
             </div>
             <div

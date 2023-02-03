@@ -12,10 +12,20 @@ const collectionTypeLabelColors = {
   document: '#b7a59a',
 }
 
+const generatorStyles = [
+  'text2img',
+  'cute-creature-generator',
+  'fantasy-world-generator',
+  'old-style-generator',
+  'pop-art-generator',
+  'pixel-art-generator',
+]
+
 export {
   defaultNFTCollectionsLimit,
   defaultAssetsLimit,
   collectionTypes,
   collectionTypeLabelColors,
   statuses,
+  generatorStyles,
 }
