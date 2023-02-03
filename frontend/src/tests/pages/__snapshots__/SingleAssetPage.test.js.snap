@@ -129,9 +129,22 @@ Object {
                       class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
                     >
                       <h3
-                        class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+                        class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-5zsea0-MuiTypography-root"
                       >
                         deserunt recusandae quis rerum quo amet
+                        <a
+                          href="/collections/63cce9886f124b9e51502125/assets/63cce991b241f44010e06adf/edit"
+                          style="text-decoration: none;"
+                          sx="[object Object]"
+                        >
+                          <button
+                            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
+                            tabindex="0"
+                            type="button"
+                          >
+                            Edit
+                          </button>
+                        </a>
                       </h3>
                       <h5
                         class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
@@ -147,6 +160,7 @@ Object {
                           style="text-decoration: none;"
                         >
                            
+                          abc123
                         </a>
                         <span
                           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
@@ -518,9 +532,22 @@ Object {
                     class="MuiAccordionDetails-root css-ta84vm-MuiAccordionDetails-root"
                   >
                     <h3
-                      class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-1ot9enh-MuiTypography-root"
+                      class="MuiTypography-root MuiTypography-h3 MuiTypography-alignLeft css-5zsea0-MuiTypography-root"
                     >
                       deserunt recusandae quis rerum quo amet
+                      <a
+                        href="/collections/63cce9886f124b9e51502125/assets/63cce991b241f44010e06adf/edit"
+                        style="text-decoration: none;"
+                        sx="[object Object]"
+                      >
+                        <button
+                          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
+                          tabindex="0"
+                          type="button"
+                        >
+                          Edit
+                        </button>
+                      </a>
                     </h3>
                     <h5
                       class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-i32owz-MuiTypography-root"
@@ -536,6 +563,7 @@ Object {
                         style="text-decoration: none;"
                       >
                          
+                        abc123
                       </a>
                       <span
                         class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"

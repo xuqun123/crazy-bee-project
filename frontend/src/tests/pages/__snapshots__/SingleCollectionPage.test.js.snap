@@ -243,6 +243,17 @@ Object {
                     </span>
                   </div>
                 </div>
+                <div
+                  class="MuiCardActions-root MuiCardActions-spacing css-15f5lf7-MuiCardActions-root"
+                >
+                  <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
+                    tabindex="0"
+                    type="button"
+                  >
+                    Edit
+                  </button>
+                </div>
               </div>
             </a>
           </div>
@@ -562,6 +573,17 @@ Object {
                     image
                   </span>
                 </div>
+              </div>
+              <div
+                class="MuiCardActions-root MuiCardActions-spacing css-15f5lf7-MuiCardActions-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall MuiButton-root MuiButton-contained MuiButton-containedInfo MuiButton-sizeSmall MuiButton-containedSizeSmall css-1ead20q-MuiButtonBase-root-MuiButton-root"
+                  tabindex="0"
+                  type="button"
+                >
+                  Edit
+                </button>
               </div>
             </div>
           </a>
