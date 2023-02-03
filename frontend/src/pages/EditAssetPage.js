@@ -7,8 +7,8 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import CurrentUserContext from '../lib/CurrentUserContext'
-import CollectionForm from '../components/CollectionForm'
-import { collectionValidationSchema } from '../lib/validations'
+import { assetValidationSchema } from '../lib/validations'
+import AssetForm from '../components/AssetForm'
 
 export const defaultValues = {
   name: '',
@@ -16,16 +16,17 @@ export const defaultValues = {
   summary: '',
   description: '',
   publishedAt: moment(new Date(), moment.ISO_8601),
-  collectionTypes: [],
+  assetType: '',
   coverImageUrl: '',
-  bannerImageUrl: '',
+  assetUrl: '',
 }
 
-function EditCollectionPage() {
-  const { nftCollectionId } = useParams()
+function EditAssetPage() {
+  const { assetId, nftCollectionId } = useParams()
   const navigate = useNavigate()
   const [serverError, setsSrverError] = useState(null)
   const [loading, setLoading] = useState(true)
+  const [nftCollection, setNftCollection] = useState(null)
   const { setAlert } = useContext(AlertMessageContext)
   const currentUser = useContext(CurrentUserContext)
 
@@ -36,7 +37,7 @@ function EditCollectionPage() {
     formState: { errors },
     reset,
   } = useForm({
-    resolver: yupResolver(collectionValidationSchema),
+    resolver: yupResolver(assetValidationSchema),
     defaultValues,
   })
 
@@ -45,14 +46,26 @@ function EditCollectionPage() {
       .get(`/nftCollections/${nftCollectionId}`)
       .then((response) => {
         setLoading(false)
-        reset(pick(response?.data?.data, Object.keys(defaultValues)))
+        setNftCollection(response?.data?.data)
       })
       .catch((error) => {
         setLoading(false)
         const message = `Get user data failed: ${error.message}`
         console.error(message)
       })
-  }, [nftCollectionId, reset])
+  }, [nftCollectionId])
+
+  useEffect(() => {
+    axiosClient
+      .get(`/assets/${assetId}`)
+      .then((response) => {
+        reset(pick(response?.data?.data, Object.keys(defaultValues)))
+      })
+      .catch((error) => {
+        const message = `Get user data failed: ${error.message}`
+        console.error(message)
+      })
+  }, [assetId, reset])
 
   const handleCancelClick = () => {
     navigate(-1)
@@ -62,16 +75,16 @@ function EditCollectionPage() {
     setsSrverError(null)
 
     axiosClient
-      .patch(`/nftCollections/${nftCollectionId}`, { nftCollection: data })
+      .patch(`/assets/${assetId}`, { asset: data })
       .then((response) => {
-        const message = 'NFT collection is updated successfully'
+        const message = 'Asset is updated successfully'
         console.log(message, response.data)
         setAlert({ message })
         navigate(-1)
       })
       .catch((error) => {
         const errMsg = error.response?.data?.error || error.message
-        const message = `Update NFT collection failed: ${errMsg}`
+        const message = `Update Asset failed: ${errMsg}`
         console.error(message)
         setsSrverError(message)
         setAlert({ message, severity: 'error' })
@@ -79,8 +92,8 @@ function EditCollectionPage() {
   }
 
   return (
-    <CollectionForm
-      formTitle="Edit NFT Collection"
+    <AssetForm
+      formTitle="Edit Asset"
       submitButtonText="Update"
       userId={currentUser?._id}
       user={currentUser}
@@ -92,8 +105,9 @@ function EditCollectionPage() {
       errors={errors}
       register={register}
       InputLabelProps={{ shrink: true }}
+      nftCollection={nftCollection}
     />
   )
 }
 
-export default EditCollectionPage
+export default EditAssetPage

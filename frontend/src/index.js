@@ -16,6 +16,7 @@ import SingleCollectionPage from './pages/SingleCollectionPage'
 import SingleAssetPage from './pages/SingleAssetPage'
 import NewCollectionPage from './pages/NewCollectionPage'
 import EditCollectionPage from './pages/EditCollectionPage'
+import EditAssetPage from './pages/EditAssetPage'
 import NewAssetPage from './pages/NewAssetPage'
 
 import './index.css'
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
       {
         path: 'collections/:nftCollectionId',
         element: <SingleCollectionPage />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: '/collections/:nftCollectionId/assets/:assetId/edit',
+        element: <EditAssetPage />,
         errorElement: <ErrorPage />,
       },
       {

@@ -1,9 +1,10 @@
 import React from 'react'
-import { render, screen, waitFor, fireEvent } from '@testing-library/react'
+import { MemoryRouter } from 'react-router-dom'
+import { render, screen, waitFor } from '@testing-library/react'
 import SingleAssetPage from '../../pages/SingleAssetPage'
 import axiosClient from '../../lib/axiosClient'
 import { fakeUser, fakeNftCollection, fakeAsset } from '../../lib/testHelper'
-import { MemoryRouter } from 'react-router-dom'
+import CurrentUserContext from '../../lib/CurrentUserContext'
 
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
@@ -35,7 +36,12 @@ describe('SingleAssetPage', () => {
     })
 
     it('render the SingleAssetPage view properly with expected elements', async () => {
-      render(<SingleAssetPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleAssetPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
       let assetHeader, collectionNameSection
 
       await waitFor(() => {
@@ -56,7 +62,12 @@ describe('SingleAssetPage', () => {
     })
 
     it('snapshot the SingleAssetPage view with all expected elements', async () => {
-      const view = render(<SingleAssetPage />, { wrapper: MemoryRouter })
+      const view = render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleAssetPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
         expect(screen.getByText(fakeAsset.name)).toBeInTheDocument()
@@ -75,7 +86,12 @@ describe('SingleAssetPage', () => {
     })
 
     it('render the SingleAssetPage view without rendering any nftCollection data', async () => {
-      render(<SingleAssetPage />, { wrapper: MemoryRouter })
+      render(
+        <CurrentUserContext.Provider value={fakeUser}>
+          <SingleAssetPage />
+        </CurrentUserContext.Provider>,
+        { wrapper: MemoryRouter }
+      )
 
       await waitFor(() => {
         expect(screen.queryByText(fakeAsset.name)).not.toBeInTheDocument()
