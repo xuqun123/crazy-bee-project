@@ -21,6 +21,7 @@ function ActionConfirm({
   confirmText,
   cancelText,
   confrimAction,
+  entityName,
 }) {
   const [open, setOpen] = React.useState(false)
 
@@ -43,7 +44,7 @@ function ActionConfirm({
   return (
     <>
       <Button
-        data-testid="action-btn"
+        data-testid={`${entityName}-action-btn`}
         variant={variant}
         color={color}
         size={size}
@@ -67,7 +68,7 @@ function ActionConfirm({
             {cancelText}
           </Button>
           <Button
-            data-testid="action-confirm-btn"
+            data-testid={`${entityName}-action-confirm-btn`}
             variant="contained"
             color="error"
             onClick={handleConfirm}

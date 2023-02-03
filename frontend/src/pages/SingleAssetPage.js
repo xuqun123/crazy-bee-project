@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import moment from 'moment'
 import Typography from '@mui/material/Typography'
 import Grid from '@mui/material/Grid'
@@ -17,15 +17,19 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { collectionTypeLabelColors } from '../lib/dataConstants'
 import AssetsList from '../components/AssetsList'
+import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
 import CurrentUserContext from '../lib/CurrentUserContext'
+import AlertMessageContext from '../lib/AlertMessageContext'
 
 function SingleCollectionPage() {
   const { assetId } = useParams()
+  const navigate = useNavigate()
   const [asset, setAsset] = useState(null)
   const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
   const currentUser = useContext(CurrentUserContext)
+  const { setAlert } = useContext(AlertMessageContext)
 
   useEffect(() => {
     axiosClient
@@ -54,6 +58,22 @@ function SingleCollectionPage() {
         })
     }
   }, [asset])
+
+  const handleDelete = (id) => {
+    axiosClient
+      .delete(`/assets/${id}`)
+      .then((response) => {
+        const message = 'The Asset has been deleted successfully!'
+        console.log(message)
+        setAlert({ message })
+        navigate(-1)
+      })
+      .catch((error) => {
+        const message = `Delte Asset failed: ${error.message}`
+        console.error(message)
+        setAlert({ message, severity: 'error' })
+      })
+  }
 
   return (
     <>
@@ -126,6 +146,18 @@ function SingleCollectionPage() {
                         >
                           Edit
                         </Button>
+                        <ActionConfirm
+                          variant="contained"
+                          size="small"
+                          color="error"
+                          buttonText={'Delete'}
+                          entityName="asset"
+                          title="Are you sure to delete this Asset?"
+                          description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                          confirmText="Confirm"
+                          cancelText="Cancel"
+                          confrimAction={() => handleDelete(asset._id)}
+                        />
                       </Link>
                     )}
                   </Typography>

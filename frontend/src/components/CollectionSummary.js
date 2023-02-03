@@ -99,6 +99,7 @@ function CollectionSummary({
                       size="small"
                       color="error"
                       buttonText={'Delete'}
+                      entityName="nftCollection"
                       title="Are you sure to delete this NFT collection?"
                       description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
                       confirmText="Confirm"

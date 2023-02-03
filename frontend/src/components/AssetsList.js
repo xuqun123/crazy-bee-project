@@ -56,7 +56,7 @@ function AssetsList({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const loadData = (offset = 0) => {
+  const loadData = (offset = 0, reset = false) => {
     let url = `/assets?limit=${defaultAssetsLimit}&offset=${offset}`
     if (nftCollectionId) url = `${url}&nftCollectionId=${nftCollectionId}`
     if (userId) url = `${url}&userId=${userId}`
@@ -68,7 +68,8 @@ function AssetsList({
 
         setLoading(false)
         setOffset(offsetNumber)
-        setAssets(assets.concat(data)?.filter((asset) => asset._id !== excludeAssetId))
+        if (reset) setAssets(data)
+        else setAssets(assets.concat(data)?.filter((asset) => asset._id !== excludeAssetId))
         setLoadMore(loadMoreFlag)
       })
       .catch((error) => {
@@ -87,21 +88,21 @@ function AssetsList({
     navigate(`/collections/${asset.nftCollectionId}/assets/${asset._id}/edit`)
   }
 
-  // const handleDelete = (id) => {
-  //   axiosClient
-  //     .delete(`/assets/${id}`)
-  //     .then((response) => {
-  //       const message = 'The Asset has been deleted successfully!'
-  //       console.log(message)
-  //       loadData(0, true)
-  //       setAlert({ message })
-  //     })
-  //     .catch((error) => {
-  //       const message = `Delte Asset failed: ${error.message}`
-  //       console.error(message)
-  //       setAlert({ message, severity: 'error' })
-  //     })
-  // }
+  const handleDelete = (id) => {
+    axiosClient
+      .delete(`/assets/${id}`)
+      .then((response) => {
+        const message = 'The Asset has been deleted successfully!'
+        console.log(message)
+        loadData(0, true)
+        setAlert({ message })
+      })
+      .catch((error) => {
+        const message = `Delete Asset failed: ${error.message}`
+        console.error(message)
+        setAlert({ message, severity: 'error' })
+      })
+  }
 
   return (
     <Container sx={{ py: 0 }}>
@@ -156,18 +157,18 @@ function AssetsList({
                   </CardContent>
                   {enableEdit && (
                     <CardActions sx={{ flexDirection: 'row-reverse', pt: 0 }}>
-                      {/* <ActionConfirm
+                      <ActionConfirm
                         variant="contained"
                         size="small"
                         color="error"
                         buttonText={'Delete'}
-                        title="Are you sure to delete this NFT collection?"
+                        entityName="asset"
+                        title="Are you sure to delete this asset?"
                         description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
                         confirmText="Confirm"
                         cancelText="Cancel"
                         confrimAction={() => handleDelete(asset._id)}
-                        // onClick={()=>}
-                      /> */}
+                      />
                       <Button
                         sx={{ mr: 1 }}
                         key={asset._id}
