@@ -27,6 +27,7 @@ function SingleCollectionPage() {
   const navigate = useNavigate()
   const [asset, setAsset] = useState(null)
   const [nftCollection, setNFTCollection] = useState(null)
+  const [assetOwner, setAssetOwner] = useState(null)
   const [loading, setLoading] = useState(true)
   const currentUser = useContext(CurrentUserContext)
   const { setAlert } = useContext(AlertMessageContext)
@@ -51,6 +52,16 @@ function SingleCollectionPage() {
         .get(`/nftCollections/${asset.nftCollectionId}`)
         .then((response) => {
           setNFTCollection(response?.data?.data)
+        })
+        .catch((error) => {
+          const message = `Get asset data failed: ${error.message}`
+          console.error(message)
+        })
+
+      axiosClient
+        .get(`/users/${asset.userId}`)
+        .then((response) => {
+          setAssetOwner(response?.data?.data)
         })
         .catch((error) => {
           const message = `Get asset data failed: ${error.message}`
@@ -176,7 +187,7 @@ function SingleCollectionPage() {
                       to={`/users/${asset.userId}/collections`}
                     >
                       {' '}
-                      {currentUser?.username}
+                      {assetOwner?.username}
                     </Link>
                     <Typography component="span" variant="h5" align="left" color="grey">
                       {' '}
