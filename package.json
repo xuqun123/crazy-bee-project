@@ -5,7 +5,8 @@
   "directories": {
     "docs": "docs",
     "frontend": "frontend",
-    "backend": "backend"
+    "backend": "backend",
+    "nft-minting": "nft-minting-v2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -22,11 +23,6 @@
   },
   "homepage": "https://github.com/xuqun123/crazy-bee-project#readme",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
-    "hardhat": "^2.12.6",
     "husky": "^8.0.3"
-  },
-  "dependencies": {
-    "@openzeppelin/contracts": "^4.8.1"
   }
 }
