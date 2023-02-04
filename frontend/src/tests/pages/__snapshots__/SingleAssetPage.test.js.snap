@@ -170,7 +170,6 @@ Object {
                           style="text-decoration: none;"
                         >
                            
-                          abc123
                         </a>
                         <span
                           class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"
@@ -649,7 +648,6 @@ Object {
                         style="text-decoration: none;"
                       >
                          
-                        abc123
                       </a>
                       <span
                         class="MuiTypography-root MuiTypography-h5 MuiTypography-alignLeft css-11uw5h0-MuiTypography-root"

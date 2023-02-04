@@ -1,0 +1,19 @@
+{
+  "name": "nft-minting-v2",
+  "version": "1.0.0",
+  "description": "a backend service to build and deploy smart contracts to blockchain for Crazy Bee",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.12.6"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
