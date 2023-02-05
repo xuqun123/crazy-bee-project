@@ -1,6 +1,7 @@
 const StatusCodes = require("http-status-codes");
-const assetRepo = require("../repos/Asset");
 const { OK, BAD_REQUEST, NOT_FOUND } = StatusCodes;
+const assetRepo = require("../repos/Asset");
+const { buildAssetTokenDetails, uploadToPinataAndMintNFT } = require("../lib/nft/mintNFT");
 
 // get Assets
 const getAssets = (req, res) => {
@@ -30,17 +31,30 @@ const getAsset = (req, res) => {
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 
-// create an asset
+// create an asset and also mint the asset as a NFT token asynchrously
 const createAsset = (req, res) => {
-  const { asset } = req.body || {};
+  const receiverAddress = req.body?.receiverAddress?.length > 0 ? req.body?.receiverAddress : null;
+  let asset = req.body?.asset;
 
   if (!asset) {
     return res.status(BAD_REQUEST).json({ error: "missing asset params" });
   }
 
+  // build the token details
+  asset = buildAssetTokenDetails(asset, receiverAddress);
+
   assetRepo
     .create(asset)
-    .then((data) => res.status(OK).json({ data }))
+    .then((data) => {
+      res.status(OK).json({ data });
+
+      if (receiverAddress) {
+        const assetId = data._id;
+
+        // uploading the asset data to Pinata as a NFT's metadata asynchronously
+        uploadToPinataAndMintNFT(asset, assetId, receiverAddress);
+      }
+    })
     .catch((error) => res.status(BAD_REQUEST).json({ error: error.message }));
 };
 

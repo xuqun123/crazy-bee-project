@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import Container from '@mui/material/Container'
 import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
@@ -16,7 +17,12 @@ import PageSearchBar from '../components/PageSearchBar'
 import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
-import { defaultAssetsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
+import {
+  MINTING_STATUSES,
+  defaultAssetsLimit,
+  collectionTypeLabelColors,
+} from '../lib/dataConstants'
+import { Tooltip } from '@mui/material'
 
 function LoadingSkeletons() {
   return (
@@ -139,8 +145,13 @@ function AssetsList({
                 >
                   <CardMedia component="img" image={asset.coverImageUrl} alt="random" />
                   <CardContent sx={{ flexGrow: 1 }}>
+                    {asset.tokenDetails?.mintingStatus === MINTING_STATUSES.minted && (
+                      <Tooltip title="minted as NFT" arrow={true} placement="right">
+                        <CheckCircleIcon color="success" sx={{ fontSize: 25 }} />
+                      </Tooltip>
+                    )}
                     <Typography variant="p" component="p">
-                      {moment(asset.publishedAt).format('Do MMMM YYYY')}
+                      {moment(asset.publishedAt).format('Do MMMM YYYY')}{' '}
                     </Typography>
                     <Typography gutterBottom variant="h5" component="h2">
                       {asset.name}
@@ -164,7 +175,7 @@ function AssetsList({
                         buttonText={'Delete'}
                         entityName="asset"
                         title="Are you sure to delete this asset?"
-                        description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                        description="Please be aware there is no turning back and your won't be able to retrieve your NFT from Crazy Bee later! Please cancel this action if this is not what you want."
                         confirmText="Confirm"
                         cancelText="Cancel"
                         confrimAction={() => handleDelete(asset._id)}

@@ -24,7 +24,7 @@ const connectToWallet = async () => {
         method: 'eth_requestAccounts',
       })
       const obj = {
-        message: 'Wallet connection is succeeded!',
+        message: 'Your wallet has been connected successfully!',
         address: addressArray[0],
       }
       return obj
@@ -49,7 +49,7 @@ const getConnectedWallet = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          message: 'Wallet connection is succeeded!',
+          message: 'Your wallet has been connected successfully!',
         }
       } else {
         return {

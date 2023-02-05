@@ -68,7 +68,14 @@ function NewAssetPage() {
 
   const onSubmit = (data) => {
     axiosClient
-      .post(`/assets`, { asset: { ...data, userId: currentUser?._id, nftCollectionId } })
+      .post(`/assets`, {
+        asset: {
+          ...data,
+          userId: currentUser?._id,
+          nftCollectionId,
+        },
+        receiverAddress: localStorage.getItem('walletAddress'),
+      })
       .then((response) => {
         const message = 'Asset is created successfully'
         console.log(message, response.data)
