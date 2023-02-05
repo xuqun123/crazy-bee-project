@@ -1,0 +1,23 @@
+{
+  "attributes": [
+    {
+      "trait_type": "Eye color",
+      "value": "black"
+    },
+    {
+      "trait_type": "Skin color",
+      "value": "yellow"
+    },
+    {
+      "trait_type": "Theme",
+      "value": "nature"
+    },
+    {
+      "trait_type": "Keyword",
+      "value": "bubble bee"
+    }
+  ],
+  "description": "the first testing NFT made from Crazy Bee",
+  "image": "https://gateway.pinata.cloud/ipfs/QmUe6wkBQRVpeFXdRUWvieqKexKC8R99TojKah3bKd81AW",
+  "name": "the-first-testing-nft"
+}

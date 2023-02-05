@@ -1,9 +1,10 @@
 async function main() {
-  const HelloWorld = await ethers.getContractFactory("HelloWorld");
+  // Grab the contract factory
+  const CrazyBeeNFT = await ethers.getContractFactory("CrazyBeeNFT");
 
   // Start deployment, returning a promise that resolves to a contract object
-  const hello_world = await HelloWorld.deploy("Hello World!");
-  console.log("Contract deployed to address:", hello_world.address);
+  const crazyBeeNFT = await CrazyBeeNFT.deploy(); // Instance of the contract
+  console.log("Contract deployed to address:", crazyBeeNFT.address);
 }
 
 main()
