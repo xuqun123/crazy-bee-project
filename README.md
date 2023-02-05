@@ -80,7 +80,7 @@ The following list shows all the major external software and web services going 
 •	The application should be always available for at least 99.5% of the uptime.
 
 ### Other Requirements
-•	All UI views will be mobile-friendly.
+•	All UI views will be mobile-friendly.;
 •	The primary supported language is English.
 •	Any other languages support can be supported later upon further requests.
 •	The application will be only operated in Australia for the initial release.
