@@ -1320,7 +1320,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/api/assets/63cb6a3c8da53d587b15097a",
+							"raw": "http://localhost:3000/api/assets/63df82b11cc9a70e6c83a35c",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1329,7 +1329,7 @@
 							"path": [
 								"api",
 								"assets",
-								"63cb6a3c8da53d587b15097a"
+								"63df82b11cc9a70e6c83a35c"
 							]
 						},
 						"description": "http://localhost:3000/api/nftCollections/63c3d3d962fdd0d95944af08"
@@ -1393,6 +1393,65 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"_id\": \"63cb6a3c8da53d587b15097a\",\n        \"userId\": \"63c54ffead511693e5db8ec6\",\n        \"nftCollectionId\": \"63be66e1909e2d0a8f0e8ec4\",\n        \"name\": \"aliquid aut reiciendis nesciunt officia nostrum\",\n        \"summary\": \"Laborum debitis iusto esse expedita saepe quasi.\",\n        \"description\": \"Deleniti aut quam. Earum autem reiciendis fuga nihil tempora deleniti. Vel inventore atque quis nulla at.\",\n        \"assetType\": \"video\",\n        \"status\": \"published\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/food\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"tokenDetails\": {\n            \"contractAdress\": \"b893bb05-486d-4e42-ac55-35ad9dada8f5\",\n            \"tokenId\": \"c06facdc-f098-46a2-9d73-0ad65d6ab52b\",\n            \"tokenStandard\": \"ERC-1156\",\n            \"chain\": \"Polygon\",\n            \"metadata\": \"Centralized\",\n            \"_id\": \"63cb6a3c8da53d587b15097b\"\n        },\n        \"publishedAt\": \"2023-01-03T11:51:44.859Z\",\n        \"__v\": 0,\n        \"createdAt\": \"2023-01-21T04:29:48.949Z\",\n        \"updatedAt\": \"2023-01-21T04:29:48.949Z\"\n    }\n}"
+						},
+						{
+							"name": "Get One Asset with minted NFT token details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/assets/63df82b11cc9a70e6c83a35c",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"assets",
+										"63df82b11cc9a70e6c83a35c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1177"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"499-Wmp/Kw+YzVxoqe60FjlYxVob3i4\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Feb 2023 10:28:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"63df82b11cc9a70e6c83a35c\",\n        \"userId\": \"63d256a9bcd3538c990494ff\",\n        \"nftCollectionId\": \"63d256b367ea5bf232d1b9b2\",\n        \"name\": \"a new test asset 2 123412\",\n        \"summary\": \"Officia dolorum esse nemo esse a doloremque aut.\",\n        \"description\": \"Consequatur assumenda maxime expedita eaque. Repellat aliquid animi inventore vitae maiores veritatis odit. Dolorem tempore libero eligendi repellat minus. Accusamus illo ipsam dolorem. Eveniet quibusdam laudantium numquam aperiam. Nemo corporis odit esse vel atque porro excepturi vero totam.\",\n        \"assetType\": \"audio\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"tokenDetails\": {\n            \"contractAddress\": \"0x128a61FFE68b40a93D4Cae95D86287a96884f3c9\",\n            \"tokenId\": \"5\",\n            \"transactionId\": \"0x84537e4159fa8f81230fdef5509715525f4fca0a66af750765d91115f0d1ef05\",\n            \"tokenStandard\": \"ERC721\",\n            \"chain\": \"Goerli\",\n            \"pinataUrl\": \"https://gateway.pinata.cloud/ipfs/QmRcjXeY8B58X86Np364bTARQB9fLujMUEEcPDisytmiKc\",\n            \"mintingStatus\": \"minted\",\n            \"_id\": \"63df82c61cc9a70e6c83a363\"\n        },\n        \"publishedAt\": \"2023-06-01T07:46:55.885Z\",\n        \"createdAt\": \"2023-02-05T10:19:29.469Z\",\n        \"updatedAt\": \"2023-02-05T10:19:50.159Z\",\n        \"__v\": 0\n    }\n}"
 						}
 					]
 				},
@@ -1403,7 +1462,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"asset\": {\n        \"userId\": \"63d256a9bcd3538c990494ff\",\n        \"nftCollectionId\": \"63d256b367ea5bf232d1b9b2\",\n        \"name\": \"a new test asset 2\",\n        \"summary\": \"Officia dolorum esse nemo esse a doloremque aut.\",\n        \"description\": \"Consequatur assumenda maxime expedita eaque. Repellat aliquid animi inventore vitae maiores veritatis odit. Dolorem tempore libero eligendi repellat minus. Accusamus illo ipsam dolorem. Eveniet quibusdam laudantium numquam aperiam. Nemo corporis odit esse vel atque porro excepturi vero totam.\",\n        \"assetType\": \"audio\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"tokenDetails\": {\n            \"contractAdress\": \"db0c304f-e8a0-4387-8cd3-db9e805e06d2\",\n            \"tokenId\": \"0db22d81-40fb-4540-8716-56ff5b74c36e\",\n            \"tokenStandard\": \"ERC-1155\",\n            \"chain\": \"Polygon\",\n            \"metadata\": \"Decentralized\",\n            \"_id\": \"63d905ea2adf240fa7e3d03e\"\n        },\n        \"publishedAt\": \"2023-06-01T07:46:55.885Z\"\n    }\n}",
+							"raw": "{\n    \"asset\": {\n        \"userId\": \"63d256a9bcd3538c990494ff\",\n        \"nftCollectionId\": \"63d256b367ea5bf232d1b9b2\",\n        \"name\": \"a new test asset 123123\",\n        \"summary\": \"Officia dolorum esse nemo esse a doloremque aut.\",\n        \"description\": \"Consequatur assumenda maxime expedita eaque. Repellat aliquid animi inventore vitae maiores veritatis odit. Dolorem tempore libero eligendi repellat minus. Accusamus illo ipsam dolorem. Eveniet quibusdam laudantium numquam aperiam. Nemo corporis odit esse vel atque porro excepturi vero totam.\",\n        \"assetType\": \"audio\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"publishedAt\": \"2023-06-01T07:46:55.885Z\"\n    },\n    \"receiverAddress\": \"0x18566bD30E791C6FC7d8add8D93408c35711639D\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1549,6 +1608,73 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"data\": {\n        \"_id\": \"63c3d3d962fdd0d95944af08\",\n        \"name\": \"new name new name\",\n        \"summary\": \"new summary\",\n        \"description\": \"Fuga consequuntur cupiditate vero tempore porro eum. Asperiores facere ab labore assumenda voluptatum eligendi reprehenderit. Nesciunt quasi ab. Perspiciatis iste quia officia odio. Rerum explicabo maxime voluptates officia laboriosam sunt tenetur veniam. Fuga ex magnam magni porro illo harum.\",\n        \"collectionType\": \"video\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/571.jpg\",\n        \"publishedAt\": \"2023-01-12T12:11:28.093Z\",\n        \"__v\": 0,\n        \"created_at\": \"2023-01-15T10:22:18.658Z\",\n        \"updated_at\": \"2023-01-15T10:22:18.658Z\",\n        \"updatedAt\": \"2023-01-17T21:50:11.907Z\"\n    }\n}"
+						},
+						{
+							"name": "Create One Asset with a wallet address to trigger the NFT minting",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"asset\": {\n        \"userId\": \"63d256a9bcd3538c990494ff\",\n        \"nftCollectionId\": \"63d256b367ea5bf232d1b9b2\",\n        \"name\": \"a new test asset 2 123412\",\n        \"summary\": \"Officia dolorum esse nemo esse a doloremque aut.\",\n        \"description\": \"Consequatur assumenda maxime expedita eaque. Repellat aliquid animi inventore vitae maiores veritatis odit. Dolorem tempore libero eligendi repellat minus. Accusamus illo ipsam dolorem. Eveniet quibusdam laudantium numquam aperiam. Nemo corporis odit esse vel atque porro excepturi vero totam.\",\n        \"assetType\": \"audio\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"publishedAt\": \"2023-06-01T07:46:55.885Z\"\n    },\n    \"receiverAddress\": \"0x18566bD30E791C6FC7d8add8D93408c35711639D\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/assets",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"assets"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1032"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"408-SSDrPmng7xXXuoRb72cZp5WS2ro\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 05 Feb 2023 10:19:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"userId\": \"63d256a9bcd3538c990494ff\",\n        \"nftCollectionId\": \"63d256b367ea5bf232d1b9b2\",\n        \"name\": \"a new test asset 2 123412\",\n        \"summary\": \"Officia dolorum esse nemo esse a doloremque aut.\",\n        \"description\": \"Consequatur assumenda maxime expedita eaque. Repellat aliquid animi inventore vitae maiores veritatis odit. Dolorem tempore libero eligendi repellat minus. Accusamus illo ipsam dolorem. Eveniet quibusdam laudantium numquam aperiam. Nemo corporis odit esse vel atque porro excepturi vero totam.\",\n        \"assetType\": \"audio\",\n        \"status\": \"draft\",\n        \"coverImageUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"assetUrl\": \"https://loremflickr.com/640/480/nature\",\n        \"tokenDetails\": {\n            \"contractAddress\": \"0x128a61FFE68b40a93D4Cae95D86287a96884f3c9\",\n            \"transactionId\": \"minting\",\n            \"tokenStandard\": \"ERC721\",\n            \"chain\": \"Goerli\",\n            \"pinataUrl\": \"minting\",\n            \"mintingStatus\": \"minting\",\n            \"_id\": \"63df82b11cc9a70e6c83a35d\"\n        },\n        \"publishedAt\": \"2023-06-01T07:46:55.885Z\",\n        \"_id\": \"63df82b11cc9a70e6c83a35c\",\n        \"createdAt\": \"2023-02-05T10:19:29.469Z\",\n        \"updatedAt\": \"2023-02-05T10:19:29.469Z\",\n        \"__v\": 0\n    }\n}"
 						},
 						{
 							"name": "Get One NFTCollection",
