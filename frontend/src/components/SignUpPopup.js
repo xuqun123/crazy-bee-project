@@ -16,9 +16,8 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import { loginValidationSchema } from '../lib/validations'
-import SignUpPopup from './SignUpPopup'
 
-function LoginPopup() {
+function SignUpPopup() {
   const [open, setOpen] = useState(false)
   const [serverError, setsServerError] = useState(null)
 
@@ -36,14 +35,14 @@ function LoginPopup() {
     axiosClient
       .post(`/auth/login`, { ...data })
       .then((response) => {
-        console.log('The user has been logged in successfully', response.data)
+        console.log('The user has signed up successfully', response.data)
         setOpen(false)
         localStorage.setItem('jwt', response.data.token)
         window.location.reload(false)
       })
       .catch((error) => {
         const errMsg = error.response?.data?.error || error.message
-        const message = `Login failed: ${errMsg}`
+        const message = `Sign up failed: ${errMsg}`
         console.error(message)
         setsServerError(errMsg)
       })
@@ -55,15 +54,15 @@ function LoginPopup() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(loginValidationSchema),
-    defaultValues: { email: '', password: '' },
+    defaultValues: { username: '', email: '', password: '' },
   })
 
   return (
     <div>
-      <Tooltip title="login">
-        <IconButton onClick={handleClickOpen} data-testid="login-trigger">
-          <LoginIcon />
-        </IconButton>
+      <Tooltip title="sign up">
+        <Button variant="text" onClick={handleClickOpen} data-testid="signup-trigger">
+          Signup
+        </Button>
       </Tooltip>
       <Dialog open={open} onClose={handleClose}>
         <DialogTitle sx={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }}>
@@ -80,6 +79,20 @@ function LoginPopup() {
             noValidate
             autoComplete="off"
           >
+            <TextField
+              margin="dense"
+              id="username"
+              label="Username"
+              type="username"
+              fullWidth
+              variant="filled"
+              placeholder="Please enter a username"
+              {...register('username')}
+              error={errors.username ? true : false}
+            />
+            <Typography className="validation-error" variant="inherit" color="red">
+              {errors.email?.message}
+            </Typography>
             <TextField
               margin="dense"
               id="email"
@@ -110,10 +123,8 @@ function LoginPopup() {
               {errors.password?.message}
             </Typography>
           </FormControl>
-
-          {/* TODO: link to reset password popup here */}
           <Link href="#" underline="hover" className="primary-action-link">
-            Forget your password?
+            Please read our terms of use before signing up to use our service!
           </Link>
         </DialogContent>
         <DialogActions
@@ -133,14 +144,16 @@ function LoginPopup() {
             {serverError}
           </Typography>
           <ButtonGroup>
-            <SignUpPopup />
+            <IconButton onClick={handleClose} data-testid="close-trigger">
+              <LoginIcon />
+            </IconButton>
             <Button
               variant="contained"
               className="primary-action-btn"
-              data-testid="login-btn"
+              data-testid="Signup-btn"
               onClick={handleSubmit(onSubmit)}
             >
-              Login
+              Sign up
             </Button>
           </ButtonGroup>
         </DialogActions>
@@ -149,4 +162,4 @@ function LoginPopup() {
   )
 }
 
-export default LoginPopup
+export default SignUpPopup
