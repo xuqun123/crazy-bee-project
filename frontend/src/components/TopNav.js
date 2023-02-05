@@ -2,16 +2,14 @@ import { useContext } from 'react'
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
-import WalletIcon from '@mui/icons-material/Wallet'
 import Grid from '@mui/material/Grid'
-import IconButton from '@mui/material/IconButton'
 import Tooltip from '@mui/material/Tooltip'
 import Avatar from '@mui/material/Avatar'
 import { Link } from 'react-router-dom'
-import SearchBar from './SearchBar'
 import LoginPopup from './LoginPopup'
 import CurrentUserContext from '../lib/CurrentUserContext'
 import Logout from './Logout'
+import WalletConnect from './WalletConnect'
 import BackButton from './BackButton'
 
 function TopNav() {
@@ -47,13 +45,7 @@ function TopNav() {
               justifyContent: 'flex-end',
             }}
           >
-            <SearchBar />
-            <Tooltip title="connect crypto wallet">
-              <IconButton>
-                <WalletIcon />
-              </IconButton>
-            </Tooltip>
-
+            <WalletConnect />
             {localStorage.getItem('jwt') ? <Logout /> : <LoginPopup />}
             {currentUser && (
               <Link to={`/users/${currentUser._id}/collections`}>
