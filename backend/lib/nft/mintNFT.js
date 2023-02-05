@@ -94,7 +94,7 @@ const uploadToPinataAndMintNFT = (asset, assetId, receiverAddress) => {
             tokenDetails: {
               ...newTokenDetails,
               transactionId: nftTxn.hash,
-              tokenId: nftTxn.chainId,
+              // tokenId: nftTxn.chainId,
               mintingStatus: MINTING_STATUSES.minted,
             },
           });
@@ -128,4 +128,4 @@ const uploadToPinataAndMintNFT = (asset, assetId, receiverAddress) => {
     });
 };
 
-module.exports = { buildAssetTokenDetails, mintNFT, uploadToPinataAndMintNFT };
+module.exports = { buildAssetTokenDetails, mintNFT, uploadToPinataAndMintNFT, MINTING_STATUSES };

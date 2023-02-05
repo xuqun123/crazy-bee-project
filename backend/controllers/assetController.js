@@ -33,7 +33,7 @@ const getAsset = (req, res) => {
 
 // create an asset and also mint the asset as a NFT token asynchrously
 const createAsset = (req, res) => {
-  const { receiverAddress } = req.body || {};
+  const receiverAddress = req.body?.receiverAddress?.length > 0 ? req.body?.receiverAddress : null;
   let asset = req.body?.asset;
 
   if (!asset) {

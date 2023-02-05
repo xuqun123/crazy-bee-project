@@ -222,6 +222,7 @@ Object {
                     class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
                   >
                     11th December 2022
+                     
                   </p>
                   <h2
                     class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
@@ -383,7 +384,7 @@ Object {
               class="MuiTypography-root MuiDialogContentText-root MuiTypography-body1 MuiDialogContentText-root css-qfso29-MuiTypography-root-MuiDialogContentText-root"
               id="alert-dialog-slide-description"
             >
-              Please be aware there is no turning back! Please cancel this action if this is not what you want.
+              Please be aware there is no turning back and your won't be able to retrieve your NFT from Crazy Bee later! Please cancel this action if this is not what you want.
             </p>
           </div>
           <div
@@ -629,6 +630,7 @@ Object {
                   class="MuiTypography-root MuiTypography-p css-37jdci-MuiTypography-root"
                 >
                   11th December 2022
+                   
                 </p>
                 <h2
                   class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"

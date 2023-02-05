@@ -33,16 +33,26 @@ function WalletConnect() {
     setOpen(false)
   }
 
+  const storeWalletAddress = (address) => {
+    setWalletAddress(address)
+
+    if (address?.length > 0) {
+      localStorage.setItem('walletAddress', address)
+    } else {
+      localStorage.removeItem('walletAddress')
+    }
+  }
+
   const connectWalletPressed = async () => {
     const { message, address, severity } = await connectToWallet()
     setAlert({ message, severity })
-    setWalletAddress(address)
+    storeWalletAddress(address)
   }
 
   useEffect(() => {
     async function fetchWallet() {
       const { address, message, severity } = await getConnectedWallet()
-      setWalletAddress(address)
+      storeWalletAddress(address)
       setAlert({ message, severity })
     }
     fetchWallet()
@@ -51,7 +61,7 @@ function WalletConnect() {
       window.ethereum.on('accountsChanged', (accounts) => {
         if (accounts?.length === 0) {
           setAlert({ message: 'You wallet has been disconnected successfully!' })
-          setWalletAddress('')
+          storeWalletAddress('')
         }
       })
     }

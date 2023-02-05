@@ -9,6 +9,7 @@ import ButtonGroup from '@mui/material/ButtonGroup'
 import InputLabel from '@mui/material/InputLabel'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
+import Alert from '@mui/material/Alert'
 import FormControl from '@mui/material/FormControl'
 import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
@@ -74,6 +75,32 @@ function AssetForm({
               >
                 {formTitle}
               </Typography>
+
+              {formTitle.includes('New') &&
+                (localStorage.getItem('walletAddress') ? (
+                  <Alert severity="info">
+                    Since you have connected to a crypto wallet, please be aware{' '}
+                    <strong>
+                      when you create this asset, it will be automatically minted as a new NFT token
+                      and sent to your wallet!
+                    </strong>
+                  </Alert>
+                ) : (
+                  <Alert severity="warning">
+                    {' '}
+                    Since you haven't connected to any crypto wallet yet,{' '}
+                    <strong>
+                      when you create this asset, it will not be minted as a new NFT token!
+                    </strong>
+                  </Alert>
+                ))}
+
+              {formTitle.includes('Edit') && (
+                <Alert severity="info">
+                  Once this asset is created, you can't edit the <strong>assetUrl</strong> field
+                  anymore as a NFT token is non-fungible after it's minted to the blockain.
+                </Alert>
+              )}
 
               <Grid container spacing={2}>
                 <Grid item md={4} xs={12}>
@@ -226,6 +253,7 @@ function AssetForm({
                     {...register('assetUrl')}
                     error={errors.assetUrl ? true : false}
                     InputLabelProps={InputLabelProps}
+                    disabled={formTitle.includes('Edit')}
                   />
                   <Typography className="validation-error" variant="inherit" color="red">
                     {errors.assetUrl?.message}

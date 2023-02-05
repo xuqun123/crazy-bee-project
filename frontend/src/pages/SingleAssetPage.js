@@ -15,12 +15,65 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
-import { collectionTypeLabelColors } from '../lib/dataConstants'
+import { collectionTypeLabelColors, MINTING_STATUSES } from '../lib/dataConstants'
 import AssetsList from '../components/AssetsList'
 import ActionConfirm from '../components/ActionConfirm'
 import axiosClient from '../lib/axiosClient'
 import CurrentUserContext from '../lib/CurrentUserContext'
 import AlertMessageContext from '../lib/AlertMessageContext'
+
+const renderTokenDetailsInfo = (tokenDetails, key, value) => {
+  if (key === 'mintingStatus') {
+    return (
+      <>
+        <Chip
+          key={key}
+          sx={{
+            mr: 1,
+            color: '#fff',
+            backgroundColor:
+              value === MINTING_STATUSES.minted
+                ? '#4caf50'
+                : value === MINTING_STATUSES.minting
+                ? '#f44336'
+                : '#2196f3',
+            borderRadius: 2,
+          }}
+          label={value}
+        />
+        {value === MINTING_STATUSES.minting && ' (please come back and check the status later)'}
+      </>
+    )
+  } else if (
+    tokenDetails['mintingStatus'] === MINTING_STATUSES.minting &&
+    ['tokenId', 'transactionId', 'pinataUrl'].includes(key)
+  ) {
+    return <CircularProgress key={key} color="secondary" />
+  } else if (key === 'pinataUrl' && value?.includes('http')) {
+    return (
+      <a key={key} href={value} target="_blank" rel="noreferrer">
+        {value}
+      </a>
+    )
+  } else if (key === 'transactionId' && value?.length > 0) {
+    return (
+      <>
+        {value} (
+        <a
+          key={key}
+          href={`https://goerli.etherscan.io/tx/${value}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          etherscan check
+        </a>
+        )
+      </>
+    )
+  }
+
+  return value
+}
 
 function SingleCollectionPage() {
   const { assetId } = useParams()
@@ -164,7 +217,7 @@ function SingleCollectionPage() {
                           buttonText={'Delete'}
                           entityName="asset"
                           title="Are you sure to delete this Asset?"
-                          description="Please be aware there is no turning back! Please cancel this action if this is not what you want."
+                          description="Please be aware there is no turning back and your won't be able to retrieve your NFT from Crazy Bee later! Please cancel this action if this is not what you want."
                           confirmText="Confirm"
                           cancelText="Cancel"
                           confrimAction={() => handleDelete(asset._id)}
@@ -228,7 +281,11 @@ function SingleCollectionPage() {
                                 {key}
                               </TableCell>
                               <TableCell align="right" sx={{ fontWeight: 'bold' }}>
-                                {asset.tokenDetails[key]}
+                                {renderTokenDetailsInfo(
+                                  asset.tokenDetails,
+                                  key,
+                                  asset.tokenDetails[key]
+                                )}
                               </TableCell>
                             </TableRow>
                           ))}
