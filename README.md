@@ -26,21 +26,7 @@
 # External Interfaces
 # User Interfaces
 ## The following UI mock-ups demonstrates about how the final application’s major UI views will look like:
-![Home Page](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img1.png)
-
-![Search result](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img2.png)
-
-![User Sign-up](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img3.png)
-
-![User Login](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img4.png)
-
-![User Profile](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img5.png)
-
-![Asset Collection](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img6.png)
-
-![AI Art generator](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/im7.png)
-
-![Asset Info](https://github.com/xuqun123/crazy-bee-project/tree/main/readme_img/img8.png)
+## https://github.com/xuqun123/crazy-bee-project/blob/main/docs/UI-design-page-views.pdf
 
 # Hardware Interfaces
 ## The software product will be a web application that will be remotely hosted on cloud, so any modern electronic device that gets an internet connection and a modern web browser should be able to run it.
