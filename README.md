@@ -70,7 +70,8 @@ The following list shows all the major external software and web services going 
 ### Safety
 •	All real user data will be strictly stored in Australia region AWS only (to comply with local data protection laws).
 •	All user passwords will be encrypted, and no original user credentials will be stored.
-•	Any sensitive DB write operations triggered by an end-user, such as digital assets upload, AI arts generation, user profile update, will always require an authenticated user session first.
+•	Any sensitive DB write operations triggered by an end-user, such as digital assets upload, AI arts generation, user profile update, will
+always require an authenticated user session first.
 •	Users can only manage their own digital assets or user profiles.
 
 ### Product Quality
@@ -80,7 +81,7 @@ The following list shows all the major external software and web services going 
 •	The application should be always available for at least 99.5% of the uptime.
 
 ### Other Requirements
-•	All UI views will be mobile-friendly.;
+•	All UI views will be mobile-friendly.
 •	The primary supported language is English.
 •	Any other languages support can be supported later upon further requests.
 •	The application will be only operated in Australia for the initial release.
