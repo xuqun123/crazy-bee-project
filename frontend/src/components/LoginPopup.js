@@ -60,7 +60,7 @@ function LoginPopup() {
 
   return (
     <div>
-      <Tooltip title="login">
+      <Tooltip title="login" arrow={true}>
         <IconButton onClick={handleClickOpen} data-testid="login-trigger">
           <LoginIcon />
         </IconButton>
