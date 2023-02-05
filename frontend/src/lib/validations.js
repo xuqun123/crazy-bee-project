@@ -36,7 +36,7 @@ const signUpValidationSchema = Yup.object().shape({
   firstName: Yup.string().required('name is required'),
   lastName: Yup.string(),
   avatarUrl: Yup.string().required('profile picture is required'),
-  bannerImage: Yup.string(),
+  bannerImageUrl: Yup.string(),
   bio: Yup.string(),
 })
 

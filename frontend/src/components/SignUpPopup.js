@@ -59,7 +59,7 @@ function SignUpPopup() {
       firstName: '',
       lastName: '',
       avatarUrl: '',
-      bannerImage: '',
+      bannerImageUrl: '',
       bio: '',
     },
   })
