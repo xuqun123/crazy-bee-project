@@ -28,7 +28,7 @@ const createFakeAsset = (withId = false, userId, nftCollectionId) =>
       assetUrl: sample(sampleImages),
       publishedAt: faker.date.past(),
       tokenDetails: {
-        contractAdress: faker.datatype.uuid(),
+        contractAddress: faker.datatype.uuid(),
         tokenId: faker.datatype.uuid(),
         tokenStandard: sample(["ERC-1155", "ERC-1156"]),
         chain: sample(["Ethereum", "Polygon"]),

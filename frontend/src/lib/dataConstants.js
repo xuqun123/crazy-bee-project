@@ -21,6 +21,12 @@ const generatorStyles = [
   'pixel-art-generator',
 ]
 
+const MINTING_STATUSES = {
+  not_minted: 'not_minted',
+  minted: 'minted',
+  minting: 'minting',
+}
+
 export {
   defaultNFTCollectionsLimit,
   defaultAssetsLimit,
@@ -28,4 +34,5 @@ export {
   collectionTypeLabelColors,
   statuses,
   generatorStyles,
+  MINTING_STATUSES,
 }

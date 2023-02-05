@@ -5,11 +5,14 @@ const assetTypes = ["image", "video", "audio", "document"];
 const statuses = ["draft", "published", "archived"];
 
 const TokenDetailsSchema = new Schema({
-  contractAdress: { type: String },
+  contractAddress: { type: String },
   tokenId: { type: String },
+  transactionId: { type: String },
   tokenStandard: { type: String },
   chain: { type: String },
   metadata: { type: String },
+  pinataUrl: { type: String },
+  mintingStatus: { type: String },
 });
 
 const AssetSchema = new Schema(
