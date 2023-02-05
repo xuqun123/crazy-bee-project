@@ -4,6 +4,7 @@ import Stack from '@mui/material/Stack'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
+import SignUpPopup from './SignUpPopup'
 
 function TopSlogan({ header, summary, secondarySummary, mainCTAText, secondaryCTA }) {
   return (
@@ -35,8 +36,8 @@ function TopSlogan({ header, summary, secondarySummary, mainCTAText, secondaryCT
             </Button>
           )}
           {secondaryCTA && (
-            <Button data-testid="secondary-cta-btn" variant="outlined" href="signup">
-              {secondaryCTA}
+            <Button data-testid="secondary-cta-btn" variant="outlined">
+              <SignUpPopup />
             </Button>
           )}
         </Stack>
