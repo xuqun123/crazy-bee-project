@@ -10,6 +10,7 @@ import LoginPopup from './LoginPopup'
 import CurrentUserContext from '../lib/CurrentUserContext'
 import Logout from './Logout'
 import WalletConnect from './WalletConnect'
+import BackButton from './BackButton'
 
 function TopNav() {
   const currentUser = useContext(CurrentUserContext)
@@ -23,6 +24,7 @@ function TopNav() {
             <Typography variant="h5" color="inherit" fontWeight={'500'} noWrap>
               Crazy Bee
             </Typography>
+            <BackButton />
           </Grid>
           <Grid item md={4}>
             <Link style={{ marginRight: 30 }} to="/">
