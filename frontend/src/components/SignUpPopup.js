@@ -14,6 +14,8 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import { signUpValidationSchema } from '../lib/validations'
+import LoginPopup from './LoginPopup'
+import Logout from './Logout'
 
 function SignUpPopup() {
   const [open, setOpen] = useState(false)
@@ -217,7 +219,7 @@ function SignUpPopup() {
           </Typography>
           <ButtonGroup>
             <Button variant="text" onClick={handleClose} data-testid="close-trigger">
-              Login
+            {localStorage.getItem('jwt') ? <Logout /> : <LoginPopup />}
             </Button>
             <Button
               variant="contained"
