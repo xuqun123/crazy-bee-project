@@ -28,4 +28,14 @@ const loginValidationSchema = Yup.object().shape({
   password: Yup.string().required('password is required'),
 })
 
-export { collectionValidationSchema, assetValidationSchema, loginValidationSchema }
+const signUpValidationSchema = Yup.object().shape({
+  email: Yup.string().email('must be a valid email').required('email is required'),
+  password: Yup.string().required('password is required'),
+})
+
+export {
+  collectionValidationSchema,
+  assetValidationSchema,
+  loginValidationSchema,
+  signUpValidationSchema,
+}

@@ -6,8 +6,6 @@ import DialogActions from '@mui/material/DialogActions'
 import DialogContent from '@mui/material/DialogContent'
 import DialogTitle from '@mui/material/DialogTitle'
 import Tooltip from '@mui/material/Tooltip'
-import LoginIcon from '@mui/icons-material/Login'
-import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import ButtonGroup from '@mui/material/ButtonGroup'
 import FormControl from '@mui/material/FormControl'
@@ -15,7 +13,7 @@ import Link from '@mui/material/Link'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
-import { loginValidationSchema } from '../lib/validations'
+import { signUpValidationSchema } from '../lib/validations'
 
 function SignUpPopup() {
   const [open, setOpen] = useState(false)
@@ -33,11 +31,10 @@ function SignUpPopup() {
     setsServerError(null)
 
     axiosClient
-      .post(`/auth/login`, { ...data })
+      .post(`/auth/signup`, { ...data })
       .then((response) => {
         console.log('The user has signed up successfully', response.data)
         setOpen(false)
-        localStorage.setItem('jwt', response.data.token)
         window.location.reload(false)
       })
       .catch((error) => {
@@ -53,8 +50,18 @@ function SignUpPopup() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(loginValidationSchema),
-    defaultValues: { username: '', email: '', password: '' },
+    resolver: yupResolver(signUpValidationSchema),
+    defaultValues: {
+      email: '',
+      password: '',
+      username: '',
+      dob: '',
+      firstName: '',
+      lastName: '',
+      avatarUrl: '',
+      bannerImage: '',
+      bio: '',
+    },
   })
 
   return (
@@ -79,19 +86,39 @@ function SignUpPopup() {
             noValidate
             autoComplete="off"
           >
+            <Typography component="p" variant="h7" color="text.primary" fontWeight="bold" mt={1}>
+              Personal Details
+            </Typography>
             <TextField
               margin="dense"
-              id="username"
-              label="Username"
-              type="username"
+              id="firstName"
+              label="Firstname"
+              type="text"
               fullWidth
               variant="filled"
-              placeholder="Please enter a username"
-              {...register('username')}
-              error={errors.username ? true : false}
+              placeholder="Please enter your first name"
+              {...register('firstName')}
+              error={errors.firstName ? true : false}
             />
             <Typography className="validation-error" variant="inherit" color="red">
-              {errors.email?.message}
+              {errors.firstName?.message}
+            </Typography>
+            <TextField
+              margin="dense"
+              id="lastName"
+              label="Lastname"
+              type="text"
+              fullWidth
+              variant="filled"
+              placeholder="Please enter your last name"
+              {...register('lastName')}
+              error={errors.lastName ? true : false}
+            />
+            <Typography className="validation-error" variant="inherit" color="red">
+              {errors.lastName?.message}
+            </Typography>
+            <Typography component="p" variant="h7" color="text.primary" fontWeight="bold" mt={1}>
+              Login Details
             </Typography>
             <TextField
               margin="dense"
@@ -122,6 +149,51 @@ function SignUpPopup() {
             <Typography className="validation-error" variant="inherit" color="red">
               {errors.password?.message}
             </Typography>
+            <Typography component="p" variant="h7" color="text.primary" fontWeight="bold" mt={1}>
+              Account Details
+            </Typography>
+            <TextField
+              margin="dense"
+              id="username"
+              label="Username"
+              type="text"
+              fullWidth
+              variant="filled"
+              placeholder="Please enter a username"
+              {...register('username')}
+              error={errors.username ? true : false}
+            />
+            <Typography className="validation-error" variant="inherit" color="red">
+              {errors.username?.message}
+            </Typography>
+            <TextField
+              margin="dense"
+              id="bio"
+              label="Bio"
+              type="text"
+              fullWidth
+              variant="filled"
+              placeholder="Please write a short description"
+              {...register('bio')}
+              error={errors.bio ? true : false}
+            />
+            <Typography className="validation-error" variant="inherit" color="red">
+              {errors.bio?.message}
+            </Typography>
+            <TextField
+              margin="dense"
+              id="avatarUrl"
+              label="Profile Picture URL"
+              type="text"
+              fullWidth
+              variant="filled"
+              placeholder="Paste image URL for your Avatar"
+              {...register('avatarUrl')}
+              error={errors.avatarUrl ? true : false}
+            />
+            <Typography className="validation-error" variant="inherit" color="red">
+              {errors.avatarUrl?.message}
+            </Typography>
           </FormControl>
           <Link href="#" underline="hover" className="primary-action-link">
             Please read our terms of use before signing up to use our service!
@@ -144,9 +216,9 @@ function SignUpPopup() {
             {serverError}
           </Typography>
           <ButtonGroup>
-            <IconButton onClick={handleClose} data-testid="close-trigger">
-              <LoginIcon />
-            </IconButton>
+            <Button variant="text" onClick={handleClose} data-testid="close-trigger">
+              Login
+            </Button>
             <Button
               variant="contained"
               className="primary-action-btn"
