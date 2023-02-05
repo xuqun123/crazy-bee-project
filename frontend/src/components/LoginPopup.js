@@ -16,6 +16,7 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import { loginValidationSchema } from '../lib/validations'
+import SignUpPopup from './SignUpPopup'
 
 function LoginPopup() {
   const [open, setOpen] = useState(false)
@@ -132,7 +133,7 @@ function LoginPopup() {
             {serverError}
           </Typography>
           <ButtonGroup>
-            <Button variant="text">Signup</Button>
+            <SignUpPopup />
             <Button
               variant="contained"
               className="primary-action-btn"
