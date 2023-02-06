@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import CurrentUserContext from '../lib/CurrentUserContext'
+import SocketContext from '../lib/SocketContext'
 import AssetForm from '../components/AssetForm'
 import { assetValidationSchema } from '../lib/validations'
 
@@ -28,6 +29,7 @@ function NewAssetPage() {
   const currentUser = useContext(CurrentUserContext)
   const [nftCollection, setNFTCollection] = useState(null)
   const [loading, setLoading] = useState(true)
+  const socket = useContext(SocketContext)
 
   const defaultValuesWithAIArtUrl = () => {
     let result = defaultValues
@@ -81,6 +83,12 @@ function NewAssetPage() {
         console.log(message, response.data)
         setAlert({ message })
 
+        socket &&
+          socket.emit('assetOrCollectionCreated', {
+            id: response.data?.data?._id,
+            name: response.data?.data?.name,
+            type: 'asset',
+          })
         state?.output_url ? navigate(`/assets/${response.data.data._id}`) : navigate(-1)
       })
       .catch((error) => {

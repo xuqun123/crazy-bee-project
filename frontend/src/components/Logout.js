@@ -10,7 +10,7 @@ function Logout() {
   }
 
   return (
-    <Tooltip title="logout">
+    <Tooltip title="logout" arrow={true} placement="top">
       <IconButton data-testid="logout-btn" onClick={logoutUser}>
         <LogoutIcon />
       </IconButton>

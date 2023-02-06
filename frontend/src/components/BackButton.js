@@ -13,7 +13,13 @@ const BackButton = () => {
   return location.pathname === '/' ||
     location.pathname === '/explore' ||
     location.pathname === '/ai/creator' ? null : (
-    <IconButton variant="h5" color="inherit" fontWeight={'500'} noWrap onClick={handleClick}>
+    <IconButton
+      variant="h5"
+      color="inherit"
+      fontWeight={'500'}
+      sx={{ ml: 1 }}
+      onClick={handleClick}
+    >
       <ArrowBackIcon />
     </IconButton>
   )
