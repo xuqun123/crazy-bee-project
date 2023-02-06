@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
+const password = require('../controllers/password');
 const {check} = require('express-validator');
 
 // set 1 day expire time for JWT token
@@ -43,13 +44,13 @@ router.post("/login", function (req, res) {
 
 router.post('/recover', [
   check('email').isEmail().withMessage('Enter a valid email address'),
-], validate, Password.recover);
+], password.recover);
 
-router.get('/reset/:token', Password.reset);
+router.get('/reset/:token', password.reset);
 
 router.post('/reset/:token', [
     check('password').not().isEmpty().isLength({min: 6}).withMessage('Must be at least 6 chars long'),
     check('confirmPassword', 'Passwords do not match').custom((value, {req}) => (value === req.body.password)),
-], validate, Password.resetPassword);
+], password.resetPassword);
 
 module.exports = router;
