@@ -53,8 +53,8 @@ function TopSlogan({
             </Button>
           )}
           {secondaryCTA && (
-            <Button data-testid="secondary-cta-btn" variant="outlined">
-              <SignUpPopup />
+            <Button data-testid="secondary-cta-btn" variant="outlined" href="signup">
+              {secondaryCTA}
             </Button>
           )}
           {enableSignUpPopup && (
