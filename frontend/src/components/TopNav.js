@@ -8,11 +8,13 @@ import Avatar from '@mui/material/Avatar'
 import { Link } from 'react-router-dom'
 import LoginPopup from './LoginPopup'
 import CurrentUserContext from '../lib/CurrentUserContext'
+import SocketContext from '../lib/SocketContext'
 import Logout from './Logout'
 import WalletConnect from './WalletConnect'
 import BackButton from './BackButton'
 
 function TopNav() {
+  const socket = useContext(SocketContext)
   const currentUser = useContext(CurrentUserContext)
 
   return (
