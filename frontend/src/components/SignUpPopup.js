@@ -230,7 +230,7 @@ function SignUpPopup({ buttonStyle, buttonText }) {
               data-testid="Signup-btn"
               onClick={handleSubmit(onSubmit)}
             >
-              'Sign up'
+              Sign up
             </Button>
           </ButtonGroup>
         </DialogActions>

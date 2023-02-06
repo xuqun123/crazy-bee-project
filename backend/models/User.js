@@ -50,6 +50,11 @@ const UserSchema = new Schema(
   { timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" } }
 );
 
+UserSchema.methods.generatePasswordReset = function() {
+  this.resetPasswordToken = crypto.randomBytes(20).toString('hex');
+  this.resetPasswordExpires = Date.now() + 3600000; //expires in an hour
+};
+
 const UserModel = model("User", UserSchema);
 
 module.exports = { UserModel, UserSchema };

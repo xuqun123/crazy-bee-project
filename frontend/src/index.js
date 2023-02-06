@@ -7,7 +7,6 @@ import HomePage from './pages/HomePage'
 import ErrorPage from './pages/ErrorPage'
 import ExplorePage from './pages/ExplorePage'
 import AICreatorPage from './pages/AICreatorPage'
-// import UserProfilePage from './pages/UserProfilePage'
 import SingleUserCollectionsPage from './pages/SingleUserCollectionsPage'
 import SingleCollectionPage from './pages/SingleCollectionPage'
 import SingleAssetPage from './pages/SingleAssetPage'
@@ -74,11 +73,6 @@ const router = createBrowserRouter([
         element: <SingleAssetPage />,
         errorElement: <ErrorPage />,
       },
-      // {
-      //   path: 'user-profile',
-      //   element: <UserProfilePage />,
-      //   errorElement: <ErrorPage />,
-      // },
     ],
   },
 ])
