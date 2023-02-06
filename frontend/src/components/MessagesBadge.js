@@ -122,6 +122,7 @@ function MessagesBadge() {
           console.log("[socket] 'assetOrCollectionCreated' event disconnected")
         )
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [socket])
 
   return (

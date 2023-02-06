@@ -15,7 +15,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import { signUpValidationSchema } from '../lib/validations'
 
-function SignUpPopup() {
+function SignUpPopup({ buttonStyle, buttonText }) {
   const [open, setOpen] = useState(false)
   const [serverError, setsServerError] = useState(null)
 
@@ -67,8 +67,13 @@ function SignUpPopup() {
   return (
     <div>
       <Tooltip title="sign up">
-        <Button variant="text" onClick={handleClickOpen} data-testid="signup-trigger">
-          Signup
+        <Button
+          variant="text"
+          onClick={handleClickOpen}
+          {...buttonStyle}
+          data-testid="signup-trigger"
+        >
+          {buttonText || 'Signup'}
         </Button>
       </Tooltip>
       <Dialog open={open} onClose={handleClose}>
@@ -225,7 +230,7 @@ function SignUpPopup() {
               data-testid="Signup-btn"
               onClick={handleSubmit(onSubmit)}
             >
-              Sign up
+              'Sign up'
             </Button>
           </ButtonGroup>
         </DialogActions>
