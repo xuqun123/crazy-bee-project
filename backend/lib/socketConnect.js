@@ -1,13 +1,15 @@
 require("dotenv").config();
 const io = require("socket.io");
 
-const startSocketServer = (http) => {
+const startSocketServer = (app, http) => {
   const ioInstance = io(http, {
     cors: {
       origin: process.env.REACT_APP_URL || "http://localhost:3001",
     },
   });
   console.log(`Socket server is listening on port ${process.env.port || 3000}!`);
+  // set a global 'socketio' instance to the app server
+  app.set("socketio", ioInstance);
 
   ioInstance.on("connection", (socket) => {
     console.log(`[socket] ${socket.id} user is just connected.`);
@@ -16,12 +18,13 @@ const startSocketServer = (http) => {
       console.log("[socket] A user is disconnected.");
     });
 
-    setInterval(() => {
-      const number = parseInt(Math.random() * 10);
-      console.log("emitting number", number);
-      socket.emit("number", number);
-    }, 1000);
+    socket.on("assetOrCollectionCreated", (msg) => {
+      console.log("[socket] 'assetOrCollectionCreated' event received: " + JSON.stringify(msg));
+
+      console.log(`[socket] brocasting to all clients except for the sender: ${socket.id}`);
+      socket.broadcast.emit("assetOrCollectionCreated", msg);
+    });
   });
 };
 
-module.exports = startSocketServer;
+module.exports = { startSocketServer };

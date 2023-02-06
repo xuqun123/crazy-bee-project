@@ -8,13 +8,12 @@ import Avatar from '@mui/material/Avatar'
 import { Link } from 'react-router-dom'
 import LoginPopup from './LoginPopup'
 import CurrentUserContext from '../lib/CurrentUserContext'
-import SocketContext from '../lib/SocketContext'
 import Logout from './Logout'
 import WalletConnect from './WalletConnect'
+import MessagesBadge from './MessagesBadge'
 import BackButton from './BackButton'
 
 function TopNav() {
-  const socket = useContext(SocketContext)
   const currentUser = useContext(CurrentUserContext)
 
   return (
@@ -48,10 +47,11 @@ function TopNav() {
             }}
           >
             <WalletConnect />
+            <MessagesBadge />
             {localStorage.getItem('jwt') ? <Logout /> : <LoginPopup />}
             {currentUser && (
               <Link to={`/users/${currentUser._id}/collections`}>
-                <Tooltip title={currentUser.username}>
+                <Tooltip title={currentUser.username} arrow={true} placement="top">
                   <Avatar
                     alt={`${currentUser.firstName} ${currentUser.lastName}`}
                     src={currentUser.avatarUrl}

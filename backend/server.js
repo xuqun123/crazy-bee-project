@@ -5,7 +5,7 @@ const express = require("express");
 const passport = require("passport");
 const cors = require("cors");
 const morgan = require("morgan");
-const startSocketServer = require("./lib/socketConnect");
+const { startSocketServer } = require("./lib/socketConnect");
 const userAuthRoutes = require("./routes/userAuthRoutes");
 const nftCollectionRoutes = require("./routes/nftCollectionRoutes");
 const assetRoutes = require("./routes/assetRoutes");
@@ -15,6 +15,7 @@ const aiCreatorRoutes = require("./routes/aiCreatorRoutes");
 const app = express();
 const port = process.env.PORT || 3000;
 const http = require("http").createServer(app);
+startSocketServer(app, http);
 
 app.use(cors());
 app.use(morgan("combined"));
@@ -30,8 +31,6 @@ app.use("/api/aiCreator", aiCreatorRoutes);
 app.get("/", (req, res) => {
   res.send("the backend server is running now...");
 });
-
-startSocketServer(http);
 
 http.listen(port, () => {
   console.log(`Web server is listening on port ${port}!`);

@@ -6,12 +6,8 @@ function SocketConnect() {
 
   useEffect(() => {
     const connection = io(process.env.REACT_APP_WS_URL)
-    console.log('[socket] connection started.')
     setSocket(connection)
-
-    connection.on('number', (msg) => {
-      console.log('Random number: ' + msg)
-    })
+    console.log('[socket] connection started.')
 
     return () => {
       connection.close()

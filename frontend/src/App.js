@@ -25,15 +25,15 @@ function App() {
       <ThemeProvider theme={theme}>
         <CurrentUserContext.Provider value={currentUser}>
           <AlertMessageContext.Provider value={{ alert, setAlert }}>
-            <CssBaseline />
             <SocketContext.Provider value={socket}>
+              <CssBaseline />
               <TopNav />
+              <main>
+                <Outlet />
+              </main>
+              <Footer />
+              <AlertMessage />
             </SocketContext.Provider>
-            <main>
-              <Outlet />
-            </main>
-            <Footer />
-            <AlertMessage />
           </AlertMessageContext.Provider>
         </CurrentUserContext.Provider>
       </ThemeProvider>
