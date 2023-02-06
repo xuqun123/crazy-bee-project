@@ -83,11 +83,12 @@ function NewAssetPage() {
         console.log(message, response.data)
         setAlert({ message })
 
-        socket.emit('assetOrCollectionCreated', {
-          id: response.data?.data?._id,
-          name: response.data?.data?.name,
-          type: 'asset',
-        })
+        socket &&
+          socket.emit('assetOrCollectionCreated', {
+            id: response.data?.data?._id,
+            name: response.data?.data?.name,
+            type: 'asset',
+          })
         state?.output_url ? navigate(`/assets/${response.data.data._id}`) : navigate(-1)
       })
       .catch((error) => {

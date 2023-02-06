@@ -51,11 +51,12 @@ function NewCollectionPage() {
         const message = 'NFT collection is created successfully'
         console.log(message, response.data)
         setAlert({ message })
-        socket.emit('assetOrCollectionCreated', {
-          id: response.data?.data?._id,
-          name: response.data?.data?.name,
-          type: 'collection',
-        })
+        socket &&
+          socket.emit('assetOrCollectionCreated', {
+            id: response.data?.data?._id,
+            name: response.data?.data?.name,
+            type: 'collection',
+          })
         navigate(-1)
       })
       .catch((error) => {
