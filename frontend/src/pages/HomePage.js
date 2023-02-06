@@ -10,7 +10,8 @@ function HomePage() {
         summary="Do you want to connect your crypto wallet, list your existing NFTs, create and mint your
           own NFTs for free? We have all these features covered for you!"
         mainCTAText="Explore more NFTs"
-        secondaryCTA="Signup Now"
+        mainCTALink="/explore"
+        enableSignUpPopup={true}
       />
       <NFTCollectionsList />
     </>

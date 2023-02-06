@@ -6,6 +6,7 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import CurrentUserContext from '../lib/CurrentUserContext'
+import SocketContext from '../lib/SocketContext'
 import CollectionForm from '../components/CollectionForm'
 import { collectionValidationSchema } from '../lib/validations'
 
@@ -25,6 +26,7 @@ function NewCollectionPage() {
   const [serverError, setsSrverError] = useState(null)
   const { setAlert } = useContext(AlertMessageContext)
   const currentUser = useContext(CurrentUserContext)
+  const socket = useContext(SocketContext)
 
   const {
     register,
@@ -49,6 +51,12 @@ function NewCollectionPage() {
         const message = 'NFT collection is created successfully'
         console.log(message, response.data)
         setAlert({ message })
+        socket &&
+          socket.emit('assetOrCollectionCreated', {
+            id: response.data?.data?._id,
+            name: response.data?.data?.name,
+            type: 'collection',
+          })
         navigate(-1)
       })
       .catch((error) => {
