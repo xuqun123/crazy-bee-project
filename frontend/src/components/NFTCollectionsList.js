@@ -33,7 +33,13 @@ function LoadingSkeletons() {
   )
 }
 
-function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit, enableDelete }) {
+function NFTCollectionsList({
+  userId,
+  enableLoadMore,
+  enableSearch,
+  enableEdit,
+  nftCollectionsLimit,
+}) {
   const navigate = useNavigate()
   const [nftCollections, setNFTCollections] = useState([])
   const [loadMore, setLoadMore] = useState(false)
@@ -47,7 +53,9 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit, 
   }, [])
 
   const loadData = (offset = 0, reset = false) => {
-    let url = `/nftCollections?limit=${defaultNFTCollectionsLimit}&offset=${offset}`
+    let url = `/nftCollections?limit=${
+      nftCollectionsLimit || defaultNFTCollectionsLimit
+    }&offset=${offset}`
     if (userId) url = `${url}&userId=${userId}`
 
     axiosClient
@@ -70,7 +78,7 @@ function NFTCollectionsList({ userId, enableLoadMore, enableSearch, enableEdit, 
   }
 
   const handleLoadMore = () => {
-    loadData(offset + defaultNFTCollectionsLimit)
+    loadData(offset + (nftCollectionsLimit || defaultNFTCollectionsLimit))
   }
 
   const handleEditClick = (event, nftCollection) => {
