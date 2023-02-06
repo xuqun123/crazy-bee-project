@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
+const {check} = require('express-validator');
 
 // set 1 day expire time for JWT token
 const expiresIn = 1 * 24 * 60 * 60;
