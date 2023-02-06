@@ -35,434 +35,114 @@ Object {
                 class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </button>
-            <a
-              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
-              data-testid="secondary-cta-btn"
-              href="signup"
-              tabindex="0"
-            >
-              Signup Now
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
-            </a>
+            <div>
+              <button
+                aria-label="sign up"
+                class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+                data-mui-internal-clone-element="true"
+                data-testid="signup-trigger"
+                tabindex="0"
+                type="button"
+              >
+                Signup Now
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
           </div>
         </div>
+      </div>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft MuiTypography-gutterBottom css-1yh9psj-MuiTypography-root"
+        >
+          Recent NFT Collections
+        </h4>
+      </div>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+        width="lg"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+        >
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+        </div>
+      </div>
+      <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1leqz1f-MuiContainer-root"
+      >
+        <h4
+          class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft MuiTypography-gutterBottom css-1yh9psj-MuiTypography-root"
+        >
+          Recent Assets
+        </h4>
       </div>
       <div
         class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
       >
         <div
+          class="MuiBox-root css-70qvj9"
+        />
+        <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
         >
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-          >
-            <div
-              class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-            >
-              <img
-                alt="random"
-                class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-                src="https://source.unsplash.com/random"
-              />
-              <div
-                class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-              >
-                <h2
-                  class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-                >
-                  Heading
-                </h2>
-                <p
-                  class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-                >
-                  This is a media card. You can use this section to describe the content.
-                </p>
-              </div>
-              <div
-                class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-              >
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  View
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-                <button
-                  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                  tabindex="0"
-                  type="button"
-                >
-                  Edit
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
-                </button>
-              </div>
-            </div>
-          </div>
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
+          <span
+            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+          />
         </div>
       </div>
     </div>
@@ -498,434 +178,114 @@ Object {
               class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </button>
-          <a
-            class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
-            data-testid="secondary-cta-btn"
-            href="signup"
-            tabindex="0"
-          >
-            Signup Now
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
-          </a>
+          <div>
+            <button
+              aria-label="sign up"
+              class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+              data-mui-internal-clone-element="true"
+              data-testid="signup-trigger"
+              tabindex="0"
+              type="button"
+            >
+              Signup Now
+              <span
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+              />
+            </button>
+          </div>
         </div>
       </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft MuiTypography-gutterBottom css-1yh9psj-MuiTypography-root"
+      >
+        Recent NFT Collections
+      </h4>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
+      width="lg"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+      >
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1leqz1f-MuiContainer-root"
+    >
+      <h4
+        class="MuiTypography-root MuiTypography-h4 MuiTypography-alignLeft MuiTypography-gutterBottom css-1yh9psj-MuiTypography-root"
+      >
+        Recent Assets
+      </h4>
     </div>
     <div
       class="MuiContainer-root MuiContainer-maxWidthLg css-1mknzg7-MuiContainer-root"
     >
       <div
+        class="MuiBox-root css-70qvj9"
+      />
+      <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
       >
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
-        <div
-          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
-        >
-          <div
-            class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-16vq84g-MuiPaper-root-MuiCard-root"
-          >
-            <img
-              alt="random"
-              class="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img css-1gwv7ie-MuiCardMedia-root"
-              src="https://source.unsplash.com/random"
-            />
-            <div
-              class="MuiCardContent-root css-2r3irp-MuiCardContent-root"
-            >
-              <h2
-                class="MuiTypography-root MuiTypography-h5 MuiTypography-gutterBottom css-h93ljk-MuiTypography-root"
-              >
-                Heading
-              </h2>
-              <p
-                class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-              >
-                This is a media card. You can use this section to describe the content.
-              </p>
-            </div>
-            <div
-              class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-            >
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                View
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-              <button
-                class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-                tabindex="0"
-                type="button"
-              >
-                Edit
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
-              </button>
-            </div>
-          </div>
-        </div>
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
+        <span
+          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
+        />
       </div>
     </div>
   </div>,

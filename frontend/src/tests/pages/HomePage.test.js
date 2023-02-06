@@ -19,7 +19,7 @@ describe('HomePage', () => {
 
       const sloganHeader = screen.getByText(/#1 NFT Marketplace in Australia/)
       const exploreButton = screen.getByTestId('main-cta-btn')
-      const signupButton = screen.getByTestId('secondary-cta-btn')
+      const signupButton = screen.getByTestId('signup-trigger')
 
       await waitFor(() => {
         expect(sloganHeader).toBeInTheDocument()
@@ -28,7 +28,7 @@ describe('HomePage', () => {
       expect(exploreButton).toBeInTheDocument()
       expect(exploreButton.tagName.toLowerCase()).toBe('button')
       expect(signupButton).toBeInTheDocument()
-      expect(signupButton.tagName.toLowerCase()).toBe('a')
+      expect(signupButton.tagName.toLowerCase()).toBe('button')
 
       rerender(<HomePage></HomePage>)
 
@@ -61,7 +61,7 @@ describe('HomePage', () => {
 
       const sloganHeader = screen.getByText(/#1 NFT Marketplace in Australia/)
       const exploreButton = screen.getByTestId('main-cta-btn')
-      const signupButton = screen.getByTestId('secondary-cta-btn')
+      const signupButton = screen.getByTestId('signup-trigger')
 
       await waitFor(() => {
         expect(sloganHeader).toBeInTheDocument()
@@ -70,7 +70,7 @@ describe('HomePage', () => {
       expect(exploreButton).toBeInTheDocument()
       expect(exploreButton.tagName.toLowerCase()).toBe('button')
       expect(signupButton).toBeInTheDocument()
-      expect(signupButton.tagName.toLowerCase()).toBe('a')
+      expect(signupButton.tagName.toLowerCase()).toBe('button')
 
       rerender(<HomePage></HomePage>)
 
