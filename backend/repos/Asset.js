@@ -17,10 +17,17 @@ const getOne = async ({ _id }) => {
 /**
  * Get multiple assets
  */
-const getMany = async ({ userId, nftCollectionId, offset = 0, limit = DEFAULT_RESULTS_LIMIT }) => {
+const getMany = async ({
+  userId,
+  nftCollectionId,
+  name,
+  offset = 0,
+  limit = DEFAULT_RESULTS_LIMIT,
+}) => {
   let filter = {};
   if (userId) filter = { ...filter, userId };
   if (nftCollectionId) filter = { ...filter, nftCollectionId };
+  if (name) filter = { ...filter, name: { $regex: name, $options: "i" } };
 
   const totalCount = await AssetModel.countDocuments(filter);
   const loadMore = offset + limit < totalCount;

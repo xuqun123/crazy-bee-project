@@ -19,8 +19,8 @@ const getOne = async ({ name, _id }) => {
  */
 const getMany = async ({ name, userId, offset = 0, limit = DEFAULT_RESULTS_LIMIT }) => {
   let filter = {};
-  if (name) filter = { ...filter, name };
   if (userId) filter = { ...filter, userId };
+  if (name) filter = { ...filter, name: { $regex: name, $options: "i" } };
 
   const totalCount = await NFTCollectionModel.countDocuments(filter);
   const loadMore = offset + limit < totalCount;

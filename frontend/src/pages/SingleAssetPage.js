@@ -312,7 +312,7 @@ function SingleCollectionPage() {
                 excludeAssetId={asset._id}
                 enableLoadMore={true}
                 enableSearch={false}
-                containerStyle={{ py: 2.5, minWidth: '100%' }}
+                fullWidth={true}
               />
             </AccordionDetails>
           </Accordion>
