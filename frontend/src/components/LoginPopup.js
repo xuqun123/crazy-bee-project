@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField'
 import Dialog from '@mui/material/Dialog'
@@ -15,12 +15,13 @@ import Link from '@mui/material/Link'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import axiosClient from '../lib/axiosClient'
+import AlertMessageContext from '../lib/AlertMessageContext'
 import { loginValidationSchema } from '../lib/validations'
 import SignUpPopup from './SignUpPopup'
 
 function LoginPopup() {
   const [open, setOpen] = useState(false)
-  const [serverError, setsServerError] = useState(null)
+  const { setAlert } = useContext(AlertMessageContext)
 
   const handleClickOpen = () => {
     setOpen(true)
@@ -31,21 +32,24 @@ function LoginPopup() {
   }
 
   const onSubmit = (data) => {
-    setsServerError(null)
-
     axiosClient
       .post(`/auth/login`, { ...data })
       .then((response) => {
+        const message = `Welcome back, ${response.data?.user?.username}!`
         console.log('The user has been logged in successfully', response.data)
         setOpen(false)
-        localStorage.setItem('jwt', response.data.token)
-        window.location.reload(false)
+        setAlert({ message })
+
+        setTimeout(() => {
+          localStorage.setItem('jwt', response.data.token)
+          window.location.reload(false)
+        }, 800)
       })
       .catch((error) => {
         const errMsg = error.response?.data?.error || error.message
-        const message = `Login failed: ${errMsg}`
+        const message = `Failed to login: ${errMsg}`
         console.error(message)
-        setsServerError(errMsg)
+        setAlert({ message, severity: 'error' })
       })
   }
 
@@ -124,14 +128,7 @@ function LoginPopup() {
             justifyContent: 'space-between',
           }}
         >
-          <Typography
-            className="validation-error"
-            variant="inherit"
-            color="red"
-            sx={{ fontSize: 12 }}
-          >
-            {serverError}
-          </Typography>
+          <div />
           <ButtonGroup>
             <SignUpPopup />
             <Button
