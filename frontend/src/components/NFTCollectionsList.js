@@ -8,30 +8,14 @@ import Grid from '@mui/material/Grid'
 import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import Container from '@mui/material/Container'
-import Skeleton from '@mui/material/Skeleton'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import ActionConfirm from '../components/ActionConfirm'
+import LoadingSkeletons from '../components/LoadingSkeletons'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import { defaultNFTCollectionsLimit, collectionTypeLabelColors } from '../lib/dataConstants'
-
-function LoadingSkeletons() {
-  return (
-    <>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-    </>
-  )
-}
 
 function NFTCollectionsList({
   userId,
@@ -107,7 +91,10 @@ function NFTCollectionsList({
       {enableSearch && <PageSearchBar placeholder={'Search NFT collections'} />}
       <Grid container spacing={4}>
         {loading ? (
-          <LoadingSkeletons />
+          <LoadingSkeletons
+            cardsCount={nftCollectionsLimit || defaultNFTCollectionsLimit}
+            name="nftCollection"
+          />
         ) : (
           nftCollections.map((nftCollection) => (
             <Grid item key={nftCollection._id} xs={12} sm={4} md={3}>

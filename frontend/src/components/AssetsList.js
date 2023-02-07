@@ -10,11 +10,12 @@ import Typography from '@mui/material/Typography'
 import Chip from '@mui/material/Chip'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle'
 import Container from '@mui/material/Container'
-import Skeleton from '@mui/material/Skeleton'
+import { Tooltip } from '@mui/material'
 import moment from 'moment'
 import { Link, useNavigate } from 'react-router-dom'
 import PageSearchBar from '../components/PageSearchBar'
 import ActionConfirm from '../components/ActionConfirm'
+import LoadingSkeletons from '../components/LoadingSkeletons'
 import axiosClient from '../lib/axiosClient'
 import AlertMessageContext from '../lib/AlertMessageContext'
 import {
@@ -22,23 +23,6 @@ import {
   defaultAssetsLimit,
   collectionTypeLabelColors,
 } from '../lib/dataConstants'
-import { Tooltip } from '@mui/material'
-
-function LoadingSkeletons() {
-  return (
-    <>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-      <Skeleton animation="wave" sx={{ height: '50px' }}></Skeleton>
-    </>
-  )
-}
 
 function AssetsList({
   nftCollectionId,
@@ -47,7 +31,7 @@ function AssetsList({
   enableLoadMore,
   enableSearch,
   enableCreate = false,
-  containerStyle,
+  fullWidth = false,
   enableEdit,
 }) {
   const navigate = useNavigate()
@@ -111,7 +95,7 @@ function AssetsList({
   }
 
   return (
-    <Container sx={{ py: 0 }}>
+    <Container sx={{ py: 0 }} {...(fullWidth ? { maxWidth: false } : null)}>
       <Box display="flex" sx={{ alignItems: 'center' }}>
         {enableSearch && <PageSearchBar placeholder={'Search assets'} />}
         {enableCreate && (
@@ -127,7 +111,7 @@ function AssetsList({
       </Box>
       <Grid container spacing={4}>
         {loading ? (
-          <LoadingSkeletons />
+          <LoadingSkeletons cardsCount={defaultAssetsLimit} name="asset" />
         ) : (
           assets.map((asset) => (
             <Grid item key={asset._id} xs={12} sm={4} md={3}>

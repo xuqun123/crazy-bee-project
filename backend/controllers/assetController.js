@@ -10,6 +10,7 @@ const getAssets = (req, res) => {
 
   if (query?.userId) payload = { ...payload, userId: query.userId };
   if (query?.nftCollectionId) payload = { ...payload, nftCollectionId: query.nftCollectionId };
+  if (query?.name) payload = { ...payload, name: query.name };
   if (query?.limit) payload = { ...payload, limit: Number(query.limit) };
   if (query?.offset) payload = { ...payload, offset: Number(query.offset) };
 

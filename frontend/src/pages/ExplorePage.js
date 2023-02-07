@@ -1,11 +1,61 @@
-import * as React from 'react'
+import { useState, useContext } from 'react'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
 import TopSlogan from '../components/TopSlogan'
+import LinearProgress from '@mui/material/LinearProgress'
 import NFTCollectionsList from '../components/NFTCollectionsList'
 import AssetsList from '../components/AssetsList'
+import SearchResultsList from '../components/SearchResultsList'
+import PageSearchBar from '../components/PageSearchBar'
+import axiosClient from '../lib/axiosClient'
+import { defaultAssetsLimit, defaultNFTCollectionsLimit } from '../lib/dataConstants'
+import AlertMessageContext from '../lib/AlertMessageContext'
 
 function ExplorePage() {
+  const [keyword, setKeyword] = useState('')
+  const [searching, setSearching] = useState(false)
+  const [showResultsCount, setShowResultsCount] = useState(false)
+  const [nftCollections, setNFTCollections] = useState([])
+  const [assets, setAssets] = useState([])
+  const { setAlert } = useContext(AlertMessageContext)
+  const resultsCount = nftCollections.length + assets.length || 0
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+    setSearching(true)
+
+    const getNftCollections = axiosClient.get(
+      `/nftCollections?limit=${defaultAssetsLimit}&name=${keyword}`
+    )
+    const getAssets = axiosClient.get(`/assets?limit=${defaultNFTCollectionsLimit}&name=${keyword}`)
+
+    Promise.all([getNftCollections, getAssets])
+      .then(([nftCollectionsResponse, assetsResponse]) => {
+        setNFTCollections(nftCollectionsResponse?.data?.data)
+        setAssets(assetsResponse?.data?.data)
+        setSearching(false)
+        setShowResultsCount(true)
+      })
+      .catch((error) => {
+        const message = `Explore search failed: ${error.message}`
+        console.error(message)
+        setAlert({ message, severity: 'error' })
+        setSearching(false)
+        setShowResultsCount(true)
+      })
+  }
+
+  const onReset = () => {
+    setKeyword('')
+    setNFTCollections([])
+    setAssets([])
+    setShowResultsCount(false)
+  }
+
+  const onChange = (event) => {
+    setKeyword(event.target.value)
+  }
+
   return (
     <>
       <TopSlogan
@@ -15,6 +65,37 @@ function ExplorePage() {
         mainCTALink="/ai/creator"
         enableSignUpPopup={true}
       />
+      <Container sx={{ mb: showResultsCount ? 0 : 5 }}>
+        <PageSearchBar
+          placeholder={'Search NFT Collections or Assets'}
+          onSubmit={onSubmit}
+          onChange={onChange}
+          onReset={onReset}
+          keyword={keyword}
+        />
+        {searching && <LinearProgress color="info" />}
+        {showResultsCount && (
+          <Typography
+            sx={{ py: 0, mt: 2 }}
+            component="p"
+            variant="p"
+            align="right"
+            color="text.secondary"
+            gutterBottom
+          >
+            {resultsCount === 0 ? (
+              'No Results Found'
+            ) : (
+              <>
+                <strong>{resultsCount}</strong> Result{resultsCount > 1 && 's'}
+              </>
+            )}
+          </Typography>
+        )}
+      </Container>
+
+      <SearchResultsList nftCollections={nftCollections} assets={assets} searching={searching} />
+
       <Container>
         <Typography component="h4" variant="h4" align="left" color="text.primary" gutterBottom>
           Recent NFT Collections
