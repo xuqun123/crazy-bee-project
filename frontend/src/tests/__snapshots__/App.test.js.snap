@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomePage snapshot the main app view with all expected elements 1`] = `
+exports[`App snapshot the main app view with all expected elements 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

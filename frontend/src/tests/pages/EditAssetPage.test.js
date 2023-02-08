@@ -103,11 +103,15 @@ describe('EditAssetPage', () => {
           value: 'https://new-image-link',
         },
       })
-      fireEvent.input(screen.getByLabelText('Asset URL'), {
-        target: {
-          value: 'https://new-image-link',
-        },
-      })
+
+      await act(
+        async () =>
+          await fireEvent.input(screen.getByLabelText('Asset URL'), {
+            target: {
+              value: 'https://new-image-link',
+            },
+          })
+      )
 
       // submit the form
       const submitButton = screen.getByTestId('form-submit-btn')

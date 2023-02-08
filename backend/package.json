@@ -21,7 +21,8 @@
       "routes"
     ],
     "exclude": [
-      "lib/AIArtGenerator.js"
+      "lib/",
+      "controllers/password.js"
     ]
   },
   "repository": {
