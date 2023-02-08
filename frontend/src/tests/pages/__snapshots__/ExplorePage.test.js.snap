@@ -54,6 +54,70 @@ Object {
         </div>
       </div>
       <div
+        class="MuiContainer-root MuiContainer-maxWidthLg css-1dev4xc-MuiContainer-root"
+      >
+        <form
+          class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-p7b1z8-MuiPaper-root"
+        >
+          <div
+            class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+          >
+            <input
+              aria-label="Search NFT Collections or Assets"
+              class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+              placeholder="Search NFT Collections or Assets"
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            aria-label="search"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="SearchIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+          <hr
+            class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
+          />
+          <button
+            aria-label="directions"
+            class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
+            tabindex="0"
+            type="button"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="RestartAltIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
+              />
+            </svg>
+            <span
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+            />
+          </button>
+        </form>
+      </div>
+      <div
         class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
       >
         <h4
@@ -69,33 +133,78 @@ Object {
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
         >
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
+          <div
+            class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -116,33 +225,142 @@ Object {
         <div
           class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
         >
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
-          <span
-            class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-          />
+          <div
+            class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+            >
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+              <div
+                class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+              >
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                  style="height: 250px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+                <span
+                  class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                  style="height: 30px;"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -197,6 +415,70 @@ Object {
       </div>
     </div>
     <div
+      class="MuiContainer-root MuiContainer-maxWidthLg css-1dev4xc-MuiContainer-root"
+    >
+      <form
+        class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-p7b1z8-MuiPaper-root"
+      >
+        <div
+          class="MuiInputBase-root MuiInputBase-colorPrimary css-piqts5-MuiInputBase-root"
+        >
+          <input
+            aria-label="Search NFT Collections or Assets"
+            class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+            placeholder="Search NFT Collections or Assets"
+            type="text"
+            value=""
+          />
+        </div>
+        <button
+          aria-label="search"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1gtpq4r-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="SearchIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <hr
+          class="MuiDivider-root MuiDivider-fullWidth MuiDivider-vertical css-jbezd2-MuiDivider-root"
+        />
+        <button
+          aria-label="directions"
+          class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorPrimary MuiIconButton-sizeMedium css-1bxg8jb-MuiButtonBase-root-MuiIconButton-root"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="RestartAltIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 5V2L8 6l4 4V7c3.31 0 6 2.69 6 6 0 2.97-2.17 5.43-5 5.91v2.02c3.95-.49 7-3.85 7-7.93 0-4.42-3.58-8-8-8zm-6 8c0-1.65.67-3.15 1.76-4.24L6.34 7.34C4.9 8.79 4 10.79 4 13c0 4.08 3.05 7.44 7 7.93v-2.02c-2.83-.48-5-2.94-5-5.91z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </form>
+    </div>
+    <div
       class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
     >
       <h4
@@ -212,33 +494,78 @@ Object {
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
       >
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -259,33 +586,142 @@ Object {
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
       >
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
-        <span
-          class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-wave css-1pkc0kw-MuiSkeleton-root"
-        />
+        <div
+          class="MuiContainer-root MuiContainer-maxWidthLg css-1oqqzyl-MuiContainer-root"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-480o17-MuiGrid-root"
+          >
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+            <div
+              class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 css-6w982j-MuiGrid-root"
+            >
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-v3h081-MuiSkeleton-root"
+                style="height: 250px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+              <span
+                class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-wave css-4kxt9a-MuiSkeleton-root"
+                style="height: 30px;"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>,

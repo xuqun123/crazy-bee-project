@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import App from '../App'
 
-describe('HomePage', () => {
+describe('App', () => {
   it('render the main view properly with TopNav and Footer elements', () => {
     render(<App />, { wrapper: BrowserRouter })
 

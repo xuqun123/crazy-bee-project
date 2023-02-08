@@ -3,6 +3,7 @@ const passport = require("passport");
 const passportJWT = require("passport-jwt");
 const LocalStrategy = require("passport-local").Strategy;
 const { omit } = require("lodash");
+const { faker } = require("@faker-js/faker");
 const { UserModel } = require("../models/User");
 const userRepo = require("../repos/User");
 
@@ -31,6 +32,9 @@ passport.use(
             userAttributes.forEach((key) => {
               if (req.body.hasOwnProperty(key)) payload[key] = req.body[key];
             });
+
+            payload.bannerImageUrl = faker.image.nature(1024, 200);
+            console.log(payload);
 
             userRepo
               .create(payload)
