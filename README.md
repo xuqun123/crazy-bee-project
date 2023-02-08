@@ -26,9 +26,9 @@ Crazy Bee aims to provide a NFT marketplace platform where users can explore NFT
 
 4. The "Crazy Bee" Teams app channel can be found here: https://teams.microsoft.com/l/team/19%3aPwvFqf4OhtLp5Ew6k02b-Y_GUvJvVRvaBtxSDbyct5E1%40thread.tacv2/conversations?groupId=393ba1e4-bc38-4cb0-a16b-8fdacd41ea9e&tenantId=d02378ec-1688-46d5-8540-1c28b5f470f6
 
-5. The testing coverage for `frontend` codes can be seen here: https://github.com/xuqun123/crazy-bee-project/tree/main/frontend/coverage/lcov-report/index.html
+5. The testing coverage for `frontend` codes can be seen here: https://github.com/xuqun123/crazy-bee-project/tree/main/frontend/coverage/lcov-report/index.html (you may clone this repo locally to view the report as html format in a web browser)
 
-6. The testing coverage for `backend` codes can be seen here: https://github.com/xuqun123/crazy-bee-project/tree/main/backend/coverage/lcov-report/index.html
+6. The testing coverage for `backend` codes can be seen here: https://github.com/xuqun123/crazy-bee-project/tree/main/backend/coverage/lcov-report/index.html (you may clone this repo locally to view the report as html format in a web browser)
 
 ## How to Install
 
