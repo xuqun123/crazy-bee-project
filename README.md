@@ -16,7 +16,7 @@ Crazy Bee aims to provide a NFT marketplace platform where users can explore NFT
 
 5. [nft-minting](https://github.com/xuqun123/crazy-bee-project/tree/main/nft-minting) folder contains some sample smart contract deploy and interact scripts that are not being used anyplace in this project.
 
-## Help Links
+## Helpful Links
 
 1. The Crazy Bee project has been deployed to GCP now: http://34.129.191.214/ (please feel free to check it out!)
 
@@ -35,6 +35,8 @@ Crazy Bee aims to provide a NFT marketplace platform where users can explore NFT
 - The frontend application install guide can be found at: https://github.com/xuqun123/crazy-bee-project/tree/main/frontend
 
 - The backend application install guide can be found at: https://github.com/xuqun123/crazy-bee-project/tree/main/backend
+
+- All necessary `.env` environment variables or credentials can be found in this Trello card: https://trello.com/c/9VFxP2PW/65-service-credentials
 
 ## Product Overview
 
