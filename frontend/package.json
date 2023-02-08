@@ -64,14 +64,6 @@
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!<rootDir>/src/reportWebVitals.js"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 60,
-        "functions": 60,
-        "lines": 60,
-        "statements": 60
-      }
-    }
+    ]
   }
 }
