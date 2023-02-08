@@ -4,7 +4,7 @@ const io = require("socket.io");
 const startSocketServer = (app, http) => {
   const ioInstance = io(http, {
     cors: {
-      origin: process.env.REACT_APP_URL || "http://localhost:3001",
+      origin: "*",
     },
   });
   console.log(`Socket server is listening on port ${process.env.port || 3000}!`);
