@@ -4,7 +4,6 @@
   "description": "The backend web application for \"Crazy Bee\" project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./server.js",
     "test": "mocha --file ./tests/setup.js tests/**/** --reporter spec",
     "test-single": "mocha --file ./tests/setup.js --reporter spec",
     "test-with-coverage": "nyc --all --no-cache --reporter=lcov --reporter=text mocha --file ./tests/setup.js tests/**/** --reporter spec",
@@ -62,6 +61,7 @@
     "mongoose": "^6.8.3",
     "mongoose-unique-validator": "^3.1.0",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
     "nyc": "^15.1.0",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.1",
@@ -72,7 +72,6 @@
   "devDependencies": {
     "eslint": "^8.32.0",
     "mongodb-memory-server": "^8.11.1",
-    "nodemon": "^2.0.20",
     "prettier": "^2.8.2",
     "sinon": "^15.0.1",
     "supertest": "^6.3.3"
